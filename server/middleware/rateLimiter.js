@@ -32,8 +32,7 @@ const redisClient = new Redis({
             await redisClient.expire(ip, windowMs / 1000);
             next();
         } else {
-            res.status(429).send('Too Many Requests');
-        }
+            res.status(429).json({ status: 'error', message: 'Too Many Requests, Try after 1 hour', statusCode: 429});        }
     };
 }
 
