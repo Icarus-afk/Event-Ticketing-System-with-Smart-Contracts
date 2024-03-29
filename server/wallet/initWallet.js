@@ -3,7 +3,6 @@ import { Wallet } from 'ethers'
 import dotenv from 'dotenv'
 import walletSchema from '../models/wallet.js'
 import Web3 from 'web3';
-import crypto from 'crypto';
 
 dotenv.config()
 

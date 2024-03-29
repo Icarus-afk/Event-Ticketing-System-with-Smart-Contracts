@@ -1,6 +1,6 @@
 import cron from 'node-cron';
 import ethers from 'ethers';
-import Wallet from './models/wallet.js'; 
+import Wallet from './models/wallet.js';
 import mongoose from 'mongoose';
 
 import dotenv from 'dotenv'
@@ -17,7 +17,7 @@ mongoose.connect(String(MONGO_STRING))
     console.error('Error connecting to MongoDB:', error);
   });
 
-const provider = new ethers.providers.JsonRpcProvider('http://localhost:7545'); 
+const provider = new ethers.providers.JsonRpcProvider('http://localhost:7545');
 console.log('Provider created');
 
 async function syncBalances() {
@@ -27,7 +27,6 @@ async function syncBalances() {
     const wallets = await Wallet.find({});
     console.log(`Found ${wallets.length} wallets`);
 
-    // Create an array of promises
     const promises = wallets.map(async (wallet) => {
       console.log(`Processing wallet ${wallet.address}`);
       const blockchainBalance = await provider.getBalance(wallet.address);
@@ -46,7 +45,6 @@ async function syncBalances() {
       }
     });
 
-    // Wait for all promises to resolve
     await Promise.all(promises);
   } catch (error) {
     console.error('Error during sync:', error);
@@ -55,6 +53,5 @@ async function syncBalances() {
   console.log('Syncing completed');
 }
 
-// Schedule the function to run every 5 seconds
 cron.schedule('*/5 * * * * *', syncBalances);
 console.log('Cron job scheduled');
