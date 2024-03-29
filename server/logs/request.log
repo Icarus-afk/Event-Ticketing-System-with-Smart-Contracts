@@ -39,3 +39,10 @@ Time: 3/29/2024, 7:50:53 PM, Method: POST, URL: /user/signin, Status: 429
 Time: 3/29/2024, 7:50:54 PM, Method: POST, URL: /user/signin, Status: 429
 Time: 3/29/2024, 7:53:05 PM, Method: POST, URL: /user/signin, Status: 429
 Time: 3/29/2024, 7:53:09 PM, Method: POST, URL: /user/signin, Status: 429
+Time: 3/29/2024, 8:55:09 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 3/29/2024, 8:55:14 PM, Method: GET, URL: /event/get?date=2022-12-31&time=18:00, Status: 401
+Time: 3/29/2024, 8:55:16 PM, Method: GET, URL: /event/get?date=2022-12-31&time=18:00, Status: 401
+Time: 3/29/2024, 8:55:16 PM, Method: GET, URL: /event/get?date=2022-12-31&time=18:00, Status: 401
+Time: 3/29/2024, 8:55:17 PM, Method: GET, URL: /event/get?date=2022-12-31&time=18:00, Status: 401
+Time: 3/29/2024, 9:07:28 PM, Method: GET, URL: /favicon.ico, Status: 404
+Time: 3/29/2024, 9:16:18 PM, Method: GET, URL: /admin/user/, Status: 404
