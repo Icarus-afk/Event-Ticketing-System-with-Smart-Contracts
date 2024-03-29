@@ -14,6 +14,10 @@ const walletSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    iv:{
+        type: String,
+        required: true
+    },
     balance: {
         type: Number,
         default: 0

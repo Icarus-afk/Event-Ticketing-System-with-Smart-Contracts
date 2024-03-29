@@ -6,11 +6,11 @@ const eventSchema = new mongoose.Schema({
         required: true
     },
     date: {
-        type: Number,
+        type: String,
         required: true
     },
     time: {
-        type: Number,
+        type: String,
         required: true
     },
     price: {
@@ -26,7 +26,7 @@ const eventSchema = new mongoose.Schema({
         required: true
     },
     eventId: {
-        type: Number,
+        type: String,
         unique: true,
         required: true
     }

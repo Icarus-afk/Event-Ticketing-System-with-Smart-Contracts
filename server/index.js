@@ -3,8 +3,8 @@ import bodyParser from 'body-parser';
 import mongoose  from 'mongoose';
 import cors from 'cors';
 import userRoutes from './routes/users.js';
-// import logger from './middlewares/logger.js';
-// import errorHandler from './middlewares/errorHandler.js';
+import eventRoutes from './routes/events.js';
+
 
 import dotenv from 'dotenv'
 dotenv.config()
@@ -12,8 +12,6 @@ dotenv.config()
 
 const app = express(); //initialize express instance
 
-// app.use(logger);
-// app.use(errorHandler);
 
 // setting up body parser
 app.use(bodyParser.json({ limit: "30mb", extended: true }))
@@ -23,6 +21,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }))
 app.use(cors())
 
 app.use('/user', userRoutes)
+app.use('/event', eventRoutes)
 
 const MONGO_STRING = process.env.MONGO_STRING
 const PORT = process.env.PORT || 8000;

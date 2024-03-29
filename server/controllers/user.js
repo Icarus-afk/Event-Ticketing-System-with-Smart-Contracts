@@ -41,14 +41,12 @@ export const signup = async (req, res) => {
     try {
       const result = await UserModel.create({ email, password: hashedPassword, name: `${firstName} ${lastName}` });
       const wallet = await createWallet(result._id);
-      console.log('Wallet created:', wallet);
-
       const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
 
       return res.status(201).json({ code: 201, success: true, message: "User successfully created", data: { result, token} });
     } catch (error) {
       console.error('Error creating wallet:', error);
-      throw error; // Rethrow the error to be caught by the outer catch block
+      throw error; 
     }
 
   } catch (error) {
@@ -82,10 +80,9 @@ export const deleteUser = async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).json({ code: 404, success: false, message: `No user with id: ${id}` });
 
   try {
-    const user = await UserModel.findByIdAndDelete(id); // Store the result in a variable
+    const user = await UserModel.findByIdAndDelete(id); 
 
     if (!user) {
-      // If no user was deleted, send a 404 response
       return res.status(404).json({ code: 404, success: false, message: `user not found` });
     }
 
@@ -95,3 +92,5 @@ export const deleteUser = async (req, res) => {
     res.status(500).json({ code: 500, success: false, message: "Something went wrong" });
   }
 };
+
+
