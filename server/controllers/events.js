@@ -249,4 +249,4 @@ export const getEvents = async (req, res) => {
         console.error(error);
         res.status(500).json({ success: false, message: 'An error occurred while getting the events', statusCode: 500 });
     }
-  };
+};
