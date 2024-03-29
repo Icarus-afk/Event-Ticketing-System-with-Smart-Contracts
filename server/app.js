@@ -5,6 +5,7 @@ import userRoutes from './routes/users.js';
 import eventRoutes from './routes/events.js';
 import errorHandler from './middleware/errorHandler.js';
 import logger from './middleware/logger.js';
+import limiter from './middleware/rateLimiter.js';
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use(errorHandler);
 app.use(logger);
+app.use(limiter);
+
 
 app.use('/user', userRoutes);
 app.use('/event', eventRoutes);
