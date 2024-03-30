@@ -14,7 +14,7 @@ const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
 const web3Instance = new Web3('http://localhost:7545');
 
 const contractABI = contractData.abi;
-const contractAddress = '0x23c26aBe06130BAa2bDE966210759b38D94f0ffa';
+const contractAddress = '0x914a5DB53877D3f4A0F0F664Ce3264F3800D4B4B';
 const EventManagementContract = new web3Instance.eth.Contract(contractABI, contractAddress);
 
 export const createEvent = async (req, res) => {
