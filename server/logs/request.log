@@ -46,3 +46,9 @@ Time: 3/29/2024, 8:55:16 PM, Method: GET, URL: /event/get?date=2022-12-31&time=1
 Time: 3/29/2024, 8:55:17 PM, Method: GET, URL: /event/get?date=2022-12-31&time=18:00, Status: 401
 Time: 3/29/2024, 9:07:28 PM, Method: GET, URL: /favicon.ico, Status: 404
 Time: 3/29/2024, 9:16:18 PM, Method: GET, URL: /admin/user/, Status: 404
+Time: 3/30/2024, 8:20:16 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 3/30/2024, 8:25:29 PM, Method: GET, URL: /ticket/issue, Status: 404
+Time: 3/30/2024, 8:25:33 PM, Method: POST, URL: /ticket/issue, Status: 500
+Time: 3/30/2024, 8:26:04 PM, Method: POST, URL: /ticket/issue, Status: 500
+Time: 3/30/2024, 8:26:30 PM, Method: POST, URL: /ticket/issue, Status: 500
+Time: 3/30/2024, 8:26:47 PM, Method: POST, URL: /ticket/issue, Status: 500

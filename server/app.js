@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import userRoutes from './routes/users.js';
 import eventRoutes from './routes/events.js';
+import ticketRoutes from './routes/tickets.js';
 import errorHandler from './middleware/errorHandler.js';
 import logger from './middleware/logger.js';
 import limiter from './middleware/rateLimiter.js';
@@ -20,6 +21,7 @@ app.use(limiter);
 
 app.use('/user', userRoutes);
 app.use('/event', eventRoutes);
+app.use('/ticket', ticketRoutes);
 
 
 
