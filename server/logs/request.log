@@ -121,3 +121,11 @@ Time: 3/30/2024, 11:08:13 PM, Method: POST, URL: /ticket/issue, Status: 500
 Time: 3/30/2024, 11:09:24 PM, Method: POST, URL: /ticket/issue, Status: 400
 Time: 3/30/2024, 11:10:23 PM, Method: POST, URL: /user/signin, Status: 200
 Time: 3/30/2024, 11:12:50 PM, Method: POST, URL: /ticket/issue, Status: 200
+Time: 3/31/2024, 11:51:17 AM, Method: POST, URL: /user/signin, Status: 200
+Time: 3/31/2024, 11:51:32 AM, Method: GET, URL: /event/get, Status: 401
+Time: 3/31/2024, 11:52:07 AM, Method: GET, URL: /event/get, Status: 401
+Time: 3/31/2024, 11:52:08 AM, Method: GET, URL: /event/get, Status: 401
+Time: 3/31/2024, 11:52:09 AM, Method: GET, URL: /event/get, Status: 401
+Time: 3/31/2024, 11:52:10 AM, Method: GET, URL: /event/get, Status: 401
+Time: 3/31/2024, 11:52:10 AM, Method: GET, URL: /event/get, Status: 429
+Time: 3/31/2024, 11:52:10 AM, Method: GET, URL: /event/get, Status: 429

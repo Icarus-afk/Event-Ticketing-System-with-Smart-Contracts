@@ -36,7 +36,7 @@ const redisClient = new Redis({
     };
 }
 
-const limiter = rateLimit({ windowMs: 60 * 60 * 1000, maxRequests: 100 });
+const limiter = rateLimit({ windowMs: 60 * 60 * 1000, maxRequests: 5 });
 
 // Export limiter as default
 export default limiter;
