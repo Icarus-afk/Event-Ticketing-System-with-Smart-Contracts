@@ -8,6 +8,6 @@ router.post('/issue', auth, issueTicket);
 router.get('/total/:eventId', auth, getTotalTicketsSold);
 router.get('/transfarred/:eventId', auth, getTicketsTransfarred);
 router.patch('/transfer', auth, transferTicket);
-router.get('/details', auth, getTicketDetails);
+router.get('/details/:eventId', auth, getTicketDetails);
 
 export default router;

@@ -5,11 +5,12 @@ import contractData from '../../smart_contracts/build/contracts/Ticket.json' ass
 import Ticket from '../models/ticket.js';
 import Wallet from '../models/wallet.js';
 import Event from '../models/event.js';
-import mongoose from 'mongoose';
-
+import User from "../models/user.js";
+import jwt from 'jsonwebtoken'
 
 dotenv.config();
 
+const JWT_SECRET = process.env.JWT_SECRET;
 const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
 
 const web3Instance = new Web3('http://localhost:7545');
@@ -109,6 +110,7 @@ export const getTotalTicketsSold = async (req, res) => {
         return res.status(500).json({ success: false, message: 'Server error', statusCode: 500 });
     }
 };
+dotenv.config();
 
 export const getTicketsTransfarred = async (req, res) => {
     try {
@@ -124,20 +126,24 @@ export const getTicketsTransfarred = async (req, res) => {
     }
 };
 
-
 export const transferTicket = async (req, res) => {
     try {
         console.log('Transferring ticket...');
-        const { to, eventId } = req.body;
+        const { to } = req.body;
 
         const from = req.userId;
 
-        const ticket = await Ticket.findOne({ owner: from, eventId });
+        const ticket = await Ticket.findOne({ owner: from });
         if (!ticket) {
             return res.status(404).json({ success: false, message: 'Ticket not found', statusCode: 404 });
         }
 
-        ticket.owner = to;
+        const recipient = await User.findOne({ email: to });
+        if (!recipient) {
+            return res.status(404).json({ success: false, message: 'Recipient user not found', statusCode: 404 });
+        }
+
+        ticket.owner = recipient._id;
         ticket.isTransferred = true;
         await ticket.save();
 
@@ -148,13 +154,24 @@ export const transferTicket = async (req, res) => {
     }
 };
 
-
 export const getTicketDetails = async (req, res) => {
     try {
         console.log('Getting ticket details...');
-        const { owner, eventId } = req.body;
+        const eventId = req.params.eventId;
+        const token = req.headers.authorization.split(" ")[1];
 
-        const ticket = await Ticket.findOne({ owner, eventId });
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const ownerId = decoded.id;
+
+        const event = await Event.findOne({ eventId: eventId });
+        if (!event) {
+            return res.status(404).json({ success: false, message: 'Event not found', statusCode: 404 });
+        }
+
+        const ticket = await Ticket.findOne({ owner: ownerId, eventId: event._id })
+            .populate('owner', '-password') 
+            .populate('eventId');
+
         const hasTicket = !!ticket;
 
         return res.status(200).json({ success: true, hasTicket, ticket, statusCode: 200 });
