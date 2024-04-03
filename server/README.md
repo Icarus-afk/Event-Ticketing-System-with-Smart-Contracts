@@ -22,9 +22,39 @@ To start the server, navigate to the server directory and run the following comm
 The server directory is structured as follows:
 
 ```bash
-npm start     
+npm start   
 ```
-
+The server directory is structured as follows:
+```bash
+server/
+├── .env
+├── app.js
+├── controllers/
+│   ├── events.js
+│   ├── tickets.js
+│   └── users.js
+├── db.js
+├── index.js
+├── logs/
+│   ├── access.log
+│   └── error.log
+├── middleware/
+│   ├── auth.js
+│   ├── errorHandler.js
+│   ├── logger.js
+│   └── validator.js
+├── models/
+│   ├── Event.js
+│   ├── Ticket.js
+│   ├── User.js
+│   └── Wallet.js
+├── package.json
+├── routes/
+│   ├── events.js
+│   ├── tickets.js
+│   └── users.js
+└── synchronizer.js
+```
 
 ## Key Files
 
