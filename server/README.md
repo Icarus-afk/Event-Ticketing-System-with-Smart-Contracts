@@ -126,12 +126,14 @@ The server uses a cron job to synchronize balances. This is done in `synchronize
 
 ## Future Works
 
-- [✅] Implement Authentication: Implement user authentication using JWT or Passport.js to secure the routes.
+- [ ✓ ] Implement Authentication: Implement user authentication using JWT or Passport.js to secure the routes.
 - [ ] **Add Tests**: Write unit and integration tests for the routes and models using a testing framework like Jest.
 - [ ] **Improve Error Handling**: Enhance the errorHandler middleware to handle more specific error cases.
-- [✅] **Add Data Validation**: Use a library like Joi to validate incoming request data.
+- [ ✓ ] **Add Data Validation**: Use a library like Joi to validate incoming request data.
 - [ ] **Implement Caching**: Use Redis to cache responses and improve performance.
 - [ ] **Add More Models**: Depending on the application's needs, more models could be added (e.g., Admin, Category).
 - [ ] **Implement Pagination**: Add pagination to the routes that return multiple items.
-- [✅] **Use a Process Manager**: Use a process manager like PM2 for better process management.
+- [ ✓ ] **Use a Process Manager**: Use a process manager like PM2 for better process management.
 - [ ] **Dockerize the Application**: Containerize the application using Docker for easier deployment.
+
+
