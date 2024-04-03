@@ -129,3 +129,11 @@ Time: 3/31/2024, 11:52:09 AM, Method: GET, URL: /event/get, Status: 401
 Time: 3/31/2024, 11:52:10 AM, Method: GET, URL: /event/get, Status: 401
 Time: 3/31/2024, 11:52:10 AM, Method: GET, URL: /event/get, Status: 429
 Time: 3/31/2024, 11:52:10 AM, Method: GET, URL: /event/get, Status: 429
+Time: 4/1/2024, 8:43:29 AM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/1/2024, 8:44:27 AM, Method: GET, URL: /ticket/total/1, Status: 401
+Time: 4/1/2024, 8:44:33 AM, Method: GET, URL: /ticket/total/1, Status: 200
+Time: 4/1/2024, 8:44:39 AM, Method: GET, URL: /ticket/total/0, Status: 200
+Time: 4/1/2024, 8:44:41 AM, Method: GET, URL: /ticket/total/0, Status: 429
+Time: 4/1/2024, 8:45:17 AM, Method: GET, URL: /ticket/total/0, Status: 200
+Time: 4/1/2024, 8:45:24 AM, Method: GET, URL: /ticket/total/1, Status: 200
+Time: 4/1/2024, 8:46:47 AM, Method: GET, URL: /ticket/total/1, Status: 200

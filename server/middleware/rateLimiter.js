@@ -4,7 +4,6 @@ const redisClient = new Redis({
     host: 'localhost',
     port: 6379, 
   });
-  
   redisClient.on('connect', () => {
     console.log('Connected to Redis');
   });
@@ -36,7 +35,7 @@ const redisClient = new Redis({
     };
 }
 
-const limiter = rateLimit({ windowMs: 60 * 60 * 1000, maxRequests: 5 });
+const limiter = rateLimit({ windowMs: 60 * 60 * 1000, maxRequests: 500 });
 
 // Export limiter as default
 export default limiter;
