@@ -226,3 +226,4 @@ Time: 4/3/2024, 9:53:40 PM, Method: POST, URL: /ticket/issue, Status: 200
 Time: 4/3/2024, 9:53:51 PM, Method: PATCH, URL: /ticket/transfer, Status: 200
 Time: 4/3/2024, 9:57:02 PM, Method: PATCH, URL: /ticket/transfer, Status: 500
 Time: 4/3/2024, 9:57:20 PM, Method: GET, URL: /ticket/details/1, Status: 401
+Time: 4/4/2024, 1:53:14 AM, Method: GET, URL: /, Status: 404

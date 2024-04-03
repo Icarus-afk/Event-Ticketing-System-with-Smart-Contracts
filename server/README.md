@@ -16,15 +16,46 @@ This documentation provides an overview of the server-side codebase for the tick
 
 To start the server, navigate to the server directory and run the following command:
 
+install pm2 in your server:
+
+```
+npm install pm2 -g
+```
+
+start the server with:
+
+```bash
+pm2 start index.js
+```
+
+To check the status of your application:
+
+```bash
+pm2 list
+```
+
+To restart your application:
+
+```bash
+pm2 restart index.js
+```
+
+to stop the application:
+
+```bash
+pm2 stop index.js
+```
+
+to delete the application from pm2's process list:
+
+```bash
+pm2 delete index.js
+```
 
 ## File Structure
 
 The server directory is structured as follows:
 
-```bash
-npm start   
-```
-The server directory is structured as follows:
 ```bash
 server/
 ├── .env
@@ -91,3 +122,16 @@ The server uses several middleware functions:
 ## Synchronization
 
 The server uses a cron job to synchronize balances. This is done in `synchronizer.js`. A script that synchronizes data with the Ethereum blockchain.
+
+
+## Future Works
+
+- [✅] Implement Authentication: Implement user authentication using JWT or Passport.js to secure the routes.
+- [ ] **Add Tests**: Write unit and integration tests for the routes and models using a testing framework like Jest.
+- [ ] **Improve Error Handling**: Enhance the errorHandler middleware to handle more specific error cases.
+- [✅] **Add Data Validation**: Use a library like Joi to validate incoming request data.
+- [ ] **Implement Caching**: Use Redis to cache responses and improve performance.
+- [ ] **Add More Models**: Depending on the application's needs, more models could be added (e.g., Admin, Category).
+- [ ] **Implement Pagination**: Add pagination to the routes that return multiple items.
+- [✅] **Use a Process Manager**: Use a process manager like PM2 for better process management.
+- [ ] **Dockerize the Application**: Containerize the application using Docker for easier deployment.
