@@ -5,6 +5,8 @@ import contractData from '../../smart_contracts/build/contracts/Ticket.json' ass
 import Ticket from '../models/ticket.js';
 import Wallet from '../models/wallet.js';
 import Event from '../models/event.js';
+import mongoose from 'mongoose';
+
 
 dotenv.config();
 
@@ -87,12 +89,19 @@ export const issueTicket = async (req, res) => {
     }
 };
 
-export const getTotalTickets = async (req, res) => {
+export const getTotalTicketsSold = async (req, res) => {
     try {
         console.log('Getting total tickets...');
-        const { eventId } = req.body;
+        const eventId = req.params.eventId;
 
-        const totalTickets = await Ticket.countDocuments({ eventId });
+        // Find the event using the eventId
+        const event = await Event.findOne({ eventId: eventId });
+        if (!event) {
+            return res.status(404).json({ success: false, message: 'Event not found', statusCode: 404 });
+        }
+
+        // Use the ObjectId of the event to count the tickets
+        const totalTickets = await Ticket.countDocuments({ eventId: event._id });
 
         return res.status(200).json({ success: true, totalTickets, statusCode: 200 });
     } catch (error) {
@@ -101,10 +110,10 @@ export const getTotalTickets = async (req, res) => {
     }
 };
 
-export const getTicketsSold = async (req, res) => {
+export const getTicketsTransfarred = async (req, res) => {
     try {
         console.log('Getting tickets sold...');
-        const { eventId } = req.body;
+        const { eventId } = req.params;
 
         const ticketsSold = await Ticket.countDocuments({ eventId, isTransferred: true });
 
