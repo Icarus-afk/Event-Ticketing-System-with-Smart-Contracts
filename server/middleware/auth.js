@@ -24,10 +24,11 @@ const auth = async (req, res, next) => {
 
     next();
   } catch (error) {
-    if (error instanceof jwt.TokenExpiredError) {
-      return res.status(401).json({ status: 'error', statusCode: 401, message: 'Token expired. Please sign in again.' });
+    if (error instanceof jwt.JsonWebTokenError) {
+      return res.status(401).json({ success: false, message: 'Invalid token. Please sign in again.', statusCode: 401 });
     }
     console.log(error);
+    res.status(500).json({ success: false, message: 'Authentication failed', statusCode: 500 });
   }
 };
 

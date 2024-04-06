@@ -257,3 +257,4 @@ Time: 4/6/2024, 5:49:09 PM, Method: GET, URL: /event/get/, Status: 200
 Time: 4/6/2024, 5:49:10 PM, Method: GET, URL: /event/get/, Status: 200
 Time: 4/6/2024, 5:50:11 PM, Method: GET, URL: /ticket/total/0, Status: 200
 Time: 4/6/2024, 5:52:39 PM, Method: GET, URL: /ticket/total/0, Status: 500
+Time: 4/6/2024, 5:57:39 PM, Method: GET, URL: /ticket/total/0, Status: 500
