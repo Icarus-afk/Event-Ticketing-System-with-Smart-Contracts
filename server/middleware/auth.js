@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import dotenv from 'dotenv';
+import User from '../models/user.js'; // import your User model
 
 dotenv.config();
 
@@ -21,6 +22,9 @@ const auth = async (req, res, next) => {
 
       req.userId = decodedData?.sub;
     }    
+
+    // Fetch the user from the database
+    req.user = await User.findById(req.userId);
 
     next();
   } catch (error) {

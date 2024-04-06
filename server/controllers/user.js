@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { mongoose } from "mongoose";
 import UserModel from "../models/user.js";
-import { createWallet } from "../wallet/initWallet.js";
+import { createWallet } from "../utils/initWallet.js";
 import dotenv from 'dotenv';
 import logger from '../utils/consoleLogger.js'
 
@@ -42,7 +42,10 @@ export const signin = async (req, res) => {
 
 
 export const signup = async (req, res) => {
-  const { email, password, firstName, lastName } = req.body;
+  const { email, password, firstName, lastName, isAdmin, isOrganizer } = req.body;
+
+  const session = await mongoose.startSession();
+  session.startTransaction();
 
   try {
     logger.info(`Signup attempt for email: ${email}`);
@@ -55,16 +58,29 @@ export const signup = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 12);
 
-    const result = await UserModel.create({ email, password: hashedPassword, name: `${firstName} ${lastName}` });
+    const result = await UserModel.create([{
+      email,
+      password: hashedPassword,
+      name: `${firstName} ${lastName}`,
+      isAdmin: isAdmin || false,
+      isOrganizer: isOrganizer || false, 
+      isActive: true
+    }], { session });
 
-    const wallet = createWallet(result._id);
+    const wallet = await createWallet(result[0]._id);
 
-    const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
+    const token = jwt.sign({ email: result[0].email, id: result[0]._id }, secret, { expiresIn: "1h" });
 
     logger.info(`User signed up successfully for email: ${email}`);
-    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result, token } });
+    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result: result[0], token, wallet } });
+
+    await session.commitTransaction();
+    session.endSession();
 
   } catch (error) {
+    await session.abortTransaction();
+    session.endSession();
+
     logger.error(`Signup error for email: ${email}`, error);
     res.status(500).json({ code: 500, success: false, message: "Something went wrong" });
   }

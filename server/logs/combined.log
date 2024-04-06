@@ -26,3 +26,30 @@
 2024-04-06 17:49:09 [info]: Events retrieved successfully 
 2024-04-06 17:49:10 [info]: Getting events... 
 2024-04-06 17:49:10 [info]: Events retrieved successfully 
+2024-04-06 21:43:44 [info]: Signin attempt for email: ahmed.ehsan1@gmail.com 
+2024-04-06 21:43:44 [info]: User signed in successfully for email: ahmed.ehsan1@gmail.com 
+2024-04-06 21:44:47 [info]: Signup attempt for email: ahmed.ehsan7@gmail.com 
+2024-04-06 21:44:47 [info]: User signed up successfully for email: ahmed.ehsan7@gmail.com 
+2024-04-06 21:47:19 [info]: Signin attempt for email: ahmed.ehsan7@gmail.com 
+2024-04-06 21:47:19 [info]: User signed in successfully for email: ahmed.ehsan7@gmail.com 
+2024-04-06 21:49:22 [info]: Creating event... 
+2024-04-06 21:49:22 [info]: User wallet not found 
+2024-04-06 21:50:02 [info]: Signup attempt for email: ahmed.ehsan8@gmail.com 
+2024-04-06 21:50:02 [info]: User signed up successfully for email: ahmed.ehsan8@gmail.com 
+2024-04-06 21:50:17 [info]: Signin attempt for email: ahmed.ehsan8@gmail.com 
+2024-04-06 21:50:17 [info]: User signed in successfully for email: ahmed.ehsan8@gmail.com 
+2024-04-06 21:56:59 [info]: Signup attempt for email: ahmed.ehsan9@gmail.com 
+2024-04-06 21:56:59 [info]: User signed up successfully for email: ahmed.ehsan9@gmail.com 
+2024-04-06 21:57:56 [info]: Signup attempt for email: ahmed.ehsan10@gmail.com 
+2024-04-06 21:57:56 [info]: User signed up successfully for email: ahmed.ehsan10@gmail.com 
+2024-04-06 21:58:13 [info]: Signup attempt for email: ahmed.ehsan11@gmail.com 
+2024-04-06 21:58:13 [info]: User signed up successfully for email: ahmed.ehsan11@gmail.com 
+2024-04-06 21:59:09 [info]: Signup attempt for email: ahmed.ehsan12@gmail.com 
+2024-04-06 21:59:10 [info]: User signed up successfully for email: ahmed.ehsan12@gmail.com 
+2024-04-06 22:00:01 [info]: Signup attempt for email: ahmed.ehsan13@gmail.com 
+2024-04-06 22:00:01 [error]: Signup error for email: ahmed.ehsan13@gmail.com Transaction numbers are only allowed on a replica set member or mongos {
+  "ok": 0,
+  "code": 20,
+  "codeName": "IllegalOperation",
+  "stack": "MongoServerError: Transaction numbers are only allowed on a replica set member or mongos\n    at Connection.onMessage (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:202:26)\n    at MessageStream.<anonymous> (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:124:16)\n    at MessageStream._write (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:556:12)\n    at _write (node:internal/streams/writable:490:10)\n    at Writable.write (node:internal/streams/writable:494:10)\n    at Socket.ondata (node:internal/streams/readable:985:22)\n    at Socket.emit (node:events:514:28)"
+}
