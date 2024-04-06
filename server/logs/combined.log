@@ -2,3 +2,27 @@
 {"level":"info","message":"User signed in successfully for email: ahmed.ehsan1@gmail.com"}
 {"level":"info","message":"Signin attempt for email: ahmed.ehsan1@gmail.com"}
 {"level":"info","message":"User signed in successfully for email: ahmed.ehsan1@gmail.com"}
+{"level":"info","message":"Signin attempt for email: ahmed.ehsan1@gmail.com"}
+{"level":"info","message":"User signed in successfully for email: ahmed.ehsan1@gmail.com"}
+{"level":"info","message":"Getting ticket details..."}
+{"level":"info","message":"Ticket details: null"}
+{"level":"info","message":"Getting ticket details..."}
+{"level":"info","message":"Ticket details: null"}
+{"level":"info","message":"Signin attempt for email: ahmed.ehsan1@gmail.com"}
+{"level":"info","message":"User signed in successfully for email: ahmed.ehsan1@gmail.com"}
+{"level":"info","message":"Getting events..."}
+{"level":"info","message":"Events retrieved successfully"}
+{"level":"info","message":"Getting events...","timestamp":"2024-04-06 17:46:56"}
+{"level":"info","message":"Events retrieved successfully","timestamp":"2024-04-06 17:46:56"}
+{"level":"info","message":"Getting events...","timestamp":"2024-04-06 17:47:21"}
+{"level":"info","message":"Events retrieved successfully","timestamp":"2024-04-06 17:47:21"}
+2024-04-06 17:48:57 [info]: Getting events... 
+2024-04-06 17:48:57 [info]: Events retrieved successfully 
+2024-04-06 17:49:07 [info]: Getting events... 
+2024-04-06 17:49:07 [info]: Events retrieved successfully 
+2024-04-06 17:49:08 [info]: Getting events... 
+2024-04-06 17:49:08 [info]: Events retrieved successfully 
+2024-04-06 17:49:09 [info]: Getting events... 
+2024-04-06 17:49:09 [info]: Events retrieved successfully 
+2024-04-06 17:49:10 [info]: Getting events... 
+2024-04-06 17:49:10 [info]: Events retrieved successfully 
