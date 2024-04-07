@@ -40,7 +40,7 @@ export const signin = async (req, res) => {
   }
 };
 
-
+//two-phase commit pattern is used to ensure that the user is created only if the wallet is created successfully
 export const signup = async (req, res) => {
   const { email, password, firstName, lastName, isAdmin, isOrganizer } = req.body;
 
@@ -51,7 +51,7 @@ export const signup = async (req, res) => {
       return res.status(400).json({ code: 400, success: false, message: "User already exists" });
     }
 
-    const hashedPassword = await bcrypt.hash(password, 12);
+    const hashedPassword = await bcrypt.hash(password, 6);
 
     const pendingUser = {
       email,
@@ -76,7 +76,7 @@ export const signup = async (req, res) => {
     const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
 
     logger.info(`User signed up successfully for email: ${email}`);
-    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result, token, wallet } });
+    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result, token} });
 
   } catch (error) {
     logger.error(`Signup error for email: ${email}`, error);

@@ -305,3 +305,14 @@ Time: 4/7/2024, 3:51:48 PM, Method: POST, URL: /user/signup, Status: 500
 Time: 4/7/2024, 3:52:03 PM, Method: POST, URL: /user/signup, Status: 500
 Time: 4/7/2024, 3:53:22 PM, Method: POST, URL: /user/signup, Status: 500
 Time: 4/7/2024, 3:54:03 PM, Method: POST, URL: /user/signup, Status: 201
+Time: 4/7/2024, 3:55:41 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/7/2024, 3:59:20 PM, Method: POST, URL: /user/signup, Status: 201
+Time: 4/7/2024, 3:59:45 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/7/2024, 3:59:46 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/7/2024, 3:59:48 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/7/2024, 3:59:48 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/7/2024, 3:59:49 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/7/2024, 3:59:50 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/7/2024, 3:59:51 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/7/2024, 3:59:52 PM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/7/2024, 4:01:27 PM, Method: PATCH, URL: /user/65fc6fbb3c62eda193862187, Status: 401
