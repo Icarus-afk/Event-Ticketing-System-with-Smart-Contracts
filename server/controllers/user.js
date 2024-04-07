@@ -44,44 +44,45 @@ export const signin = async (req, res) => {
 export const signup = async (req, res) => {
   const { email, password, firstName, lastName, isAdmin, isOrganizer } = req.body;
 
-  const session = await mongoose.startSession();
-  session.startTransaction();
-
   try {
-    logger.info(`Signup attempt for email: ${email}`);
-    const oldUser = await UserModel.findOne({ email });
+    const existingUser = await UserModel.findOne({ email });
 
-    if (oldUser) {
-      logger.info(`User already exists for email: ${email}`);
+    if (existingUser) {
       return res.status(400).json({ code: 400, success: false, message: "User already exists" });
     }
 
     const hashedPassword = await bcrypt.hash(password, 12);
 
-    const result = await UserModel.create([{
+    const pendingUser = {
       email,
       password: hashedPassword,
       name: `${firstName} ${lastName}`,
       isAdmin: isAdmin || false,
       isOrganizer: isOrganizer || false, 
-      isActive: true
-    }], { session });
+      isActive: true,
+      status: 'pending'
+    };
 
-    const wallet = await createWallet(result[0]._id);
+    const result = await UserModel.create(pendingUser);
 
-    const token = jwt.sign({ email: result[0].email, id: result[0]._id }, secret, { expiresIn: "1h" });
+    const wallet = await createWallet(result._id);
+
+    if (!wallet) {
+      throw new Error('Failed to create wallet');
+    }
+
+    await UserModel.updateOne({ _id: result._id }, { status: 'active' });
+
+    const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
 
     logger.info(`User signed up successfully for email: ${email}`);
-    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result: result[0], token, wallet } });
-
-    await session.commitTransaction();
-    session.endSession();
+    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result, token, wallet } });
 
   } catch (error) {
-    await session.abortTransaction();
-    session.endSession();
-
     logger.error(`Signup error for email: ${email}`, error);
+    if (error.message === 'Failed to create wallet') {
+      await UserModel.deleteOne({ email });
+    }
     res.status(500).json({ code: 500, success: false, message: "Something went wrong" });
   }
 };

@@ -53,3 +53,127 @@
   "codeName": "IllegalOperation",
   "stack": "MongoServerError: Transaction numbers are only allowed on a replica set member or mongos\n    at Connection.onMessage (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:202:26)\n    at MessageStream.<anonymous> (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:124:16)\n    at MessageStream._write (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:556:12)\n    at _write (node:internal/streams/writable:490:10)\n    at Writable.write (node:internal/streams/writable:494:10)\n    at Socket.ondata (node:internal/streams/readable:985:22)\n    at Socket.emit (node:events:514:28)"
 }
+2024-04-07 14:54:13 [info]: Signup attempt for email: ahmed.ehsan13@gmail.com 
+2024-04-07 14:54:13 [error]: Signup error for email: ahmed.ehsan13@gmail.com Transaction numbers are only allowed on a replica set member or mongos {
+  "ok": 0,
+  "code": 20,
+  "codeName": "IllegalOperation",
+  "stack": "MongoServerError: Transaction numbers are only allowed on a replica set member or mongos\n    at Connection.onMessage (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:202:26)\n    at MessageStream.<anonymous> (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:124:16)\n    at MessageStream._write (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:556:12)\n    at _write (node:internal/streams/writable:490:10)\n    at Writable.write (node:internal/streams/writable:494:10)\n    at Socket.ondata (node:internal/streams/readable:985:22)\n    at Socket.emit (node:events:514:28)"
+}
+2024-04-07 14:54:35 [info]: Signup attempt for email: ahmed.ehsan13@gmail.com 
+2024-04-07 14:54:35 [error]: Signup error for email: ahmed.ehsan13@gmail.com Transaction numbers are only allowed on a replica set member or mongos {
+  "ok": 0,
+  "code": 20,
+  "codeName": "IllegalOperation",
+  "stack": "MongoServerError: Transaction numbers are only allowed on a replica set member or mongos\n    at Connection.onMessage (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:202:26)\n    at MessageStream.<anonymous> (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:124:16)\n    at MessageStream._write (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:556:12)\n    at _write (node:internal/streams/writable:490:10)\n    at Writable.write (node:internal/streams/writable:494:10)\n    at Socket.ondata (node:internal/streams/readable:985:22)\n    at Socket.emit (node:events:514:28)"
+}
+2024-04-07 14:54:37 [info]: Signup attempt for email: ahmed.ehsan13@gmail.com 
+2024-04-07 14:54:38 [error]: Signup error for email: ahmed.ehsan13@gmail.com Transaction numbers are only allowed on a replica set member or mongos {
+  "ok": 0,
+  "code": 20,
+  "codeName": "IllegalOperation",
+  "stack": "MongoServerError: Transaction numbers are only allowed on a replica set member or mongos\n    at Connection.onMessage (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:202:26)\n    at MessageStream.<anonymous> (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:124:16)\n    at MessageStream._write (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:556:12)\n    at _write (node:internal/streams/writable:490:10)\n    at Writable.write (node:internal/streams/writable:494:10)\n    at Socket.ondata (node:internal/streams/readable:985:22)\n    at Socket.emit (node:events:514:28)"
+}
+2024-04-07 14:57:07 [info]: Signup attempt for email: ahmed.ehsan13@gmail.com 
+2024-04-07 14:57:08 [info]: User signed up successfully for email: ahmed.ehsan13@gmail.com 
+2024-04-07 14:57:36 [info]: Signup attempt for email: ahmed.ehsan14@gmail.com 
+2024-04-07 14:57:37 [info]: User signed up successfully for email: ahmed.ehsan14@gmail.com 
+2024-04-07 14:58:32 [info]: Signup attempt for email: ahmed.ehsan14@gmail.com 
+2024-04-07 14:58:32 [info]: User already exists for email: ahmed.ehsan14@gmail.com 
+2024-04-07 14:58:34 [info]: Signup attempt for email: ahmed.ehsan14@gmail.com 
+2024-04-07 14:58:34 [info]: User already exists for email: ahmed.ehsan14@gmail.com 
+2024-04-07 14:58:37 [info]: Signup attempt for email: ahmed.ehsan15@gmail.com 
+2024-04-07 14:58:38 [info]: User signed up successfully for email: ahmed.ehsan15@gmail.com 
+2024-04-07 14:59:07 [info]: Signup attempt for email: ahmed.ehsan15@gmail.com 
+2024-04-07 14:59:07 [info]: User already exists for email: ahmed.ehsan15@gmail.com 
+2024-04-07 14:59:16 [info]: Signup attempt for email: ahmed.ehsan16@gmail.com 
+2024-04-07 14:59:16 [info]: User signed up successfully for email: ahmed.ehsan16@gmail.com 
+2024-04-07 15:01:57 [info]: Signup attempt for email: ahmed.ehsan17@gmail.com 
+2024-04-07 15:01:58 [error]: Signup error for email: ahmed.ehsan17@gmail.com Transaction numbers are only allowed on a replica set member or mongos {
+  "ok": 0,
+  "code": 20,
+  "codeName": "IllegalOperation",
+  "stack": "MongoServerError: Transaction numbers are only allowed on a replica set member or mongos\n    at Connection.onMessage (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:202:26)\n    at MessageStream.<anonymous> (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:124:16)\n    at MessageStream._write (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:556:12)\n    at _write (node:internal/streams/writable:490:10)\n    at Writable.write (node:internal/streams/writable:494:10)\n    at Socket.ondata (node:internal/streams/readable:985:22)\n    at Socket.emit (node:events:514:28)"
+}
+2024-04-07 15:04:55 [info]: Signup attempt for email: ahmed.ehsan17@gmail.com 
+2024-04-07 15:04:55 [info]: User signed up successfully for email: ahmed.ehsan17@gmail.com 
+2024-04-07 15:05:43 [info]: Signup attempt for email: ahmed.ehsan18@gmail.com 
+2024-04-07 15:05:43 [info]: User signed up successfully for email: ahmed.ehsan18@gmail.com 
+2024-04-07 15:06:24 [info]: Signup attempt for email: ahmed.ehsan18@gmail.com 
+2024-04-07 15:06:25 [info]: User already exists for email: ahmed.ehsan18@gmail.com 
+2024-04-07 15:06:25 [error]: Signup error for email: ahmed.ehsan18@gmail.com User already exists {
+  "stack": "Error: User already exists\n    at signup (file:///home/lothbrok/Documents/projects/ticketing-system/server/controllers/user.js:53:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+}
+2024-04-07 15:06:35 [info]: Signup attempt for email: ahmed.ehsan19@gmail.com 
+2024-04-07 15:06:36 [info]: User signed up successfully for email: ahmed.ehsan19@gmail.com 
+2024-04-07 15:07:27 [info]: Signup attempt for email: ahmed.ehsan20@gmail.com 
+2024-04-07 15:07:27 [info]: User signed up successfully for email: ahmed.ehsan20@gmail.com 
+2024-04-07 15:07:29 [info]: Signup attempt for email: ahmed.ehsan20@gmail.com 
+2024-04-07 15:07:29 [info]: User already exists for email: ahmed.ehsan20@gmail.com 
+2024-04-07 15:07:29 [error]: Signup error for email: ahmed.ehsan20@gmail.com User already exists {
+  "stack": "Error: User already exists\n    at signup (file:///home/lothbrok/Documents/projects/ticketing-system/server/controllers/user.js:53:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+}
+2024-04-07 15:35:58 [info]: Signup attempt for email: ahmed.ehsan21@gmail.com 
+2024-04-07 15:35:58 [error]: Signup error for email: ahmed.ehsan21@gmail.com Command find requires authentication {
+  "ok": 0,
+  "code": 13,
+  "codeName": "Unauthorized",
+  "$clusterTime": {
+    "clusterTime": {
+      "$timestamp": "7355056542925717505"
+    },
+    "signature": {
+      "hash": "rwg8pyZ68sbddn4w/UM+yVY4cYA=",
+      "keyId": {
+        "low": 7,
+        "high": 1712482339,
+        "unsigned": false
+      }
+    }
+  },
+  "operationTime": {
+    "$timestamp": "7355056542925717505"
+  },
+  "stack": "MongoServerError: Command find requires authentication\n    at Connection.onMessage (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:202:26)\n    at MessageStream.<anonymous> (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:124:16)\n    at MessageStream._write (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:556:12)\n    at _write (node:internal/streams/writable:490:10)\n    at Writable.write (node:internal/streams/writable:494:10)\n    at Socket.ondata (node:internal/streams/readable:985:22)\n    at Socket.emit (node:events:514:28)"
+}
+2024-04-07 15:39:23 [info]: Signup attempt for email: ahmed.ehsan21@gmail.com 
+2024-04-07 15:39:23 [error]: Signup error for email: ahmed.ehsan21@gmail.com Command find requires authentication {
+  "ok": 0,
+  "code": 13,
+  "codeName": "Unauthorized",
+  "$clusterTime": {
+    "clusterTime": {
+      "$timestamp": "7355057449163816961"
+    },
+    "signature": {
+      "hash": "9Ca60j/Ay0F6sQuNli6I1bfelW4=",
+      "keyId": {
+        "low": 7,
+        "high": 1712482339,
+        "unsigned": false
+      }
+    }
+  },
+  "operationTime": {
+    "$timestamp": "7355057449163816961"
+  },
+  "stack": "MongoServerError: Command find requires authentication\n    at Connection.onMessage (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:202:26)\n    at MessageStream.<anonymous> (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:124:16)\n    at MessageStream._write (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:556:12)\n    at _write (node:internal/streams/writable:490:10)\n    at Writable.write (node:internal/streams/writable:494:10)\n    at Socket.ondata (node:internal/streams/readable:985:22)\n    at Socket.emit (node:events:514:28)"
+}
+2024-04-07 15:44:42 [info]: Signup attempt for email: ahmed.ehsan21@gmail.com 
+2024-04-07 15:44:43 [error]: Signup error for email: ahmed.ehsan21@gmail.com Transaction numbers are only allowed on a replica set member or mongos {
+  "ok": 0,
+  "code": 20,
+  "codeName": "IllegalOperation",
+  "stack": "MongoServerError: Transaction numbers are only allowed on a replica set member or mongos\n    at Connection.onMessage (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:202:26)\n    at MessageStream.<anonymous> (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:124:16)\n    at MessageStream._write (/home/lothbrok/Documents/projects/ticketing-system/server/node_modules/mongodb/lib/cmap/message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:556:12)\n    at _write (node:internal/streams/writable:490:10)\n    at Writable.write (node:internal/streams/writable:494:10)\n    at Socket.ondata (node:internal/streams/readable:985:22)\n    at Socket.emit (node:events:514:28)"
+}
+2024-04-07 15:49:36 [error]: Signup error for email: ahmed.ehsan21@gmail.com Failed to create wallet {
+  "stack": "Error: Failed to create wallet\n    at signup (file:///home/lothbrok/Documents/projects/ticketing-system/server/controllers/user.js:71:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+}
+2024-04-07 15:51:48 [error]: Signup error for email: ahmed.ehsan21@gmail.com Failed to create wallet {
+  "stack": "Error: Failed to create wallet\n    at signup (file:///home/lothbrok/Documents/projects/ticketing-system/server/controllers/user.js:71:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+}
+2024-04-07 15:52:03 [error]: Signup error for email: ahmed.ehsan21@gmail.com Failed to create wallet {
+  "stack": "Error: Failed to create wallet\n    at signup (file:///home/lothbrok/Documents/projects/ticketing-system/server/controllers/user.js:71:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+}
+2024-04-07 15:53:22 [error]: Signup error for email: ahmed.ehsan21@gmail.com Failed to create wallet
+2024-04-07 15:54:03 [info]: User signed up successfully for email: ahmed.ehsan21@gmail.com

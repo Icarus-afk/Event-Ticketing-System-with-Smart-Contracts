@@ -6,13 +6,13 @@ const winstonLogger = winston.createLogger({
     winston.format.timestamp({
       format: 'YYYY-MM-DD HH:mm:ss'
     }),
-    winston.format.errors({ stack: true }),
+    winston.format.errors({ stack: false }),
     winston.format.splat(),
     winston.format.json(),
     winston.format.printf(info => {
-      const { timestamp, level, message, ...extra } = info;
+      const { timestamp, level, message } = info;
 
-      return `${timestamp} [${level}]: ${message} ${Object.keys(extra).length ? JSON.stringify(extra, null, 2) : ''}`;
+      return `${timestamp} [${level}]: ${message}`;
     })
   ),
   transports: [
