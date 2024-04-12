@@ -196,3 +196,14 @@
 2024-04-07 15:59:51 [info]: User signed in successfully for email: ahmed.ehsan8@gmail.com
 2024-04-07 15:59:52 [info]: Signin attempt for email: ahmed.ehsan8@gmail.com
 2024-04-07 15:59:52 [info]: User signed in successfully for email: ahmed.ehsan8@gmail.com
+2024-04-13 03:04:37 [info]: Signin attempt for email: ahmed.ehsan8@gmail.com
+2024-04-13 03:04:37 [info]: User signed in successfully for email: ahmed.ehsan8@gmail.com
+2024-04-13 03:05:07 [info]: Signin attempt for email: ahmed.ehsan1@gmail.com
+2024-04-13 03:05:07 [info]: User signed in successfully for email: ahmed.ehsan1@gmail.com
+2024-04-13 03:13:17 [info]: Signin attempt for email: ahmed.ehsan2@gmail.com
+2024-04-13 03:13:17 [info]: User signed in successfully for email: ahmed.ehsan2@gmail.com
+2024-04-13 03:16:51 [info]: Signin attempt for email: ahmed.ehsan3@gmail.com
+2024-04-13 03:16:51 [info]: User signed in successfully for email: ahmed.ehsan3@gmail.com
+2024-04-13 03:24:24 [info]: Signin attempt for email: ahmed.ehsan4@gmail.com
+2024-04-13 03:24:24 [info]: User signed in successfully for email: ahmed.ehsan4@gmail.com
+2024-04-13 03:25:10 [error]: Get user details error for id: 66084075dffd27ad43914fde Expected property name or '}' in JSON at position 4

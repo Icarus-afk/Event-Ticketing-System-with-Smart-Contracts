@@ -5,11 +5,15 @@ import UserModel from "../models/user.js";
 import { createWallet } from "../utils/initWallet.js";
 import dotenv from 'dotenv';
 import logger from '../utils/consoleLogger.js'
+import redisClient from '../utils//initRedis.js';
+
+
 
 dotenv.config();
 
 
 const secret = process.env.JWT_SECRET;
+
 
 export const signin = async (req, res) => {
   const { email, password } = req.body;
@@ -58,7 +62,7 @@ export const signup = async (req, res) => {
       password: hashedPassword,
       name: `${firstName} ${lastName}`,
       isAdmin: isAdmin || false,
-      isOrganizer: isOrganizer || false, 
+      isOrganizer: isOrganizer || false,
       isActive: true,
       status: 'pending'
     };
@@ -76,7 +80,7 @@ export const signup = async (req, res) => {
     const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
 
     logger.info(`User signed up successfully for email: ${email}`);
-    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result, token} });
+    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result, token } });
 
   } catch (error) {
     logger.error(`Signup error for email: ${email}`, error);
@@ -138,3 +142,28 @@ export const deleteUser = async (req, res) => {
   }
 };
 
+
+
+export const getUserDetails = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    let userDetails = await redisClient.get(`user:${id}`);
+
+    if (!userDetails) {
+      userDetails = await UserModel.findOne({ _id: id });
+
+      if (!userDetails) {
+        return res.status(404).json({ code: 404, success: false, message: "User not found" });
+      }
+      await redisClient.setex(`user:${userDetails.name}`, 3600, JSON.stringify(userDetails));
+    } else {
+      userDetails = JSON.parse(userDetails);
+    }
+
+    res.status(200).json({ code: 200, success: true, data: userDetails });
+  } catch (err) {
+    logger.error
+    res.status(500).json({ code: 500, success: false, message: "Something went wrong" });
+  }
+};

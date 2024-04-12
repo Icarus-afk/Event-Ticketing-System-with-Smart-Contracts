@@ -1,38 +1,27 @@
-import Redis from 'ioredis';
+import redisClient from '../utils/initRedis.js'
 
-const redisClient = new Redis({
-    host: 'localhost',
-    port: 6379, 
-  });
-  redisClient.on('connect', () => {
-    console.log('Connected to Redis');
-  });
-  
-  redisClient.on('error', (err) => {
-    console.error('Redis connection error:', err);
-  });
+function rateLimit(options) {
+  const { windowMs, maxRequests } = options;
 
+  return async function(req, res, next) {
+    const ip = req.headers['x-forwarded-for'] || req.ip;
+    console.log('IP:', ip); // Log the IP address
 
-  function rateLimit(options) {
-    const { windowMs, maxRequests } = options;
+    const currentTimestamp = Date.now();
 
-    return async function(req, res, next) {
-        const ip = req.headers['x-forwarded-for'] || req.ip;
-        console.log('IP:', ip); // Log the IP address
+    // Get the request count for this IP
+    const requestCount = Number(await redisClient.hget('rateLimit', ip)) || 0;
 
-        const currentTimestamp = Date.now();
-
-        const data = await redisClient.lrange(ip, 0, -1);
-
-        const timestamps = data.map(Number).filter(timestamp => timestamp > currentTimestamp - windowMs);
-
-        if (timestamps.length < maxRequests) {
-            await redisClient.lpush(ip, currentTimestamp);
-            await redisClient.expire(ip, windowMs / 1000);
-            next();
-        } else {
-            res.status(429).json({ status: 'error', message: 'Too Many Requests, Try after 1 hour', statusCode: 429});        }
-    };
+    if (requestCount < maxRequests) {
+      // Increment the request count
+      await redisClient.hincrby('rateLimit', ip, 1);
+      // Set the hash to expire after windowMs milliseconds
+      await redisClient.pexpire('rateLimit', windowMs);
+      next();
+    } else {
+      res.status(429).json({ status: 'error', message: 'Too Many Requests, Try after 1 hour', statusCode: 429});
+    }
+  };
 }
 
 const limiter = rateLimit({ windowMs: 60 * 60 * 1000, maxRequests: 500 });
