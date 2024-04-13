@@ -7,7 +7,8 @@ import moment from 'moment';
 import dotenv from 'dotenv'
 import crypto from 'crypto';
 import logger from '../utils/consoleLogger.js'
-
+import { getIo } from '../utils/initSocket.js';
+import { v4 as uuidv4 } from 'uuid';
 
 dotenv.config()
 
@@ -22,6 +23,8 @@ const EventManagementContract = new web3Instance.eth.Contract(contractABI, contr
 
 export const createEvent = async (req, res) => {
     try {
+        const io = getIo();
+
         logger.info('Creating event...');
         const { name, date, time, price, totalTickets } = req.body;
 
@@ -56,6 +59,11 @@ export const createEvent = async (req, res) => {
             logger.info('Initialization vector is undefined');
             return res.status(500).json({ success: false, message: 'Initialization vector is undefined', statusCode: 500 });
         }
+        const existingEvent = await Event.findOne({ name, organizer });
+        if (existingEvent) {
+            logger.info('Event with this name already exists for this organizer');
+            return res.status(400).json({ success: false, message: 'Event with this name already exists for this organizer', statusCode: 400 });
+        }
         const dateTimestamp = moment(date, 'YYYY-MM-DD').unix();
         const timeTimestamp = moment(time, 'HH:mm').unix();
 
@@ -84,6 +92,8 @@ export const createEvent = async (req, res) => {
         const signedTx = await web3Instance.eth.accounts.signTransaction(tx, decryptedPrivateKey);
         await web3Instance.eth.sendSignedTransaction(signedTx.rawTransaction);
 
+        const eventId = uuidv4();
+
         const event = new Event({
             name,
             date,
@@ -91,12 +101,13 @@ export const createEvent = async (req, res) => {
             price,
             totalTickets,
             organizer,
-            eventId: (await EventManagementContract.methods.getTotalEvents().call()) - BigInt(1)
+            eventId
         });
 
         await event.save();
 
         logger.info('Event created successfully');
+        io.emit('newEvent', event);
         res.status(201).json({ success: true, message: 'Event created successfully', data: event, statusCode: 201 });
     } catch (error) {
         logger.error(error);
@@ -237,7 +248,7 @@ export const deleteEvent = async (req, res) => {
             logger.info('Event not found');
             return res.status(404).json({ success: false, message: 'Event not found', statusCode: 404 });
         }
-        
+
         await Event.deleteOne({ eventId });
 
         logger.info('Event deleted successfully');
@@ -252,9 +263,9 @@ export const deleteEvent = async (req, res) => {
 export const getEvents = async (req, res) => {
     try {
         logger.info('Getting events...');
-  
+
         const { name, date, time, price, totalTickets, organizer, eventId } = req.query;
-  
+
         let queryObject = {};
         if (name) queryObject.name = name;
         if (date) queryObject.date = date;
@@ -263,9 +274,9 @@ export const getEvents = async (req, res) => {
         if (totalTickets) queryObject.totalTickets = totalTickets;
         if (organizer) queryObject.organizer = organizer;
         if (eventId) queryObject.eventId = eventId;
-  
+
         const events = await Event.find(queryObject);
-  
+
         logger.info('Events retrieved successfully');
         res.status(200).json({ success: true, data: events, statusCode: 200 });
     } catch (error) {

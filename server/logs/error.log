@@ -95,3 +95,5 @@
 }
 2024-04-07 15:53:22 [error]: Signup error for email: ahmed.ehsan21@gmail.com Failed to create wallet
 2024-04-13 03:25:10 [error]: Get user details error for id: 66084075dffd27ad43914fde Expected property name or '}' in JSON at position 4
+2024-04-14 03:01:20 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-14 03:01:45 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
