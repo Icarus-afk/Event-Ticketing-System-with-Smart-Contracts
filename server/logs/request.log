@@ -510,3 +510,12 @@ Time: 4/14/2024, 3:18:51 AM, Method: POST, URL: /event/create, Status: 400
 Time: 4/14/2024, 3:18:56 AM, Method: POST, URL: /event/create, Status: 201
 Time: 4/14/2024, 3:20:36 AM, Method: POST, URL: /event/create, Status: 400
 Time: 4/14/2024, 3:20:43 AM, Method: POST, URL: /event/create, Status: 201
+Time: 4/15/2024, 8:10:57 AM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/15/2024, 8:11:46 AM, Method: POST, URL: /event/create, Status: 401
+Time: 4/15/2024, 8:11:52 AM, Method: POST, URL: /event/create, Status: 404
+Time: 4/15/2024, 8:12:02 AM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/15/2024, 8:12:11 AM, Method: POST, URL: /event/create, Status: 201
+Time: 4/15/2024, 8:15:24 AM, Method: POST, URL: /event/create, Status: 400
+Time: 4/15/2024, 8:15:34 AM, Method: POST, URL: /user/signin, Status: 200
+Time: 4/15/2024, 8:15:51 AM, Method: POST, URL: /user/signin, Status: 429
+Time: 4/15/2024, 8:18:48 AM, Method: POST, URL: /user/signin, Status: 200

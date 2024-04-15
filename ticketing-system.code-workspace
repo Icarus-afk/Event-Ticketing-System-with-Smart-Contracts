@@ -7,7 +7,7 @@
 	"settings": {
 		"workbench.colorCustomizations": {
 			"terminal.background": "#282B35",
-			"terminal.foreground": "#939599",
+			"terminal.foreground": "#dbdbdb",
 			"terminalCursor.background": "#939599",
 			"terminalCursor.foreground": "#939599",
 			"terminal.ansiBlack": "#282B35",

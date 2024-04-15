@@ -1,7 +1,7 @@
 // testClientSocket.js
 import io from 'socket.io-client';
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFobWVkLmVoc2FuMjNAZ21haWwuY29tIiwiaWQiOiI2NjFhZjNkYmY2MDI2NzYxY2I4NDFiMWEiLCJpYXQiOjE3MTMwNDIzOTYsImV4cCI6MTcxMzA0NTk5Nn0.PhWxxCjiyf7p5TR7qEHLIdJh8qZPm4l65F5HdolJELs"
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFobWVkLmVoc2FuMTRAZ21haWwuY29tIiwiaWQiOiI2NjEyNjAwMTBiODcyOTNhN2U5NTU2MWEiLCJpYXQiOjE3MTMxNDcwNTcsImV4cCI6MTcxMzE1MDY1N30.zUkb1DiCC9dxrLoQTjGT300A_O-R8584htASfLBryxg"
 
 const socket = io.connect('http://localhost:8000', {
     query: { token }
