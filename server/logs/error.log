@@ -97,3 +97,5 @@
 2024-04-13 03:25:10 [error]: Get user details error for id: 66084075dffd27ad43914fde Expected property name or '}' in JSON at position 4
 2024-04-14 03:01:20 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
 2024-04-14 03:01:45 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-16 09:26:02 [error]: redis is not defined
+2024-04-16 09:29:26 [error]: redis is not defined

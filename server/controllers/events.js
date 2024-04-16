@@ -9,6 +9,7 @@ import crypto from 'crypto';
 import logger from '../utils/consoleLogger.js'
 import { getIo } from '../utils/initSocket.js';
 import { v4 as uuidv4 } from 'uuid';
+import redisClient from '../utils/initRedis.js';
 
 dotenv.config()
 
@@ -275,9 +276,20 @@ export const getEvents = async (req, res) => {
         if (organizer) queryObject.organizer = organizer;
         if (eventId) queryObject.eventId = eventId;
 
+        const cacheKey = JSON.stringify(queryObject);
+
+        const cacheResult = await redisClient.get(cacheKey);
+        if (cacheResult) {
+            const events = JSON.parse(cacheResult);
+            logger.info('Events retrieved from cache');
+            return res.status(200).json({ success: true, data: events, statusCode: 200 });
+        }
+
         const events = await Event.find(queryObject);
 
-        logger.info('Events retrieved successfully');
+        await redisClient.set(cacheKey, JSON.stringify(events), 'EX', 60 * 60); // Cache expires after 1 hour
+
+        logger.info('Events retrieved from database');
         res.status(200).json({ success: true, data: events, statusCode: 200 });
     } catch (error) {
         logger.error(error);
