@@ -8,7 +8,6 @@ import logger from '../utils/consoleLogger.js'
 import redisClient from '../utils//initRedis.js';
 
 
-
 dotenv.config();
 
 
@@ -34,9 +33,14 @@ export const signin = async (req, res) => {
     }
 
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1h" });
+    const refreshToken = jwt.sign({ id: oldUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
+
+    res.cookie('accessToken', token, { httpOnly: true });
+    // res.cookie('token', token, { httpOnly: true, secure: true }); if the site is https 
+    res.cookie('refreshToken', refreshToken, { httpOnly: true });
 
     logger.info(`User signed in successfully for email: ${email}`);
-    res.status(200).json({ code: 200, success: true, message: "Signed in successfully", data: { result: oldUser, token } });
+    res.status(200).json({ code: 200, success: true, message: "Signed in successfully", data: { result: oldUser } });
 
   } catch (err) {
     logger.error(`Signin error for email: ${email}`, err);
@@ -44,7 +48,6 @@ export const signin = async (req, res) => {
   }
 };
 
-//two-phase commit pattern is used to ensure that the user is created only if the wallet is created successfully
 export const signup = async (req, res) => {
   const { email, password, firstName, lastName, isAdmin, isOrganizer } = req.body;
 
@@ -80,6 +83,7 @@ export const signup = async (req, res) => {
     const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
 
     logger.info(`User signed up successfully for email: ${email}`);
+;
     res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result, token } });
 
   } catch (error) {
@@ -143,7 +147,6 @@ export const deleteUser = async (req, res) => {
 };
 
 
-
 export const getUserDetails = async (req, res) => {
   const { id } = req.params;
 
@@ -165,5 +168,33 @@ export const getUserDetails = async (req, res) => {
   } catch (err) {
     logger.error
     res.status(500).json({ code: 500, success: false, message: "Something went wrong" });
+  }
+};
+
+
+export const refreshToken = async (req, res) => {
+  const refreshToken = req.body.token;
+
+  if (!refreshToken) {
+    return res.status(403).json({ success: false, message: 'Refresh token is required', code: 403 });
+  }
+
+  try {
+    const userData = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET);
+
+    const user = await UserModel.findById(userData.id);
+    if (!user) {
+      return res.status(404).json({ success: false, message: 'User not found', code: 404 });
+    }
+
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const newRefreshToken = jwt.sign({ id: user._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
+
+    res.cookie('accessToken', token, { httpOnly: true, secure: true });
+    res.cookie('refreshToken', newRefreshToken, { httpOnly: true, secure: true });
+    res.status(200).json({ success: true, message: 'Token refreshed successfully', code: 200 });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: 'Internal server error', code: 500 });
   }
 };
