@@ -141,3 +141,10 @@
 2024-04-18 09:49:03 [error]: Signup error for email: ahmed.ehsan69@gmail.com Failed to create wallet
 2024-04-18 09:51:12 [error]: error:0308010C:digital envelope routines::unsupported
 2024-04-18 09:51:12 [error]: Signup error for email: ahmed.ehsan24@gmail.com Failed to create wallet
+2024-04-18 11:06:06 [error]: data is not defined
+2024-04-18 12:11:59 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:12:17 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:12:57 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:13:19 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:14:32 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:14:40 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545

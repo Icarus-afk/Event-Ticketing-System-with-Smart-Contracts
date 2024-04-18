@@ -547,3 +547,221 @@
 2024-04-18 10:24:24 [info]: User signed up successfully for email: ahmed.ehsan30@gmail.com
 2024-04-18 10:24:57 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
 2024-04-18 10:24:58 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:39:14 [info]: Connected to Redis
+2024-04-18 10:46:46 [info]: Connected to Redis
+2024-04-18 10:46:46 [info]: Database connected successfully
+2024-04-18 10:46:46 [info]: Server running on port = 8000
+2024-04-18 10:46:49 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-18 10:46:49 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-18 10:47:04 [info]: Getting events...
+2024-04-18 10:47:04 [info]: Events retrieved from database
+2024-04-18 10:47:10 [info]: Connected to Redis
+2024-04-18 10:47:10 [info]: Database connected successfully
+2024-04-18 10:47:10 [info]: Server running on port = 8000
+2024-04-18 10:47:12 [info]: Getting events...
+2024-04-18 10:47:12 [info]: Events retrieved from cache
+2024-04-18 10:48:17 [info]: Connected to Redis
+2024-04-18 10:48:17 [info]: Database connected successfully
+2024-04-18 10:48:17 [info]: Server running on port = 8000
+2024-04-18 10:48:26 [info]: Connected to Redis
+2024-04-18 10:48:26 [info]: Database connected successfully
+2024-04-18 10:48:26 [info]: Server running on port = 8000
+2024-04-18 10:48:44 [info]: Getting events...
+2024-04-18 10:48:44 [info]: Events retrieved from cache
+2024-04-18 10:48:54 [info]: Getting events...
+2024-04-18 10:48:54 [info]: Events retrieved from cache
+2024-04-18 10:49:29 [info]: Connected to Redis
+2024-04-18 10:49:29 [info]: Database connected successfully
+2024-04-18 10:49:29 [info]: Server running on port = 8000
+2024-04-18 10:49:31 [info]: Getting events...
+2024-04-18 10:49:31 [info]: Events retrieved from cache
+2024-04-18 10:49:46 [info]: Connected to Redis
+2024-04-18 10:49:46 [info]: Database connected successfully
+2024-04-18 10:49:46 [info]: Server running on port = 8000
+2024-04-18 10:49:47 [info]: Getting events...
+2024-04-18 10:49:47 [info]: Events retrieved from cache
+2024-04-18 10:50:27 [info]: Connected to Redis
+2024-04-18 10:50:27 [info]: Database connected successfully
+2024-04-18 10:50:27 [info]: Server running on port = 8000
+2024-04-18 10:50:29 [info]: Getting events...
+2024-04-18 10:50:29 [info]: Events retrieved from cache
+2024-04-18 10:52:18 [info]: Getting events...
+2024-04-18 10:52:18 [info]: Events retrieved from database
+2024-04-18 10:53:22 [info]: Getting events...
+2024-04-18 10:53:22 [info]: Events retrieved from cache
+2024-04-18 10:53:29 [info]: Getting events...
+2024-04-18 10:53:29 [info]: Events retrieved from cache
+2024-04-18 10:54:09 [info]: Getting events...
+2024-04-18 10:54:09 [info]: Events retrieved from cache
+2024-04-18 10:56:07 [info]: Connected to Redis
+2024-04-18 10:56:07 [info]: Database connected successfully
+2024-04-18 10:56:07 [info]: Server running on port = 8000
+2024-04-18 10:56:11 [info]: Getting events...
+2024-04-18 10:56:11 [info]: Events retrieved from database
+2024-04-18 10:56:19 [info]: Getting events...
+2024-04-18 10:56:19 [info]: Events retrieved from database
+2024-04-18 10:56:28 [info]: Getting events...
+2024-04-18 10:56:28 [info]: Events retrieved from database
+2024-04-18 10:56:35 [info]: Getting events...
+2024-04-18 10:56:35 [info]: Events retrieved from database
+2024-04-18 10:58:34 [info]: Getting events...
+2024-04-18 10:58:34 [info]: Events retrieved from database
+2024-04-18 10:58:36 [info]: Getting events...
+2024-04-18 10:58:36 [info]: Events retrieved from cache
+2024-04-18 10:58:37 [info]: Getting events...
+2024-04-18 10:58:37 [info]: Events retrieved from cache
+2024-04-18 10:58:38 [info]: Getting events...
+2024-04-18 10:58:38 [info]: Events retrieved from cache
+2024-04-18 10:58:39 [info]: Getting events...
+2024-04-18 10:58:39 [info]: Events retrieved from cache
+2024-04-18 10:59:40 [info]: Connected to Redis
+2024-04-18 10:59:40 [info]: Database connected successfully
+2024-04-18 10:59:40 [info]: Server running on port = 8000
+2024-04-18 10:59:43 [info]: Getting events...
+2024-04-18 10:59:43 [info]: Events retrieved from cache
+2024-04-18 11:00:32 [info]: Getting events...
+2024-04-18 11:00:32 [info]: Events retrieved from database
+2024-04-18 11:00:45 [info]: Getting events...
+2024-04-18 11:00:45 [info]: Events retrieved from database
+2024-04-18 11:01:01 [info]: Getting events...
+2024-04-18 11:01:01 [info]: Events retrieved from cache
+2024-04-18 11:01:06 [info]: Getting events...
+2024-04-18 11:01:06 [info]: Events retrieved from cache
+2024-04-18 11:02:06 [info]: Database connected successfully
+2024-04-18 11:02:06 [info]: Server running on port = 8000
+2024-04-18 11:02:06 [info]: Connected to Redis
+2024-04-18 11:02:15 [info]: Getting events...
+2024-04-18 11:02:15 [info]: Events retrieved from cache
+2024-04-18 11:02:35 [info]: Database connected successfully
+2024-04-18 11:02:35 [info]: Server running on port = 8000
+2024-04-18 11:02:35 [info]: Connected to Redis
+2024-04-18 11:02:37 [info]: Connected to Redis
+2024-04-18 11:02:37 [info]: Database connected successfully
+2024-04-18 11:02:37 [info]: Server running on port = 8000
+2024-04-18 11:02:39 [info]: Getting events...
+2024-04-18 11:02:39 [info]: Events retrieved from cache
+2024-04-18 11:02:41 [info]: Getting events...
+2024-04-18 11:02:41 [info]: Events retrieved from cache
+2024-04-18 11:02:41 [info]: Getting events...
+2024-04-18 11:02:41 [info]: Events retrieved from cache
+2024-04-18 11:02:49 [info]: Getting events...
+2024-04-18 11:02:49 [info]: Events retrieved from database
+2024-04-18 11:02:52 [info]: Getting events...
+2024-04-18 11:02:52 [info]: Events retrieved from cache
+2024-04-18 11:03:47 [info]: Connected to Redis
+2024-04-18 11:03:47 [info]: Database connected successfully
+2024-04-18 11:03:47 [info]: Server running on port = 8000
+2024-04-18 11:03:50 [info]: Getting events...
+2024-04-18 11:03:50 [info]: Events retrieved from cache
+2024-04-18 11:04:23 [info]: Getting events...
+2024-04-18 11:04:23 [info]: Events retrieved from database
+2024-04-18 11:04:23 [info]: Getting events...
+2024-04-18 11:04:23 [info]: Events retrieved from cache
+2024-04-18 11:05:25 [info]: Connected to Redis
+2024-04-18 11:05:25 [info]: Database connected successfully
+2024-04-18 11:05:25 [info]: Server running on port = 8000
+2024-04-18 11:05:52 [info]: Connected to Redis
+2024-04-18 11:05:52 [info]: Database connected successfully
+2024-04-18 11:05:52 [info]: Server running on port = 8000
+2024-04-18 11:05:55 [info]: Getting events...
+2024-04-18 11:05:55 [info]: Events retrieved from cache
+2024-04-18 11:06:06 [info]: Getting events...
+2024-04-18 11:06:06 [error]: data is not defined
+2024-04-18 11:06:28 [info]: Connected to Redis
+2024-04-18 11:06:28 [info]: Database connected successfully
+2024-04-18 11:06:28 [info]: Server running on port = 8000
+2024-04-18 11:06:30 [info]: Getting events...
+2024-04-18 11:06:30 [info]: Events retrieved from database
+2024-04-18 11:06:32 [info]: Getting events...
+2024-04-18 11:06:32 [info]: Events retrieved from cache
+2024-04-18 11:08:03 [info]: Connected to Redis
+2024-04-18 11:08:03 [info]: Database connected successfully
+2024-04-18 11:08:03 [info]: Server running on port = 8000
+2024-04-18 11:08:07 [info]: Getting events...
+2024-04-18 11:08:07 [info]: Events retrieved from database
+2024-04-18 11:08:15 [info]: Connected to Redis
+2024-04-18 11:08:15 [info]: Database connected successfully
+2024-04-18 11:08:15 [info]: Server running on port = 8000
+2024-04-18 11:08:17 [info]: Getting events...
+2024-04-18 11:08:17 [info]: Events retrieved from cache
+2024-04-18 11:08:33 [info]: Getting events...
+2024-04-18 11:08:33 [info]: Events retrieved from database
+2024-04-18 11:08:43 [info]: Getting events...
+2024-04-18 11:08:43 [info]: Events retrieved from cache
+2024-04-18 11:08:44 [info]: Getting events...
+2024-04-18 11:08:44 [info]: Events retrieved from cache
+2024-04-18 11:09:54 [info]: Connected to Redis
+2024-04-18 11:58:49 [info]: Connected to Redis
+2024-04-18 11:58:49 [info]: Database connected successfully
+2024-04-18 11:58:49 [info]: Server running on port = 8000
+2024-04-18 12:01:25 [info]: Connected to Redis
+2024-04-18 12:01:25 [info]: Database connected successfully
+2024-04-18 12:01:25 [info]: Server running on port = 8000
+2024-04-18 12:03:30 [info]: Connected to Redis
+2024-04-18 12:03:30 [info]: Database connected successfully
+2024-04-18 12:03:30 [info]: Server running on port = 8000
+2024-04-18 12:03:42 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-18 12:03:42 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-18 12:03:50 [info]: Getting events...
+2024-04-18 12:03:50 [info]: Events retrieved from cache
+2024-04-18 12:11:04 [info]: Connected to Redis
+2024-04-18 12:11:04 [info]: Database connected successfully
+2024-04-18 12:11:04 [info]: Server running on port = 8000
+2024-04-18 12:11:07 [info]: Getting events...
+2024-04-18 12:11:07 [info]: Events retrieved from cache
+2024-04-18 12:11:59 [info]: Creating event...
+2024-04-18 12:11:59 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:12:15 [info]: Database connected successfully
+2024-04-18 12:12:15 [info]: Server running on port = 8000
+2024-04-18 12:12:15 [info]: Connected to Redis
+2024-04-18 12:12:17 [info]: Creating event...
+2024-04-18 12:12:17 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:12:55 [info]: Connected to Redis
+2024-04-18 12:12:55 [info]: Database connected successfully
+2024-04-18 12:12:55 [info]: Server running on port = 8000
+2024-04-18 12:12:57 [info]: Creating event...
+2024-04-18 12:12:57 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:13:02 [info]: Connected to Redis
+2024-04-18 12:13:02 [info]: Database connected successfully
+2024-04-18 12:13:02 [info]: Server running on port = 8000
+2024-04-18 12:13:13 [info]: Connected to Redis
+2024-04-18 12:13:13 [info]: Database connected successfully
+2024-04-18 12:13:13 [info]: Server running on port = 8000
+2024-04-18 12:13:19 [info]: Creating event...
+2024-04-18 12:13:19 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:14:07 [info]: Connected to Redis
+2024-04-18 12:14:07 [info]: Database connected successfully
+2024-04-18 12:14:07 [info]: Server running on port = 8000
+2024-04-18 12:14:32 [info]: Creating event...
+2024-04-18 12:14:32 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:14:38 [info]: Connected to Redis
+2024-04-18 12:14:38 [info]: Database connected successfully
+2024-04-18 12:14:38 [info]: Server running on port = 8000
+2024-04-18 12:14:40 [info]: Creating event...
+2024-04-18 12:14:40 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 12:15:08 [info]: Connected to Redis
+2024-04-18 12:15:08 [info]: Database connected successfully
+2024-04-18 12:15:08 [info]: Server running on port = 8000
+2024-04-18 12:15:12 [info]: Creating event...
+2024-04-18 12:15:12 [info]: Event created successfully
+2024-04-18 12:15:33 [info]: Creating event...
+2024-04-18 12:15:33 [info]: Event with this name already exists for this organizer
+2024-04-18 12:15:44 [info]: Getting events...
+2024-04-18 12:15:44 [info]: Events retrieved from cache
+2024-04-18 12:16:25 [info]: Connected to Redis
+2024-04-18 12:16:25 [info]: Database connected successfully
+2024-04-18 12:16:25 [info]: Server running on port = 8000
+2024-04-18 12:16:33 [info]: Creating event...
+2024-04-18 12:16:33 [info]: Event created successfully
+2024-04-18 12:17:08 [info]: Connected to Redis
+2024-04-18 12:17:08 [info]: Database connected successfully
+2024-04-18 12:17:08 [info]: Server running on port = 8000
+2024-04-18 12:21:29 [info]: Connected to Redis
+2024-04-18 12:21:29 [info]: Database connected successfully
+2024-04-18 12:21:29 [info]: Server running on port = 8000
+2024-04-18 12:21:38 [info]: Getting events...
+2024-04-18 12:21:38 [info]: Events retrieved from database
+2024-04-18 12:21:45 [info]: Getting events...
+2024-04-18 12:21:45 [info]: Events retrieved from database
+2024-04-18 12:21:45 [info]: Getting events...
+2024-04-18 12:21:45 [info]: Events retrieved from database

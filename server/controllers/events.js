@@ -106,7 +106,6 @@ export const createEvent = async (req, res) => {
         });
 
         await event.save();
-
         logger.info('Event created successfully');
         io.emit('newEvent', event);
         res.status(201).json({ success: true, message: 'Event created successfully', data: event, statusCode: 201 });
@@ -261,11 +260,66 @@ export const deleteEvent = async (req, res) => {
 };
 
 
+// export const getEvents = async (req, res) => {
+//     try {
+//         logger.info('Getting events...');
+
+//         const { name, date, time, price, totalTickets, organizer, eventId, page = 1, limit = 10 } = req.query;
+
+//         let queryObject = {};
+//         if (name) queryObject.name = name;
+//         if (date) queryObject.date = date;
+//         if (time) queryObject.time = time;
+//         if (price) queryObject.price = price;
+//         if (totalTickets) queryObject.totalTickets = totalTickets;
+//         if (organizer) queryObject.organizer = organizer;
+//         if (eventId) queryObject.eventId = eventId;
+
+//         const cacheKey = JSON.stringify(queryObject);
+
+//         // When retrieving data from Redis
+//         const cacheResult = await redisClient.zrangebyscore(cacheKey, page, page);
+//         if (cacheResult.length > 0) {
+//             const dataFromCache = JSON.parse(cacheResult[0]);
+//             logger.info('Events retrieved from cache');
+//             return res.status(200).json({
+//                 success: true,
+//                 data: dataFromCache.events,
+//                 currentPage: dataFromCache.currentPage,
+//                 totalPages: dataFromCache.totalPages,
+//                 totalRecords: dataFromCache.totalRecords,
+//                 statusCode: 200
+//             });
+//         }
+
+//         const totalRecords = await Event.countDocuments(queryObject);
+//         const totalPages = Math.ceil(totalRecords / limit);
+//         const skip = (page - 1) * limit;
+
+//         const events = await Event.find(queryObject).skip(skip).limit(limit);
+
+//         const dataToCache = {
+//             events,
+//             currentPage: page,
+//             totalPages,
+//             totalRecords,
+//         };
+//         await redisClient.zadd(cacheKey, page, JSON.stringify(dataToCache));
+
+//         logger.info('Events retrieved from database');
+//         res.status(200).json({ success: true, data: events, currentPage: page, totalPages, totalRecords, statusCode: 200 });
+//     } catch (error) {
+//         logger.error(error);
+//         res.status(500).json({ success: false, message: 'An error occurred while getting the events', statusCode: 500 });
+//     }
+// };
+
+
 export const getEvents = async (req, res) => {
     try {
         logger.info('Getting events...');
 
-        const { name, date, time, price, totalTickets, organizer, eventId } = req.query;
+        const { name, date, time, price, totalTickets, organizer, eventId, page = 1, limit = 10 } = req.query;
 
         let queryObject = {};
         if (name) queryObject.name = name;
@@ -276,21 +330,14 @@ export const getEvents = async (req, res) => {
         if (organizer) queryObject.organizer = organizer;
         if (eventId) queryObject.eventId = eventId;
 
-        const cacheKey = JSON.stringify(queryObject);
+        const totalRecords = await Event.countDocuments(queryObject);
+        const totalPages = Math.ceil(totalRecords / limit);
+        const skip = (page - 1) * limit;
 
-        const cacheResult = await redisClient.get(cacheKey);
-        if (cacheResult) {
-            const events = JSON.parse(cacheResult);
-            logger.info('Events retrieved from cache');
-            return res.status(200).json({ success: true, data: events, statusCode: 200 });
-        }
-
-        const events = await Event.find(queryObject);
-
-        await redisClient.set(cacheKey, JSON.stringify(events), 'EX', 60 * 60); // Cache expires after 1 hour
+        const events = await Event.find(queryObject).skip(skip).limit(limit);
 
         logger.info('Events retrieved from database');
-        res.status(200).json({ success: true, data: events, statusCode: 200 });
+        res.status(200).json({ success: true, data: events, currentPage: page, totalPages, totalRecords, statusCode: 200 });
     } catch (error) {
         logger.error(error);
         res.status(500).json({ success: false, message: 'An error occurred while getting the events', statusCode: 500 });
