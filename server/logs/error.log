@@ -148,3 +148,4 @@
 2024-04-18 12:13:19 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
 2024-04-18 12:14:32 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
 2024-04-18 12:14:40 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-18 13:57:53 [error]: BSON field 'skip' value must be >= 0, actual value '-10'

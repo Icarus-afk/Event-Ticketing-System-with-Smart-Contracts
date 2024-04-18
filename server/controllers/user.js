@@ -35,12 +35,9 @@ export const signin = async (req, res) => {
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1h" });
     const refreshToken = jwt.sign({ id: oldUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
 
-    res.cookie('accessToken', token, { httpOnly: true });
-    // res.cookie('token', token, { httpOnly: true, secure: true }); if the site is https 
-    res.cookie('refreshToken', refreshToken, { httpOnly: true });
 
     logger.info(`User signed in successfully for email: ${email}`);
-    res.status(200).json({ code: 200, success: true, message: "Signed in successfully", data: { result: oldUser } });
+    res.status(200).json({ code: 200, success: true, message: "Signed in successfully", data: { result: oldUser, a_Token:token, r_Token:refreshToken } });
 
   } catch (err) {
     logger.error(`Signin error for email: ${email}`, err);
@@ -83,7 +80,7 @@ export const signup = async (req, res) => {
     const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
 
     logger.info(`User signed up successfully for email: ${email}`);
-;
+    ;
     res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result, token } });
 
   } catch (error) {
@@ -197,4 +194,4 @@ export const refreshToken = async (req, res) => {
     console.error(err);
     res.status(500).json({ success: false, message: 'Internal server error', code: 500 });
   }
-};p
+};

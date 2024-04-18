@@ -319,7 +319,7 @@ export const getEvents = async (req, res) => {
     try {
         logger.info('Getting events...');
 
-        const { name, date, time, price, totalTickets, organizer, eventId, page = 1, limit = 10 } = req.query;
+        const { name, date, time, price, totalTickets, organizer, eventId, page = 1, limit = 6 } = req.query;
 
         let queryObject = {};
         if (name) queryObject.name = name;

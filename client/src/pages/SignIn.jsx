@@ -3,12 +3,16 @@ import axios from 'axios';
 import { Button, Input, Box, VStack, Heading, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useCustomToast } from '../components/useCustomToast';
+import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
+
 
 const SignIn = () => {
     const { showSuccessToast, showErrorToast } = useCustomToast();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const navigate = useNavigate()
     const handleSubmit = async (e) => {
         e.preventDefault();
         const config = {
@@ -23,7 +27,11 @@ const SignIn = () => {
         try {
             const response = await axios(config);
             if (response.data.success) {
-                showSuccessToast(response.data.message);
+                console.log(response.data.a_Token)
+                Cookies.set('a_Token', response.data.data.a_Token);
+                Cookies.set('r_Token', response.data.data.r_Token);
+                    showSuccessToast(response.data.message);
+                navigate('/');
             } else {
                 showErrorToast(response.data.message);
             }
