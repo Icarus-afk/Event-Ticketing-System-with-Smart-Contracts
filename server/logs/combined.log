@@ -410,3 +410,140 @@
 2024-04-17 08:45:28 [info]: Server running on port = 8000
 2024-04-17 08:45:54 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
 2024-04-17 08:45:54 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-17 08:46:31 [info]: Connected to Redis
+2024-04-17 09:30:00 [info]: Connected to Redis
+2024-04-17 09:30:02 [error]: Error Occured ---> connect ECONNREFUSED 172.17.0.1:27017
+2024-04-17 10:03:43 [info]: Connected to Redis
+2024-04-17 10:03:43 [info]: Database connected successfully
+2024-04-17 10:03:43 [info]: Server running on port = 8000
+2024-04-17 10:14:02 [info]: Connected to Redis
+2024-04-17 10:14:02 [info]: Database connected successfully
+2024-04-17 10:14:02 [info]: Server running on port = 8000
+2024-04-17 10:19:09 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-17 10:19:09 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:31:36 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-17 10:31:36 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:31:39 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-17 10:31:39 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:31:41 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-17 10:31:41 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:33:39 [info]: Accounts ----> :
+2024-04-17 10:33:39 [info]: Creating wallet for user:
+2024-04-17 10:33:39 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:33:39 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:33:58 [info]: Accounts ----> :
+2024-04-17 10:33:58 [info]: Creating wallet for user:
+2024-04-17 10:33:58 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:33:58 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:23 [info]: Accounts ----> :
+2024-04-17 10:34:23 [info]: Creating wallet for user:
+2024-04-17 10:34:23 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:23 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:25 [info]: Accounts ----> :
+2024-04-17 10:34:25 [info]: Creating wallet for user:
+2024-04-17 10:34:25 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:25 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:44 [info]: Accounts ----> :
+2024-04-17 10:34:44 [info]: Creating wallet for user:
+2024-04-17 10:34:44 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:44 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:52 [info]: Accounts ----> :
+2024-04-17 10:34:52 [info]: Creating wallet for user:
+2024-04-17 10:34:52 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:52 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:52 [info]: Accounts ----> :
+2024-04-17 10:34:52 [info]: Creating wallet for user:
+2024-04-17 10:34:52 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:52 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:53 [info]: Accounts ----> :
+2024-04-17 10:34:53 [info]: Creating wallet for user:
+2024-04-17 10:34:53 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:53 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:53 [info]: Accounts ----> :
+2024-04-17 10:34:53 [info]: Creating wallet for user:
+2024-04-17 10:34:53 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:53 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:53 [info]: Accounts ----> :
+2024-04-17 10:34:53 [info]: Creating wallet for user:
+2024-04-17 10:34:53 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:53 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:53 [info]: Accounts ----> :
+2024-04-17 10:34:53 [info]: Creating wallet for user:
+2024-04-17 10:34:53 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:53 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:37:10 [info]: Connected to Redis
+2024-04-18 02:49:28 [info]: Connected to Redis
+2024-04-18 02:49:28 [info]: Database connected successfully
+2024-04-18 02:49:28 [info]: Server running on port = 8000
+2024-04-18 02:54:56 [info]: Connected to Redis
+2024-04-18 08:13:29 [info]: Connected to Redis
+2024-04-18 08:13:29 [info]: Database connected successfully
+2024-04-18 08:13:29 [info]: Server running on port = 8000
+2024-04-18 08:26:58 [info]: Accounts ----> :
+2024-04-18 08:26:58 [info]: Creating wallet for user:
+2024-04-18 08:26:58 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-18 08:26:58 [error]: Signup error for email: ahmed.ehsan69@gmail.com Failed to create wallet
+2024-04-18 08:27:00 [info]: Accounts ----> :
+2024-04-18 08:27:00 [info]: Creating wallet for user:
+2024-04-18 08:27:00 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-18 08:27:00 [error]: Signup error for email: ahmed.ehsan69@gmail.com Failed to create wallet
+2024-04-18 09:19:16 [info]: Connected to Redis
+2024-04-18 09:19:16 [info]: Database connected successfully
+2024-04-18 09:19:16 [info]: Server running on port = 8000
+2024-04-18 09:48:48 [info]: Accounts ----> :
+2024-04-18 09:48:48 [info]: Creating wallet for user:
+2024-04-18 09:48:48 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-18 09:48:48 [error]: Signup error for email: ahmed.ehsan69@gmail.com Failed to create wallet
+2024-04-18 09:49:03 [info]: Accounts ----> :
+2024-04-18 09:49:03 [info]: Creating wallet for user:
+2024-04-18 09:49:03 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-18 09:49:03 [error]: Signup error for email: ahmed.ehsan69@gmail.com Failed to create wallet
+2024-04-18 09:51:12 [info]: Accounts ----> :
+2024-04-18 09:51:12 [info]: Creating wallet for user:
+2024-04-18 09:51:12 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-18 09:51:12 [error]: Signup error for email: ahmed.ehsan24@gmail.com Failed to create wallet
+2024-04-18 09:51:45 [info]: Connected to Redis
+2024-04-18 09:51:45 [info]: Database connected successfully
+2024-04-18 09:51:45 [info]: Server running on port = 8000
+2024-04-18 09:51:48 [info]: Accounts ----> :
+2024-04-18 09:51:48 [info]: Creating wallet for user:
+2024-04-18 09:51:48 [info]: Wallet saved successfully
+2024-04-18 09:51:48 [info]: Wallet connected to Ganache network
+2024-04-18 09:51:48 [info]: User signed up successfully for email: ahmed.ehsan69@gmail.com
+2024-04-18 10:18:42 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:18:42 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:18:44 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:18:44 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:18:47 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:18:47 [info]: Invalid credentials for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:18:50 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:18:50 [info]: Invalid credentials for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:20:12 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:20:12 [info]: Invalid credentials for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:20:22 [info]: Accounts ----> :
+2024-04-18 10:20:22 [info]: Creating wallet for user:
+2024-04-18 10:20:22 [info]: Wallet saved successfully
+2024-04-18 10:20:22 [info]: Wallet connected to Ganache network
+2024-04-18 10:20:22 [info]: User signed up successfully for email: ahmed.ehsan26@gmail.com
+2024-04-18 10:20:42 [info]: Accounts ----> :
+2024-04-18 10:20:42 [info]: Creating wallet for user:
+2024-04-18 10:20:42 [info]: Wallet saved successfully
+2024-04-18 10:20:42 [info]: Wallet connected to Ganache network
+2024-04-18 10:20:42 [info]: User signed up successfully for email: ahmed.ehsan27@gmail.com
+2024-04-18 10:21:53 [info]: Accounts ----> :
+2024-04-18 10:21:53 [info]: Creating wallet for user:
+2024-04-18 10:21:53 [info]: Wallet saved successfully
+2024-04-18 10:21:53 [info]: Wallet connected to Ganache network
+2024-04-18 10:21:53 [info]: User signed up successfully for email: ahmed.ehsan28@gmail.com
+2024-04-18 10:22:07 [info]: Accounts ----> :
+2024-04-18 10:22:07 [info]: Creating wallet for user:
+2024-04-18 10:22:07 [info]: Wallet saved successfully
+2024-04-18 10:22:07 [info]: Wallet connected to Ganache network
+2024-04-18 10:22:07 [info]: User signed up successfully for email: ahmed.ehsan29@gmail.com
+2024-04-18 10:24:24 [info]: Accounts ----> :
+2024-04-18 10:24:24 [info]: Creating wallet for user:
+2024-04-18 10:24:24 [info]: Wallet saved successfully
+2024-04-18 10:24:24 [info]: Wallet connected to Ganache network
+2024-04-18 10:24:24 [info]: User signed up successfully for email: ahmed.ehsan30@gmail.com
+2024-04-18 10:24:57 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-18 10:24:58 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com

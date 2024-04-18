@@ -1,11 +1,14 @@
-/** @type {import('tailwindcss').Config} */
+import daisyui from 'daisyui';
 
+/** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/preline/preline.js',],
-  plugins: 'preline/plugin',
+  content: [
+    'node_modules/daisyui/dist/**/*.js',
+    'node_modules/react-daisyui/dist/**/*.js',
+  ],
+  plugins: [daisyui],
   theme: {
     extend: {},
-  }
+  },
 }
 

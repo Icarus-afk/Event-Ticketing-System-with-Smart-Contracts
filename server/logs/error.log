@@ -100,3 +100,44 @@
 2024-04-16 09:26:02 [error]: redis is not defined
 2024-04-16 09:29:26 [error]: redis is not defined
 2024-04-16 12:58:20 [error]: Signin error for email: ahmed.ehsan23@gmail.com string is not defined
+2024-04-17 09:30:02 [error]: Error Occured ---> connect ECONNREFUSED 172.17.0.1:27017
+2024-04-17 10:19:09 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-17 10:19:09 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:31:36 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-17 10:31:36 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:31:39 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-17 10:31:39 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:31:41 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-17 10:31:41 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:33:39 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:33:39 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:33:58 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:33:58 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:23 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:23 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:25 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:25 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:44 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:44 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:52 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:52 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:52 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:52 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:53 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:53 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:53 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:53 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:53 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:53 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-17 10:34:53 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-17 10:34:53 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-18 08:26:58 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-18 08:26:58 [error]: Signup error for email: ahmed.ehsan69@gmail.com Failed to create wallet
+2024-04-18 08:27:00 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-18 08:27:00 [error]: Signup error for email: ahmed.ehsan69@gmail.com Failed to create wallet
+2024-04-18 09:48:48 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-18 09:48:48 [error]: Signup error for email: ahmed.ehsan69@gmail.com Failed to create wallet
+2024-04-18 09:49:03 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-18 09:49:03 [error]: Signup error for email: ahmed.ehsan69@gmail.com Failed to create wallet
+2024-04-18 09:51:12 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-18 09:51:12 [error]: Signup error for email: ahmed.ehsan24@gmail.com Failed to create wallet
