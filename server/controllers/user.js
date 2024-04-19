@@ -32,7 +32,7 @@ export const signin = async (req, res) => {
       return res.status(400).json({ code: 400, success: false, message: "Invalid credentials" });
     }
 
-    const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1h" });
+    const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1m" });
     const refreshToken = jwt.sign({ id: oldUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
 
 
@@ -77,7 +77,7 @@ export const signup = async (req, res) => {
 
     await UserModel.updateOne({ _id: result._id }, { status: 'active' });
 
-    const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
+    const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1m" });
 
     logger.info(`User signed up successfully for email: ${email}`);
     ;
@@ -184,14 +184,13 @@ export const refreshToken = async (req, res) => {
       return res.status(404).json({ success: false, message: 'User not found', code: 404 });
     }
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-    const newRefreshToken = jwt.sign({ id: user._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1m' });
 
-    res.cookie('accessToken', token, { httpOnly: true, secure: true });
-    res.cookie('refreshToken', newRefreshToken, { httpOnly: true, secure: true });
-    res.status(200).json({ success: true, message: 'Token refreshed successfully', code: 200 });
+    // res.cookie('accessToken', token, { httpOnly: true, secure: true });
+    // res.cookie('refreshToken', newRefreshToken, { httpOnly: true, secure: true });
+    res.status(200).json({ success: true, message: 'Token refreshed successfully', accessToken: token, code: 200 });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ success: false, message: 'Internal server error', code: 500 });
+    res.status(500).json({ success: false, message: 'Internal server error',  code: 500 });
   }
 };

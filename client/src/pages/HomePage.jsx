@@ -69,7 +69,7 @@ const HomePage = () => {
             </Flex>
             <Grid templateColumns="repeat(3, 1fr)" gap={6}>
                 {events.map((event, index) => (
-                    <LinkBox key={index} as="article">
+                    <LinkBox key={index} as="article">vit
                         <Box
                             w="full"
                             h="200px"
