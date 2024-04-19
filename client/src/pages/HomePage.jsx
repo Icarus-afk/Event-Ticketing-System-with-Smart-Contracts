@@ -40,8 +40,33 @@ const HomePage = () => {
     };
 
     useEffect(() => {
+        const fetchEvents = async (search = false) => {
+            let url = `http://localhost:8000/event/get?page=${currentPage}&limit=9`;
+            if (search) {
+                if (searchQuery) url += `&name=${searchQuery}`;
+                if (searchDate) url += `&date=${searchDate}`;
+            }
+
+            const config = {
+                method: 'get',
+                url: url,
+                headers: {
+                    'Authorization': `Bearer ${Cookies.get('a_Token')}`
+                },
+            };
+
+            try {
+                const response = await axios(config);
+                setEvents(response.data.data);
+                setCurrentPage(response.data.currentPage);
+                setTotalPages(response.data.totalPages);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
         fetchEvents();
-    }, []); // This will run only once when the component mounts
+    }, [fetchEvents]); // This will run only once when the component mounts
 
     useEffect(() => {
         if (searchButtonClicked) {

@@ -32,7 +32,7 @@ export const signin = async (req, res) => {
       return res.status(400).json({ code: 400, success: false, message: "Invalid credentials" });
     }
 
-    const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1m" });
+    const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1h" });
     const refreshToken = jwt.sign({ id: oldUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
 
 
@@ -77,7 +77,7 @@ export const signup = async (req, res) => {
 
     await UserModel.updateOne({ _id: result._id }, { status: 'active' });
 
-    const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1m" });
+    const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
 
     logger.info(`User signed up successfully for email: ${email}`);
     ;
@@ -130,7 +130,7 @@ export const deleteUser = async (req, res) => {
   try {
     const user = await UserModel.findByIdAndDelete(id);
 
-    if (!user) {
+    if (!user) {signin
       logger.info(`User not found for id: ${id}`);
       return res.status(404).json({ code: 404, success: false, message: `User not found` });
     }
@@ -184,7 +184,7 @@ export const refreshToken = async (req, res) => {
       return res.status(404).json({ success: false, message: 'User not found', code: 404 });
     }
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1m' });
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
     // res.cookie('accessToken', token, { httpOnly: true, secure: true });
     // res.cookie('refreshToken', newRefreshToken, { httpOnly: true, secure: true });
