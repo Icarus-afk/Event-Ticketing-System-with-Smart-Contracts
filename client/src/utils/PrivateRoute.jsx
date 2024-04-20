@@ -3,25 +3,15 @@ import { Navigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { Spinner } from '@chakra-ui/react';
+import PropTypes from 'prop-types';
+
 
 const PrivateRoute = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [tokensChanged, setTokensChanged] = useState(false); // Add tokensChanged state
   const location = useLocation();
 
   useEffect(() => {
-    const a_Token = Cookies.get('a_Token');
-    const r_Token = Cookies.get('r_Token');
-
-    setTokensChanged(true); // Set tokensChanged to true when tokens change
-  }, []);
-
-  useEffect(() => {
-    if (!tokensChanged) {
-      return;
-    }
-
     const checkAuthentication = async () => {
       setIsLoading(true); // Start loading
 
@@ -84,9 +74,7 @@ const PrivateRoute = ({ children }) => {
     };
 
     checkAuthentication();
-
-    setTokensChanged(false); // Set tokensChanged back to false after check
-  }, [tokensChanged]); // Run this hook when tokensChanged changes
+  }, []); // Run this hook when the component mounts
 
   if (isLoading) {
     return <Spinner />; // Render loading spinner
@@ -95,4 +83,7 @@ const PrivateRoute = ({ children }) => {
   return isAuthenticated ? children : <Navigate to="/signin" state={{ from: location }} />;
 };
 
+PrivateRoute.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 export default PrivateRoute;
