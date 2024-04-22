@@ -149,3 +149,81 @@
 2024-04-18 12:14:32 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
 2024-04-18 12:14:40 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
 2024-04-18 13:57:53 [error]: BSON field 'skip' value must be >= 0, actual value '-10'
+2024-04-20 10:51:15 [error]: Signup error for email: ahmed.ehsan28@gmail.com Cannot set headers after they are sent to the client
+2024-04-21 10:00:50 [error]: Web3 validator found 1 error[s]:
+value ""661af3dbf6026761cb841b1a"" at "/0" must pass "address" validation
+2024-04-21 10:01:59 [error]: Web3 validator found 1 error[s]:
+value ""661af3dbf6026761cb841b1a"" at "/0" must pass "address" validation
+2024-04-21 10:02:36 [error]: Web3 validator found 1 error[s]:
+value ""661af3dbf6026761cb841b1a"" at "/0" must pass "address" validation
+2024-04-21 10:03:55 [error]: Web3 validator found 1 error[s]:
+value ""661af3dbf6026761cb841b1a"" at "/0" must pass "address" validation
+2024-04-21 10:06:09 [error]: Error Occured ---> EIO: i/o error, write
+2024-04-21 10:52:44 [error]: Web3 validator found 1 error[s]:
+value ""661af3dbf6026761cb841b1a"" at "/0" must pass "address" validation
+2024-04-21 10:54:34 [error]: Web3 validator found 1 error[s]:
+value ""661af3dbf6026761cb841b1a"" at "/0" must pass "address" validation
+2024-04-21 10:55:11 [error]: log is not defined
+2024-04-21 10:55:39 [error]: Web3 validator found 1 error[s]:
+value ""661af3dbf6026761cb841b1a"" at "/0" must pass "address" validation
+2024-04-21 10:57:06 [error]: Web3 validator found 1 error[s]:
+value ""661af3dbf6026761cb841b1a"" at "/0" must pass "address" validation
+2024-04-21 10:59:51 [error]: Web3 validator found 1 error[s]:
+value ""661af3dbf6026761cb841b1a"" at "/0" must pass "address" validation
+2024-04-21 11:00:13 [error]: Web3 validator found 1 error[s]:
+value ""661af3dbf6026761cb841b1a"" at "/0" must pass "address" validation
+2024-04-21 11:03:12 [error]: Cast to ObjectId failed for value "0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b" (type string) at path "organizer" for model "Event"
+2024-04-21 11:06:27 [error]: Cast to ObjectId failed for value "0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b" (type string) at path "organizer" for model "Event"
+2024-04-21 11:06:45 [error]: Cast to ObjectId failed for value "0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b" (type string) at path "organizer" for model "Event"
+2024-04-21 11:07:43 [error]: Cast to ObjectId failed for value "0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b" (type string) at path "organizer" for model "Event"
+2024-04-21 11:08:35 [error]: Cast to ObjectId failed for value "0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b" (type string) at path "organizer" for model "Event"
+2024-04-21 11:09:25 [error]: Cast to ObjectId failed for value "0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b" (type string) at path "organizer" for model "Event"
+2024-04-21 11:10:56 [error]: Cast to ObjectId failed for value "0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b" (type string) at path "organizer" for model "Event"
+2024-04-21 11:11:38 [error]: Cast to ObjectId failed for value "0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b" (type string) at path "organizer" for model "Event"
+2024-04-21 11:12:31 [error]: Cast to ObjectId failed for value "0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b" (type string) at path "organizer" for model "Event"
+2024-04-21 11:14:46 [error]: user is not defined
+2024-04-21 11:17:31 [error]: Event validation failed: attendees.0: Cast to [ObjectId] failed for value "[ 'userId1', 'userId2' ]" (type string) at path "attendees.0" because of "CastError"
+2024-04-21 11:20:55 [error]: Web3 validator found 1 error[s]:
+value "af9dbfdd-9cb6-4d6d-97f5-543549dfb06a" at "/0" must pass "uint256" validation
+2024-04-21 11:27:49 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:30:25 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:31:31 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:31:33 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:33:29 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:36:04 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:36:34 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:37:50 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:38:13 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:39:55 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:41:12 [error]: Returned error: Cannot wrap a "object" as a json-rpc type
+2024-04-21 11:42:15 [error]: Error happened while trying to execute a function inside a smart contract
+2024-04-21 11:43:25 [error]: gas is not defined
+2024-04-21 11:44:08 [error]: Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:01:05 [error]: Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:02:42 [error]: Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:03:51 [error]: Invalid signature. "Signer Error Signer Error  gasLimit is too low. given 21000, need at least 22472."
+2024-04-21 15:05:05 [error]: Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:06:37 [error]: Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:09:45 [error]: An error occurred while updating the event: Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:11:15 [error]: An error occurred while updating the event: Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:16:46 [error]: Error updating event Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:18:29 [error]: Error updating event Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:19:04 [error]: Error updating event Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:20:18 [error]: Error updating event Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:21:19 [error]: Error updating event Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:23:19 [error]: Error updating event Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:23:28 [error]: Error updating event Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:24:18 [error]: Error updating event Error happened while trying to execute a function inside a smart contract
+2024-04-21 15:26:43 [error]: Error updating event Error happened while trying to execute a function inside a smart contract
+2024-04-22 13:30:31 [error]: Error updating event Error happened while trying to execute a function inside a smart contract
+2024-04-22 13:34:55 [error]: Error updating event dateTimestamp is not defined
+2024-04-22 13:37:55 [error]: Error updating event web3 is not defined
+2024-04-22 13:39:27 [error]: Error updating event in MongoDB: Cast to ObjectId failed for value "0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b" (type string) at path "organizer" because of "BSONError"
+2024-04-22 13:47:46 [error]: Error updating event Cast to ObjectId failed for value "2" (type number) at path "_id" for model "User"
+2024-04-22 13:48:04 [error]: Error updating event Cast to ObjectId failed for value "2" (type number) at path "_id" for model "User"
+2024-04-22 13:51:56 [error]: Error updating event Cast to ObjectId failed for value "2" (type number) at path "_id" for model "User"
+2024-04-22 13:54:03 [error]: Error updating event Cast to ObjectId failed for value "2" (type number) at path "_id" for model "User"
+2024-04-22 13:54:07 [error]: Error updating event Cast to ObjectId failed for value "2" (type number) at path "_id" for model "User"
+2024-04-22 13:55:30 [error]: Error updating event attendees is not defined
+2024-04-22 13:55:41 [error]: Error updating event attendees is not defined
+2024-04-22 13:57:15 [error]: Error happened while trying to execute a function inside a smart contract

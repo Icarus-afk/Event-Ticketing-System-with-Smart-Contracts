@@ -8,8 +8,6 @@ import dotenv from 'dotenv'
 import crypto from 'crypto';
 import logger from '../utils/consoleLogger.js'
 import { getIo } from '../utils/initSocket.js';
-import { v4 as uuidv4 } from 'uuid';
-import redisClient from '../utils/initRedis.js';
 
 dotenv.config()
 
@@ -27,8 +25,7 @@ export const createEvent = async (req, res) => {
         const io = getIo();
 
         logger.info('Creating event...');
-        const { name, date, time, price, totalTickets } = req.body;
-
+        const { name, date, time, price, totalTickets, location, description, attendees, tags, image } = req.body;
         if (!req.userId) {
             logger.info('User not authenticated');
             return res.status(401).json({ success: false, message: 'User not authenticated', statusCode: 401 });
@@ -46,9 +43,11 @@ export const createEvent = async (req, res) => {
         }
 
         const organizer = wallet.address;
-        if (!organizer) {
-            logger.info('User wallet address is undefined');
-            return res.status(500).json({ success: false, message: 'User wallet address is undefined', statusCode: 500 });
+        const organizerUser = await User.findById(wallet.userId);
+
+        if (!organizerUser) {
+            logger.info('Organizer not found');
+            return res.status(404).json({ success: false, message: 'Organizer not found', statusCode: 404 });
         }
 
         const balance = await web3Instance.eth.getBalance(organizer);
@@ -60,7 +59,7 @@ export const createEvent = async (req, res) => {
             logger.info('Initialization vector is undefined');
             return res.status(500).json({ success: false, message: 'Initialization vector is undefined', statusCode: 500 });
         }
-        const existingEvent = await Event.findOne({ name, organizer });
+        const existingEvent = await Event.findOne({ name, organizer: organizerUser._id });
         if (existingEvent) {
             logger.info('Event with this name already exists for this organizer');
             return res.status(400).json({ success: false, message: 'Event with this name already exists for this organizer', statusCode: 400 });
@@ -73,7 +72,7 @@ export const createEvent = async (req, res) => {
             dateTimestamp,
             timeTimestamp,
             web3Instance.utils.toWei(price, 'ether'),
-            totalTickets
+            totalTickets,
         );
 
         const gas = await createEvent.estimateGas({ from: organizer });
@@ -93,18 +92,20 @@ export const createEvent = async (req, res) => {
         const signedTx = await web3Instance.eth.accounts.signTransaction(tx, decryptedPrivateKey);
         await web3Instance.eth.sendSignedTransaction(signedTx.rawTransaction);
 
-        const eventId = uuidv4();
-
         const event = new Event({
             name,
             date,
             time,
             price,
             totalTickets,
-            organizer,
-            eventId
+            organizer: organizerUser._id,
+            eventId: (await EventManagementContract.methods.getTotalEvents().call()) - BigInt(1),
+            location,
+            description,
+            attendees,
+            tags,
+            image
         });
-
         await event.save();
         logger.info('Event created successfully');
         io.emit('newEvent', event);
@@ -119,9 +120,13 @@ export const createEvent = async (req, res) => {
 export const updateEvent = async (req, res) => {
     try {
         logger.info('Updating event...');
+        const { name, date, time, price, totalTickets, location, description, tags, image } = req.body;
         const { eventId } = req.params;
-        const { name, date, time, price, totalTickets } = req.body;
 
+        const eventDate = new Date(`${date}T00:00`);
+        const dateTimestamp = Math.floor(eventDate.getTime() / 1000);
+
+        const eventIdNumber = parseInt(eventId, 10);
         const user = await User.findById(req.userId);
         if (!user) {
             logger.info('User not found');
@@ -135,9 +140,11 @@ export const updateEvent = async (req, res) => {
         }
 
         const organizer = wallet.address;
-        if (!organizer) {
-            logger.info('User wallet address is undefined');
-            return res.status(500).json({ success: false, message: 'User wallet address is undefined', statusCode: 500 });
+        const organizerUser = await User.findById(wallet.userId);
+
+        if (!organizerUser) {
+            logger.info('Organizer not found');
+            return res.status(404).json({ success: false, message: 'Organizer not found', statusCode: 404 });
         }
 
         logger.info(`Organizer's wallet address: ${organizer}`);
@@ -151,47 +158,66 @@ export const updateEvent = async (req, res) => {
         let decryptedPrivateKey = decipher.update(wallet.privateKey, 'hex', 'utf8');
         decryptedPrivateKey += decipher.final('utf8');
 
-        const eventDate = new Date(`${date}T00:00`);
-        const dateTimestamp = Math.floor(eventDate.getTime() / 1000);
-
         const timeParts = time.split(':');
         const timeInSeconds = (+timeParts[0]) * 60 * 60 + (+timeParts[1]) * 60;
 
-        const updateEvent = EventManagementContract.methods.updateEvent(eventId, name, dateTimestamp, timeInSeconds, web3Instance.utils.toWei(price, 'ether'), totalTickets);
+        const eventDetails = await EventManagementContract.methods.getEventDetails(eventIdNumber).call();
+        if (eventDetails.organizer !== organizer) {
+            logger.info('User is not the organizer of this event');
+            return res.status(403).json({ success: false, message: 'User is not the organizer of this event', statusCode: 403 });
+        }
 
-        const gas = await updateEvent.estimateGas({ from: organizer });
+        const updateEvent = EventManagementContract.methods.updateEvent(eventIdNumber, name, dateTimestamp, timeInSeconds, web3Instance.utils.toWei(price, 'ether'), totalTickets);
 
+        let gas;
+        try {
+            gas = await updateEvent.estimateGas({ from: organizer });
+        } catch (error) {
+            logger.error('Error estimating gas:', error);
+            gas = 21000; 
+        }
         const tx = {
             to: EventManagementContract.options.address,
             data: updateEvent.encodeABI(),
             gas,
             gasPrice: web3Instance.utils.toWei('2', 'gwei'),
-            nonce: await web3Instance.eth.getTransactionCount(organizer)
+            nonce: await web3Instance.eth.getTransactionCount(organizer),
+            from: organizer
         };
 
-        const signedTx = await web3Instance.eth.accounts.signTransaction(tx, decryptedPrivateKey);
-        await web3Instance.eth.sendSignedTransaction(signedTx.rawTransaction);
-
-        const event = await Event.findOne({ eventId });
-        if (!event) {
-            logger.info('Event not found');
-            return res.status(404).json({ success: false, message: 'Event not found', statusCode: 404 });
+        try {
+            const signedTx = await web3Instance.eth.accounts.signTransaction(tx, decryptedPrivateKey);
+            await web3Instance.eth.sendSignedTransaction(signedTx.rawTransaction);
+        } catch (error) {
+            logger.error('Error updating event in smart contract:', error);
+            return res.status(500).json({ message: 'Error updating event in smart contract', error });
         }
+        try {
+            const event = await Event.findOneAndUpdate({ eventId }, {
+                name,
+                date,
+                time,
+                price,
+                totalTickets,
+                organizerUser,
+                eventId,
+                location,
+                description,
+                tags,
+                image
+            }, { new: true }); 
 
-        event.name = name;
-        event.date = date;
-        event.time = time;
-        event.price = price;
-        event.totalTickets = totalTickets;
-        await event.save();
-
-        logger.info('Event updated successfully');
-        res.status(200).json({ success: true, message: 'Event updated successfully', data: event, statusCode: 200 });
+            res.status(200).json({ success: true, message: 'Event updated successfully', event, statusCode: 200 });
+        } catch (error) {
+            logger.error('Error updating event in MongoDB:', error);
+            res.status(500).json({ success: false, message: 'Error updating event', statusCode: 500 });
+        }
     } catch (error) {
-        logger.error(error);
-        res.status(500).json({ success: false, message: 'An error occurred while updating the event', statusCode: 500 });
+        logger.error('Error updating event', error);
+        res.status(500).json({ success: false, message: 'Error updating event', statusCode: 500 });
     }
-};
+}
+
 
 
 export const deleteEvent = async (req, res) => {
@@ -322,7 +348,7 @@ export const getEvents = async (req, res) => {
         const { name, date, time, price, totalTickets, organizer, eventId, page = 1, limit = 6 } = req.query;
 
         let queryObject = {};
-        if (name) queryObject.name = name;
+        if (name) queryObject.name = { $regex: new RegExp(name), $options: 'i' };
         if (date) queryObject.date = date;
         if (time) queryObject.time = time;
         if (price) queryObject.price = price;

@@ -4,7 +4,7 @@ export const useCustomToast = () => {
   const toast = useToast();
 
   const showSuccessToast = (message) => {
-    toast({
+    return toast({
       title: message,
       status: "success",
       duration: 5000,
@@ -13,7 +13,7 @@ export const useCustomToast = () => {
   };
 
   const showErrorToast = (message) => {
-    toast({
+    return toast({
       title: message,
       status: "error",
       duration: 5000,

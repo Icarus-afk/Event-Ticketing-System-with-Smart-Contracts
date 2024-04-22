@@ -1,12 +1,14 @@
 import mongoose from "mongoose";
 
-const eventSchema = new mongoose.Schema({
+const { Schema } = mongoose;
+
+const eventSchema = new Schema({
     name: {
         type: String,
         required: true
     },
     date: {
-        type: String,
+        type: Date,
         required: true
     },
     time: {
@@ -22,14 +24,33 @@ const eventSchema = new mongoose.Schema({
         required: true
     },
     organizer: {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: 'User',
         required: true
     },
     eventId: {
         type: String,
         unique: true,
         required: true
-    }
+    },
+    location: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    attendees: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }],
+    tags: [{
+        type: String
+    }],
+    image: [{
+        type: String
+    }]
 });
 
 export default mongoose.model('Event', eventSchema);
