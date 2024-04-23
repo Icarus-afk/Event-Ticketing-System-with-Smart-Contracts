@@ -227,3 +227,9 @@ value "af9dbfdd-9cb6-4d6d-97f5-543549dfb06a" at "/0" must pass "uint256" validat
 2024-04-22 13:55:30 [error]: Error updating event attendees is not defined
 2024-04-22 13:55:41 [error]: Error updating event attendees is not defined
 2024-04-22 13:57:15 [error]: Error happened while trying to execute a function inside a smart contract
+2024-04-22 14:37:07 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-22 14:37:28 [error]: Event validation failed: image.0: Cast to [string] failed for value "[ {} ]" (type string) at path "image.0" because of "CastError"
+2024-04-22 14:43:24 [error]: Web3 validator found 1 error[s]:
+value at "/0" is required
+2024-04-23 10:05:23 [error]: upload is not defined
+2024-04-23 10:43:37 [error]: Cannot read properties of undefined (reading 'find')

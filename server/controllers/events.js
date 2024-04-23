@@ -8,13 +8,13 @@ import dotenv from 'dotenv'
 import crypto from 'crypto';
 import logger from '../utils/consoleLogger.js'
 import { getIo } from '../utils/initSocket.js';
+// import { handleImageUpload } from "../utils/imageHandler.js";
 
 dotenv.config()
 
 
 const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
 const web3Instance = new Web3('http://localhost:7545');
-
 const contractABI = contractData.abi;
 const contractAddress = '0x914a5DB53877D3f4A0F0F664Ce3264F3800D4B4B';
 const EventManagementContract = new web3Instance.eth.Contract(contractABI, contractAddress);
@@ -25,7 +25,9 @@ export const createEvent = async (req, res) => {
         const io = getIo();
 
         logger.info('Creating event...');
-        const { name, date, time, price, totalTickets, location, description, attendees, tags, image } = req.body;
+        const { name, date, time, price, totalTickets, location, description, attendees, tags } = req.body;
+        const image = req.file;
+
         if (!req.userId) {
             logger.info('User not authenticated');
             return res.status(401).json({ success: false, message: 'User not authenticated', statusCode: 401 });
@@ -104,11 +106,13 @@ export const createEvent = async (req, res) => {
             description,
             attendees,
             tags,
-            image
+            image: image ? image.path : null, 
         });
+
         await event.save();
         logger.info('Event created successfully');
         io.emit('newEvent', event);
+        event._doc.image = image ? `${req.protocol}://${req.get('host')}/${event.image}` : null;
         res.status(201).json({ success: true, message: 'Event created successfully', data: event, statusCode: 201 });
     } catch (error) {
         logger.error(error);
@@ -345,7 +349,7 @@ export const getEvents = async (req, res) => {
     try {
         logger.info('Getting events...');
 
-        const { name, date, time, price, totalTickets, organizer, eventId, page = 1, limit = 6 } = req.query;
+        const { name, date, time, price, totalTickets, organizer, eventId, page = 1, limit = 6, sort = 'desc' } = req.query;
 
         let queryObject = {};
         if (name) queryObject.name = { $regex: new RegExp(name), $options: 'i' };
@@ -360,7 +364,9 @@ export const getEvents = async (req, res) => {
         const totalPages = Math.ceil(totalRecords / limit);
         const skip = (page - 1) * limit;
 
-        const events = await Event.find(queryObject).skip(skip).limit(limit);
+        const sortOrder = sort === 'desc' ? -1 : 1;
+
+        const events = await Event.find(queryObject).sort({date: sortOrder}).skip(skip).limit(limit);
 
         logger.info('Events retrieved from database');
         res.status(200).json({ success: true, data: events, currentPage: page, totalPages, totalRecords, statusCode: 200 });

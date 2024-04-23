@@ -9046,3 +9046,321 @@ value "af9dbfdd-9cb6-4d6d-97f5-543549dfb06a" at "/0" must pass "uint256" validat
 2024-04-22 14:04:08 [info]: Database connected successfully
 2024-04-22 14:04:08 [info]: Server running on port = 8000
 2024-04-22 14:05:57 [info]: Connected to Redis
+2024-04-22 14:18:01 [info]: Connected to Redis
+2024-04-22 14:18:01 [info]: Database connected successfully
+2024-04-22 14:18:01 [info]: Server running on port = 8000
+2024-04-22 14:18:08 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-22 14:18:09 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-22 14:18:10 [info]: Getting events...
+2024-04-22 14:18:10 [info]: Events retrieved from database
+2024-04-22 14:18:10 [info]: Getting events...
+2024-04-22 14:18:10 [info]: Events retrieved from database
+2024-04-22 14:18:12 [info]: Getting events...
+2024-04-22 14:18:12 [info]: Events retrieved from database
+2024-04-22 14:18:12 [info]: Getting events...
+2024-04-22 14:18:12 [info]: Events retrieved from database
+2024-04-22 14:18:14 [info]: Getting events...
+2024-04-22 14:18:14 [info]: Events retrieved from database
+2024-04-22 14:18:14 [info]: Getting events...
+2024-04-22 14:18:14 [info]: Events retrieved from database
+2024-04-22 14:18:19 [info]: Getting events...
+2024-04-22 14:18:19 [info]: Events retrieved from database
+2024-04-22 14:18:20 [info]: Getting events...
+2024-04-22 14:18:20 [info]: Events retrieved from database
+2024-04-22 14:18:37 [info]: Connected to Redis
+2024-04-22 14:31:42 [info]: Connected to Redis
+2024-04-22 14:31:42 [info]: Database connected successfully
+2024-04-22 14:31:42 [info]: Server running on port = 8000
+2024-04-22 14:31:43 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-22 14:31:43 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-22 14:31:43 [info]: Getting events...
+2024-04-22 14:31:43 [info]: Events retrieved from database
+2024-04-22 14:31:43 [info]: Getting events...
+2024-04-22 14:31:43 [info]: Events retrieved from database
+2024-04-22 14:35:52 [info]: Getting events...
+2024-04-22 14:35:52 [info]: Events retrieved from database
+2024-04-22 14:35:52 [info]: Getting events...
+2024-04-22 14:35:52 [info]: Events retrieved from database
+2024-04-22 14:36:10 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-22 14:36:10 [info]: Invalid credentials for email: ahmed.ehsan23@gmail.com
+2024-04-22 14:36:13 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-22 14:36:13 [info]: Invalid credentials for email: ahmed.ehsan23@gmail.com
+2024-04-22 14:36:29 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-22 14:36:29 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-22 14:36:29 [info]: Getting events...
+2024-04-22 14:36:29 [info]: Events retrieved from database
+2024-04-22 14:36:29 [info]: Getting events...
+2024-04-22 14:36:29 [info]: Events retrieved from database
+2024-04-22 14:37:07 [info]: Creating event...
+2024-04-22 14:37:07 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-22 14:37:28 [info]: Creating event...
+2024-04-22 14:37:28 [error]: Event validation failed: image.0: Cast to [string] failed for value "[ {} ]" (type string) at path "image.0" because of "CastError"
+2024-04-22 14:41:40 [info]: Creating event...
+2024-04-22 14:41:40 [info]: Total tickets is required
+2024-04-22 14:42:24 [info]: Creating event...
+2024-04-22 14:42:24 [info]: Total tickets is required
+2024-04-22 14:43:22 [info]: Connected to Redis
+2024-04-22 14:43:22 [info]: Database connected successfully
+2024-04-22 14:43:22 [info]: Server running on port = 8000
+2024-04-22 14:43:24 [info]: Creating event...
+2024-04-22 14:43:24 [error]: Web3 validator found 1 error[s]:
+value at "/0" is required
+2024-04-22 14:43:42 [info]: Connected to Redis
+2024-04-22 14:43:42 [info]: Database connected successfully
+2024-04-22 14:43:42 [info]: Server running on port = 8000
+2024-04-22 14:48:59 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-22 14:48:59 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-22 14:49:10 [info]: Creating event...
+2024-04-22 14:49:10 [info]: Total tickets is required
+2024-04-22 14:49:27 [info]: Creating event...
+2024-04-22 14:49:27 [info]: Total tickets is required
+2024-04-22 14:51:38 [info]: Connected to Redis
+2024-04-22 14:51:38 [info]: Database connected successfully
+2024-04-22 14:51:38 [info]: Server running on port = 8000
+2024-04-22 14:51:39 [info]: Database connected successfully
+2024-04-22 14:51:39 [info]: Server running on port = 8000
+2024-04-22 14:51:39 [info]: Connected to Redis
+2024-04-22 15:18:36 [info]: Connected to Redis
+2024-04-22 15:18:36 [info]: Database connected successfully
+2024-04-22 15:18:36 [info]: Server running on port = 8000
+2024-04-23 09:43:54 [info]: Connected to Redis
+2024-04-23 09:43:54 [info]: Database connected successfully
+2024-04-23 09:43:54 [info]: Server running on port = 8000
+2024-04-23 09:45:28 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-23 09:45:28 [info]: Invalid credentials for email: ahmed.ehsan23@gmail.com
+2024-04-23 09:45:40 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-23 09:45:40 [info]: Invalid credentials for email: ahmed.ehsan23@gmail.com
+2024-04-23 09:45:56 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-23 09:45:56 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-23 09:45:56 [info]: Getting events...
+2024-04-23 09:45:56 [info]: Events retrieved from database
+2024-04-23 09:45:56 [info]: Getting events...
+2024-04-23 09:45:56 [info]: Events retrieved from database
+2024-04-23 09:46:44 [info]: Creating event...
+2024-04-23 09:46:44 [info]: Total tickets is required
+2024-04-23 09:49:46 [info]: Creating event...
+2024-04-23 09:49:46 [info]: Total tickets is required
+2024-04-23 09:55:39 [info]: Connected to Redis
+2024-04-23 09:55:39 [info]: Database connected successfully
+2024-04-23 09:55:39 [info]: Server running on port = 8000
+2024-04-23 09:56:30 [info]: Database connected successfully
+2024-04-23 09:56:30 [info]: Server running on port = 8000
+2024-04-23 09:56:30 [info]: Connected to Redis
+2024-04-23 09:56:32 [info]: Database connected successfully
+2024-04-23 09:56:32 [info]: Server running on port = 8000
+2024-04-23 09:56:32 [info]: Connected to Redis
+2024-04-23 09:59:08 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-23 09:59:08 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-23 09:59:24 [info]: Creating event...
+2024-04-23 09:59:24 [info]: Total tickets is required
+2024-04-23 10:00:37 [info]: Creating event...
+2024-04-23 10:00:37 [info]: Total tickets is required
+2024-04-23 10:00:50 [info]: Connected to Redis
+2024-04-23 10:00:50 [info]: Database connected successfully
+2024-04-23 10:00:50 [info]: Server running on port = 8000
+2024-04-23 10:00:52 [info]: Creating event...
+2024-04-23 10:00:52 [info]: Total tickets is required
+2024-04-23 10:02:19 [info]: Creating event...
+2024-04-23 10:02:19 [info]: Total tickets is required
+2024-04-23 10:05:20 [info]: Connected to Redis
+2024-04-23 10:05:20 [info]: Database connected successfully
+2024-04-23 10:05:20 [info]: Server running on port = 8000
+2024-04-23 10:05:22 [info]: Creating event...
+2024-04-23 10:05:23 [error]: upload is not defined
+2024-04-23 10:06:18 [info]: Connected to Redis
+2024-04-23 10:06:19 [info]: Database connected successfully
+2024-04-23 10:06:19 [info]: Server running on port = 8000
+2024-04-23 10:06:21 [info]: Creating event...
+2024-04-23 10:06:21 [info]: Event with this name already exists for this organizer
+2024-04-23 10:07:00 [info]: Deleting event...
+2024-04-23 10:07:00 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:07:00 [info]: Event deleted successfully
+2024-04-23 10:07:15 [info]: Connected to Redis
+2024-04-23 10:07:15 [info]: Database connected successfully
+2024-04-23 10:07:15 [info]: Server running on port = 8000
+2024-04-23 10:07:20 [info]: Database connected successfully
+2024-04-23 10:07:20 [info]: Server running on port = 8000
+2024-04-23 10:07:20 [info]: Connected to Redis
+2024-04-23 10:07:22 [info]: Creating event...
+2024-04-23 10:07:22 [info]: Event created successfully
+2024-04-23 10:11:04 [info]: Connected to Redis
+2024-04-23 10:11:04 [info]: Database connected successfully
+2024-04-23 10:11:04 [info]: Server running on port = 8000
+2024-04-23 10:11:13 [info]: Deleting event...
+2024-04-23 10:11:13 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:11:13 [info]: Event deleted successfully
+2024-04-23 10:11:17 [info]: Creating event...
+2024-04-23 10:11:17 [info]: Event created successfully
+2024-04-23 10:12:10 [info]: Connected to Redis
+2024-04-23 10:12:10 [info]: Database connected successfully
+2024-04-23 10:12:10 [info]: Server running on port = 8000
+2024-04-23 10:12:17 [info]: Deleting event...
+2024-04-23 10:12:17 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:12:17 [info]: Event deleted successfully
+2024-04-23 10:12:19 [info]: Creating event...
+2024-04-23 10:12:20 [info]: Event created successfully
+2024-04-23 10:12:38 [info]: Connected to Redis
+2024-04-23 10:12:38 [info]: Database connected successfully
+2024-04-23 10:12:38 [info]: Server running on port = 8000
+2024-04-23 10:13:24 [info]: Connected to Redis
+2024-04-23 10:13:24 [info]: Database connected successfully
+2024-04-23 10:13:24 [info]: Server running on port = 8000
+2024-04-23 10:13:31 [info]: Deleting event...
+2024-04-23 10:13:31 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:13:31 [info]: Event deleted successfully
+2024-04-23 10:13:39 [info]: Creating event...
+2024-04-23 10:13:39 [info]: Event created successfully
+2024-04-23 10:14:03 [info]: Deleting event...
+2024-04-23 10:14:03 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:14:03 [info]: Event deleted successfully
+2024-04-23 10:17:24 [info]: Creating event...
+2024-04-23 10:17:24 [info]: Event created successfully
+2024-04-23 10:18:48 [info]: Connected to Redis
+2024-04-23 10:18:48 [info]: Database connected successfully
+2024-04-23 10:18:48 [info]: Server running on port = 8000
+2024-04-23 10:18:51 [info]: Creating event...
+2024-04-23 10:18:51 [info]: Event with this name already exists for this organizer
+2024-04-23 10:18:57 [info]: Deleting event...
+2024-04-23 10:18:57 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:18:57 [info]: Event deleted successfully
+2024-04-23 10:19:00 [info]: Creating event...
+2024-04-23 10:19:00 [info]: Event created successfully
+2024-04-23 10:20:02 [info]: Connected to Redis
+2024-04-23 10:20:02 [info]: Database connected successfully
+2024-04-23 10:20:02 [info]: Server running on port = 8000
+2024-04-23 10:20:46 [info]: Deleting event...
+2024-04-23 10:20:46 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:20:46 [info]: Event deleted successfully
+2024-04-23 10:20:49 [info]: Creating event...
+2024-04-23 10:20:49 [info]: Event created successfully
+2024-04-23 10:21:02 [info]: Connected to Redis
+2024-04-23 10:21:02 [info]: Database connected successfully
+2024-04-23 10:21:02 [info]: Server running on port = 8000
+2024-04-23 10:22:14 [info]: Connected to Redis
+2024-04-23 10:22:14 [info]: Database connected successfully
+2024-04-23 10:22:14 [info]: Server running on port = 8000
+2024-04-23 10:22:22 [info]: Deleting event...
+2024-04-23 10:22:22 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:22:22 [info]: Event deleted successfully
+2024-04-23 10:22:25 [info]: Creating event...
+2024-04-23 10:22:25 [info]: Event created successfully
+2024-04-23 10:24:28 [info]: Connected to Redis
+2024-04-23 10:24:28 [info]: Database connected successfully
+2024-04-23 10:24:28 [info]: Server running on port = 8000
+2024-04-23 10:24:34 [info]: Deleting event...
+2024-04-23 10:24:34 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:24:34 [info]: Event deleted successfully
+2024-04-23 10:24:36 [info]: Creating event...
+2024-04-23 10:24:36 [info]: Event created successfully
+2024-04-23 10:25:44 [info]: Database connected successfully
+2024-04-23 10:25:44 [info]: Server running on port = 8000
+2024-04-23 10:25:44 [info]: Connected to Redis
+2024-04-23 10:25:50 [info]: Deleting event...
+2024-04-23 10:25:50 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:25:50 [info]: Event deleted successfully
+2024-04-23 10:25:54 [info]: Creating event...
+2024-04-23 10:25:54 [info]: Event created successfully
+2024-04-23 10:29:00 [info]: Connected to Redis
+2024-04-23 10:29:00 [info]: Database connected successfully
+2024-04-23 10:29:00 [info]: Server running on port = 8000
+2024-04-23 10:29:08 [info]: Deleting event...
+2024-04-23 10:29:08 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:29:09 [info]: Event deleted successfully
+2024-04-23 10:29:11 [info]: Creating event...
+2024-04-23 10:29:12 [info]: Event created successfully
+2024-04-23 10:30:35 [info]: Connected to Redis
+2024-04-23 10:30:35 [info]: Database connected successfully
+2024-04-23 10:30:35 [info]: Server running on port = 8000
+2024-04-23 10:30:43 [info]: Deleting event...
+2024-04-23 10:30:43 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:30:43 [info]: Event deleted successfully
+2024-04-23 10:30:47 [info]: Creating event...
+2024-04-23 10:30:47 [info]: Event created successfully
+2024-04-23 10:32:27 [info]: Connected to Redis
+2024-04-23 10:32:27 [info]: Database connected successfully
+2024-04-23 10:32:27 [info]: Server running on port = 8000
+2024-04-23 10:37:41 [info]: Connected to Redis
+2024-04-23 10:37:41 [info]: Database connected successfully
+2024-04-23 10:37:41 [info]: Server running on port = 8000
+2024-04-23 10:37:48 [info]: Deleting event...
+2024-04-23 10:37:48 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:37:48 [info]: Event deleted successfully
+2024-04-23 10:38:12 [info]: Connected to Redis
+2024-04-23 10:38:12 [info]: Database connected successfully
+2024-04-23 10:38:12 [info]: Server running on port = 8000
+2024-04-23 10:39:52 [info]: Connected to Redis
+2024-04-23 10:39:52 [info]: Database connected successfully
+2024-04-23 10:39:52 [info]: Server running on port = 8000
+2024-04-23 10:39:56 [info]: Connected to Redis
+2024-04-23 10:39:56 [info]: Database connected successfully
+2024-04-23 10:39:56 [info]: Server running on port = 8000
+2024-04-23 10:42:34 [info]: Database connected successfully
+2024-04-23 10:42:34 [info]: Server running on port = 8000
+2024-04-23 10:42:34 [info]: Connected to Redis
+2024-04-23 10:42:41 [info]: Connected to Redis
+2024-04-23 10:42:41 [info]: Database connected successfully
+2024-04-23 10:42:41 [info]: Server running on port = 8000
+2024-04-23 10:42:53 [info]: Creating event...
+2024-04-23 10:42:53 [info]: Event created successfully
+2024-04-23 10:43:34 [info]: Connected to Redis
+2024-04-23 10:43:34 [info]: Database connected successfully
+2024-04-23 10:43:34 [info]: Server running on port = 8000
+2024-04-23 10:43:37 [info]: Creating event...
+2024-04-23 10:43:37 [error]: Cannot read properties of undefined (reading 'find')
+2024-04-23 10:44:18 [info]: Connected to Redis
+2024-04-23 10:44:18 [info]: Database connected successfully
+2024-04-23 10:44:18 [info]: Server running on port = 8000
+2024-04-23 10:44:20 [info]: Deleting event...
+2024-04-23 10:44:20 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-23 10:44:20 [info]: Event deleted successfully
+2024-04-23 10:44:23 [info]: Creating event...
+2024-04-23 10:44:24 [info]: Event created successfully
+2024-04-23 10:45:54 [info]: Creating event...
+2024-04-23 10:45:54 [info]: Event created successfully
+2024-04-23 10:46:06 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-23 10:46:06 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-23 10:46:06 [info]: Getting events...
+2024-04-23 10:46:06 [info]: Events retrieved from database
+2024-04-23 10:46:06 [info]: Getting events...
+2024-04-23 10:46:06 [info]: Events retrieved from database
+2024-04-23 10:46:10 [info]: Getting events...
+2024-04-23 10:46:10 [info]: Events retrieved from database
+2024-04-23 10:46:10 [info]: Getting events...
+2024-04-23 10:46:10 [info]: Events retrieved from database
+2024-04-23 10:46:14 [info]: Getting events...
+2024-04-23 10:46:14 [info]: Events retrieved from database
+2024-04-23 10:46:14 [info]: Getting events...
+2024-04-23 10:46:14 [info]: Events retrieved from database
+2024-04-23 10:46:50 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-23 10:46:50 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-23 10:48:18 [info]: Connected to Redis
+2024-04-23 10:48:18 [info]: Database connected successfully
+2024-04-23 10:48:18 [info]: Server running on port = 8000
+2024-04-23 10:48:19 [info]: Connected to Redis
+2024-04-23 10:48:19 [info]: Database connected successfully
+2024-04-23 10:48:19 [info]: Server running on port = 8000
+2024-04-23 10:48:24 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-23 10:48:24 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-23 10:48:27 [info]: Getting events...
+2024-04-23 10:48:27 [info]: Events retrieved from database
+2024-04-23 10:48:27 [info]: Getting events...
+2024-04-23 10:48:27 [info]: Events retrieved from database
+2024-04-23 10:48:30 [info]: Getting events...
+2024-04-23 10:48:30 [info]: Events retrieved from database
+2024-04-23 10:48:30 [info]: Getting events...
+2024-04-23 10:48:30 [info]: Events retrieved from database
+2024-04-23 10:48:38 [info]: Connected to Redis
+2024-04-23 10:48:38 [info]: Database connected successfully
+2024-04-23 10:48:38 [info]: Server running on port = 8000
+2024-04-23 10:48:41 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-23 10:48:42 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-23 10:48:44 [info]: Getting events...
+2024-04-23 10:48:44 [info]: Events retrieved from database
+2024-04-23 10:48:44 [info]: Getting events...
+2024-04-23 10:48:44 [info]: Events retrieved from database
+2024-04-23 10:49:05 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-23 10:49:05 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-23 10:49:14 [info]: Getting events...
+2024-04-23 10:49:14 [info]: Events retrieved from database
+2024-04-23 10:49:47 [info]: Getting events...
+2024-04-23 10:49:47 [info]: Events retrieved from database
