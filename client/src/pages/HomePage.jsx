@@ -1,6 +1,6 @@
-import { Box, Grid, LinkBox, LinkOverlay, Input,  Button, Flex } from '@chakra-ui/react';
-import { FaRegClock, FaInfoCircle, FaTicketAlt } from 'react-icons/fa';
-import { Paginator, Container, PageGroup, usePaginator } from 'chakra-paginator';
+import { Box, Flex, Input, Button, Grid, LinkBox, LinkOverlay, Image, Text } from '@chakra-ui/react';
+import { FaRegClock } from 'react-icons/fa';
+import { usePaginator, Paginator, Container, PageGroup } from 'chakra-paginator';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import Navbar from '../components/customNavbar';
@@ -55,13 +55,12 @@ const HomePage = () => {
     const handleSearch = () => {
         setSearchButtonClicked(true);
     };
-
     return (
         <>
             <Navbar />
             <Box h="20px" />
             <Flex p={4} justifyContent="center">
-                <Box width="300px" pr={1}> 
+                <Box width="300px" pr={1}>
                     <Input
                         placeholder="Search events"
                         onChange={(e) => setSearchQuery(e.target.value)}
@@ -85,22 +84,18 @@ const HomePage = () => {
             <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }} gap={6} p={4}>
                 {events.map((event) => (
                     <LinkBox as={Box} maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="lg" bg="white" key={event._id}>
+                        <Box boxSize="100%" aspectRatio={16 / 9}>
+                            <Image src={event.image} alt={event.name} objectFit="cover" />
+                        </Box>
                         <Box p="6">
                             <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
                                 <LinkOverlay href={`/event/${event._id}`}>{event.name}</LinkOverlay>
                             </Box>
                             <Box d="flex" alignItems="center" mt={2}>
                                 <FaRegClock size={20} style={{ marginRight: '5px' }} />
-                                {event.date} at {event.time}
+                                {new Date(event.date).toLocaleDateString()} at {event.time}
                             </Box>
-                            <Box d="flex" alignItems="center" mt={2}>
-                                <FaInfoCircle size={20} style={{ marginRight: '5px' }} />
-                                Price: {event.price} ETH
-                            </Box>
-                            <Box d="flex" alignItems="center" mt={2}>
-                                <FaTicketAlt size={20} style={{ marginRight: '5px' }} />
-                                Total Tickets: {event.totalTickets}
-                            </Box>
+                            <Text mt={2}>{event.description}</Text>
                         </Box>
                     </LinkBox>
                 ))}
@@ -110,8 +105,8 @@ const HomePage = () => {
                     currentPage={currentPage}
                     onPageChange={setCurrentPage}
                     pagesQuantity={totalPages}
-                    pagesRendered={5} // Specify the number of pages to render
-                    containerStyles={{ // Styles for the container
+                    pagesRendered={5}
+                    containerStyles={{
                         justify: "center",
                     }}
                     pageButtonRender={(page, _, props) => (

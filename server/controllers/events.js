@@ -368,8 +368,13 @@ export const getEvents = async (req, res) => {
 
         const events = await Event.find(queryObject).sort({date: sortOrder}).skip(skip).limit(limit);
 
+        const updatedEvents = events.map(event => {
+            const imageUrl = event.image ? `${req.protocol}://${req.get('host')}/${event.image}` : null;
+            return { ...event._doc, image: imageUrl };
+        });
+
         logger.info('Events retrieved from database');
-        res.status(200).json({ success: true, data: events, currentPage: page, totalPages, totalRecords, statusCode: 200 });
+        res.status(200).json({ success: true, data: updatedEvents, currentPage: page, totalPages, totalRecords, statusCode: 200 });
     } catch (error) {
         logger.error(error);
         res.status(500).json({ success: false, message: 'An error occurred while getting the events', statusCode: 500 });
