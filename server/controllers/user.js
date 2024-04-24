@@ -159,7 +159,7 @@ export const getUserDetails = async (req, res) => {
     let userDetails = await redisClient.get(`user:${id}`);
 
     if (!userDetails) {
-      userDetails = await UserModel.findOne({ _id: id });
+      userDetails = await UserModel.findOne({ _id: id }).select('-password');
 
       if (!userDetails) {
         return res.status(404).json({ code: 404, success: false, message: "User not found" });
@@ -175,7 +175,6 @@ export const getUserDetails = async (req, res) => {
     res.status(500).json({ code: 500, success: false, message: "Something went wrong" });
   }
 };
-
 
 export const refreshToken = async (req, res) => {
   const refreshToken = req.body.token;

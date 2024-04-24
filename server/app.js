@@ -10,15 +10,28 @@ import limiter from './middleware/rateLimiter.js';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'path';
+import session from 'express-session';
+import MongoStore from 'connect-mongo';
+import dotenv from 'dotenv';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
 
+const store = MongoStore.create({ mongoUrl: process.env.MONGO_STRING });
+
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
+app.use(session({
+    secret: process.env.SESSION_SECRET || 'your-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    store: store
+  }));
+  
 // app.use(cors({
 //     origin: ['http://localhost:5173', 'http://localhost:8000'], 
 //     credentials: true
