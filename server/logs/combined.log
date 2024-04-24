@@ -9694,3 +9694,171 @@ value at "/0" is required
 2024-04-24 10:16:58 [info]: Server running on port = 8000
 2024-04-24 10:17:04 [info]: Updating event...
 2024-04-24 10:17:04 [info]: Organizer's wallet address: 0x3663540beCcBf44E17A40b5d05eD929EA3FF3C3b
+2024-04-24 10:31:21 [info]: Connected to Redis
+2024-04-24 10:31:22 [info]: Database connected successfully
+2024-04-24 10:31:22 [info]: Server running on port = 8000
+2024-04-24 10:31:39 [info]: Accounts ----> :
+2024-04-24 10:31:39 [info]: Creating wallet for user:
+2024-04-24 10:31:40 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 10:31:40 [error]: Signup error for email: ahmed.ehsan25@gmail.com Failed to create wallet
+2024-04-24 10:31:56 [info]: Connected to Redis
+2024-04-24 10:31:56 [info]: Database connected successfully
+2024-04-24 10:31:56 [info]: Server running on port = 8000
+2024-04-24 10:31:59 [info]: Accounts ----> :
+2024-04-24 10:31:59 [info]: Creating wallet for user:
+2024-04-24 10:31:59 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 10:31:59 [error]: Signup error for email: ahmed.ehsan25@gmail.com Failed to create wallet
+2024-04-24 10:32:05 [info]: Connected to Redis
+2024-04-24 15:23:30 [info]: Connected to Redis
+2024-04-24 15:23:31 [info]: Database connected successfully
+2024-04-24 15:23:31 [info]: Server running on port = 8000
+2024-04-24 15:23:56 [info]: Accounts ----> :
+2024-04-24 15:23:56 [info]: Creating wallet for user:
+2024-04-24 15:23:56 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:23:56 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-24 15:24:21 [info]: Connected to Redis
+2024-04-24 15:24:21 [info]: Database connected successfully
+2024-04-24 15:24:21 [info]: Server running on port = 8000
+2024-04-24 15:24:24 [info]: Accounts ----> :
+2024-04-24 15:24:24 [info]: Creating wallet for user:
+2024-04-24 15:24:24 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:24:24 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-24 15:24:33 [info]: Accounts ----> :
+2024-04-24 15:24:33 [info]: Creating wallet for user:
+2024-04-24 15:24:33 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:24:33 [error]: Signup error for email: ahmed.ehsan27@gmail.com Failed to create wallet
+2024-04-24 15:24:50 [info]: Connected to Redis
+2024-04-24 15:24:50 [info]: Database connected successfully
+2024-04-24 15:24:50 [info]: Server running on port = 8000
+2024-04-24 15:27:45 [info]: Connected to Redis
+2024-04-24 15:27:45 [info]: Database connected successfully
+2024-04-24 15:27:45 [info]: Server running on port = 8000
+2024-04-24 15:32:45 [info]: Accounts ----> :
+2024-04-24 15:32:45 [info]: Creating wallet for user:
+2024-04-24 15:32:45 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:32:45 [error]: Signup error for email: ahmed.ehsan31@gmail.com Failed to create wallet
+2024-04-24 15:34:06 [info]: Connected to Redis
+2024-04-24 15:34:06 [info]: Database connected successfully
+2024-04-24 15:34:06 [info]: Server running on port = 8000
+2024-04-24 15:34:08 [info]: Accounts ----> :
+2024-04-24 15:34:08 [info]: Creating wallet for user:
+2024-04-24 15:34:08 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:34:08 [error]: Signup error for email: ahmed.ehsan31@gmail.com Failed to create wallet
+2024-04-24 15:35:19 [info]: Connected to Redis
+2024-04-24 15:35:19 [info]: Database connected successfully
+2024-04-24 15:35:19 [info]: Server running on port = 8000
+2024-04-24 15:35:21 [info]: Accounts ----> :
+2024-04-24 15:35:21 [info]: Creating wallet for user:
+2024-04-24 15:35:21 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:35:21 [error]: Signup error for email: ahmed.ehsan31@gmail.com Failed to create wallet
+2024-04-24 15:38:43 [info]: Connected to Redis
+2024-04-24 15:38:43 [info]: Database connected successfully
+2024-04-24 15:38:43 [info]: Server running on port = 8000
+2024-04-24 15:39:13 [info]: Connected to Redis
+2024-04-24 15:39:13 [info]: Database connected successfully
+2024-04-24 15:39:13 [info]: Server running on port = 8000
+2024-04-24 15:43:17 [info]: Connected to Redis
+2024-04-24 15:43:17 [info]: Database connected successfully
+2024-04-24 15:43:17 [info]: Server running on port = 8000
+2024-04-24 15:43:23 [info]: Connected to Redis
+2024-04-24 15:43:23 [info]: Database connected successfully
+2024-04-24 15:43:23 [info]: Server running on port = 8000
+2024-04-24 15:44:18 [info]: Connected to Redis
+2024-04-24 15:44:18 [info]: Database connected successfully
+2024-04-24 15:44:18 [info]: Server running on port = 8000
+2024-04-24 15:44:24 [info]: Connected to Redis
+2024-04-24 15:44:24 [info]: Database connected successfully
+2024-04-24 15:44:24 [info]: Server running on port = 8000
+2024-04-24 15:44:26 [info]: Accounts ----> :
+2024-04-24 15:44:26 [info]: Creating wallet for user:
+2024-04-24 15:44:26 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:44:26 [error]: Signup error for email: ahmed.ehsan31@gmail.com Failed to create wallet
+2024-04-24 15:44:39 [info]: Connected to Redis
+2024-04-24 15:44:39 [info]: Database connected successfully
+2024-04-24 15:44:39 [info]: Server running on port = 8000
+2024-04-24 16:31:25 [info]: Connected to Redis
+2024-04-24 16:31:25 [info]: Database connected successfully
+2024-04-24 16:31:25 [info]: Server running on port = 8000
+2024-04-24 16:31:27 [info]: Accounts ----> :
+2024-04-24 16:31:27 [info]: Creating wallet for user:
+2024-04-24 16:31:27 [info]: Wallet saved successfully
+2024-04-24 16:31:27 [info]: Wallet connected to Ganache network
+2024-04-24 16:31:27 [info]: User signed up successfully for email: ahmed.ehsan31@gmail.com
+2024-04-24 16:33:07 [info]: Connected to Redis
+2024-04-24 16:33:07 [info]: Database connected successfully
+2024-04-24 16:33:07 [info]: Server running on port = 8000
+2024-04-24 16:33:11 [info]: Accounts ----> :
+2024-04-24 16:33:11 [info]: Creating wallet for user:
+2024-04-24 16:33:11 [info]: Wallet saved successfully
+2024-04-24 16:33:11 [info]: Wallet connected to Ganache network
+2024-04-24 16:33:11 [info]: User signed up successfully for email: ahmed.ehsan32@gmail.com
+2024-04-24 16:35:23 [info]: Database connected successfully
+2024-04-24 16:35:23 [info]: Server running on port = 8000
+2024-04-24 16:35:24 [info]: Connected to Redis
+2024-04-24 16:36:20 [info]: Connected to Redis
+2024-04-24 16:36:20 [info]: Database connected successfully
+2024-04-24 16:36:20 [info]: Server running on port = 8000
+2024-04-24 16:36:53 [info]: Database connected successfully
+2024-04-24 16:36:53 [info]: Server running on port = 8000
+2024-04-24 16:36:53 [info]: Connected to Redis
+2024-04-24 16:38:40 [info]: Database connected successfully
+2024-04-24 16:38:40 [info]: Server running on port = 8000
+2024-04-24 16:38:40 [info]: Connected to Redis
+2024-04-24 16:42:43 [info]: Accounts ----> :
+2024-04-24 16:42:43 [info]: Creating wallet for user:
+2024-04-24 16:42:43 [info]: Wallet saved successfully
+2024-04-24 16:42:43 [info]: Wallet connected to Ganache network
+2024-04-24 16:44:41 [info]: Database connected successfully
+2024-04-24 16:44:41 [info]: Server running on port = 8000
+2024-04-24 16:44:41 [info]: Connected to Redis
+2024-04-24 16:44:48 [info]: Database connected successfully
+2024-04-24 16:44:48 [info]: Server running on port = 8000
+2024-04-24 16:44:48 [info]: Connected to Redis
+2024-04-24 16:44:57 [info]: Accounts ----> :
+2024-04-24 16:44:57 [info]: Creating wallet for user:
+2024-04-24 16:44:57 [info]: Wallet saved successfully
+2024-04-24 16:44:57 [info]: Wallet connected to Ganache network
+2024-04-24 16:49:04 [info]: Database connected successfully
+2024-04-24 16:49:04 [info]: Server running on port = 8000
+2024-04-24 16:49:04 [info]: Connected to Redis
+2024-04-24 16:49:17 [error]: Signup error for email:  test@example2.com UserModel.create(...).populate is not a function
+2024-04-24 16:51:35 [info]: Database connected successfully
+2024-04-24 16:51:35 [info]: Server running on port = 8000
+2024-04-24 16:51:35 [info]: Connected to Redis
+2024-04-24 16:51:42 [info]: Database connected successfully
+2024-04-24 16:51:42 [info]: Server running on port = 8000
+2024-04-24 16:51:42 [info]: Connected to Redis
+2024-04-24 16:52:20 [info]: Accounts ----> :
+2024-04-24 16:52:20 [info]: Creating wallet for user:
+2024-04-24 16:52:20 [info]: Wallet saved successfully
+2024-04-24 16:52:20 [info]: Wallet connected to Ganache network
+2024-04-24 16:53:24 [info]: Connected to Redis
+2024-04-24 16:53:26 [error]: Error Occured ---> connect ECONNREFUSED 172.17.0.1:27017
+2024-04-24 17:56:25 [info]: Database connected successfully
+2024-04-24 17:56:25 [info]: Server running on port = 8000
+2024-04-24 17:56:25 [info]: Connected to Redis
+2024-04-24 17:58:22 [info]: Database connected successfully
+2024-04-24 17:58:22 [info]: Server running on port = 8000
+2024-04-24 17:58:22 [info]: Connected to Redis
+2024-04-24 17:58:36 [info]: Database connected successfully
+2024-04-24 17:58:36 [info]: Server running on port = 8000
+2024-04-24 17:58:36 [info]: Connected to Redis
+2024-04-24 17:59:11 [info]: Database connected successfully
+2024-04-24 17:59:11 [info]: Server running on port = 8000
+2024-04-24 17:59:11 [info]: Connected to Redis
+2024-04-24 18:01:16 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-24 18:01:16 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-24 18:01:27 [info]: Update user attempt for id: 6628e464493960c05d50d4ad
+2024-04-24 18:03:50 [info]: Database connected successfully
+2024-04-24 18:03:50 [info]: Server running on port = 8000
+2024-04-24 18:03:50 [info]: Connected to Redis
+2024-04-24 18:03:53 [info]: Update user attempt for id: 6628e464493960c05d50d4ad
+2024-04-24 18:03:53 [error]: Update user error for id: 6628e464493960c05d50d4ad result is not defined
+2024-04-24 18:04:47 [info]: Database connected successfully
+2024-04-24 18:04:47 [info]: Server running on port = 8000
+2024-04-24 18:04:47 [info]: Connected to Redis
+2024-04-24 18:04:49 [info]: Update user attempt for id: 6628e464493960c05d50d4ad
+2024-04-24 18:04:49 [info]: User updated successfully for id: 6628e464493960c05d50d4ad
+2024-04-24 18:05:01 [info]: Connected to Redis
+2024-04-24 18:05:01 [info]: Database connected successfully
+2024-04-24 18:05:01 [info]: Server running on port = 8000

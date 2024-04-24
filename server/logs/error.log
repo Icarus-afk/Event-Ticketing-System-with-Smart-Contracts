@@ -263,3 +263,24 @@ value at "/0" is required
 2024-04-24 10:12:27 [error]: Error updating event populatedEvent is not defined
 2024-04-24 10:12:44 [error]: Error updating event populatedEvent is not defined
 2024-04-24 10:13:11 [error]: Error updating event populatedEvent is not defined
+2024-04-24 10:31:40 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 10:31:40 [error]: Signup error for email: ahmed.ehsan25@gmail.com Failed to create wallet
+2024-04-24 10:31:59 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 10:31:59 [error]: Signup error for email: ahmed.ehsan25@gmail.com Failed to create wallet
+2024-04-24 15:23:56 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:23:56 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-24 15:24:24 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:24:24 [error]: Signup error for email: ahmed.ehsan26@gmail.com Failed to create wallet
+2024-04-24 15:24:33 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:24:33 [error]: Signup error for email: ahmed.ehsan27@gmail.com Failed to create wallet
+2024-04-24 15:32:45 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:32:45 [error]: Signup error for email: ahmed.ehsan31@gmail.com Failed to create wallet
+2024-04-24 15:34:08 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:34:08 [error]: Signup error for email: ahmed.ehsan31@gmail.com Failed to create wallet
+2024-04-24 15:35:21 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:35:21 [error]: Signup error for email: ahmed.ehsan31@gmail.com Failed to create wallet
+2024-04-24 15:44:26 [error]: error:0308010C:digital envelope routines::unsupported
+2024-04-24 15:44:26 [error]: Signup error for email: ahmed.ehsan31@gmail.com Failed to create wallet
+2024-04-24 16:49:17 [error]: Signup error for email:  test@example2.com UserModel.create(...).populate is not a function
+2024-04-24 16:53:26 [error]: Error Occured ---> connect ECONNREFUSED 172.17.0.1:27017
+2024-04-24 18:03:53 [error]: Update user error for id: 6628e464493960c05d50d4ad result is not defined

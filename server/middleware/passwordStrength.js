@@ -14,7 +14,6 @@ const passwordStrength = (req, res, next) => {
         return res.status(400).json({ success: false, message: 'Password is not strong enough', stausCode:400});
     }
 
-    res.status(200).json({ success: true, message: 'Password is strong', statusCode:200 });
     next();
 };
 

@@ -8,7 +8,7 @@ import logger from './consoleLogger.js'
 dotenv.config()
 
 const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY
-
+console.log(ENCRYPTION_KEY.length);
 const web3 = new Web3('http://localhost:7545'); 
 
 function handleError(error) {

@@ -35,7 +35,6 @@ export const signin = async (req, res) => {
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1h" });
     const refreshToken = jwt.sign({ id: oldUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
 
-
     logger.info(`User signed in successfully for email: ${email}`);
     res.status(200).json({ code: 200, success: true, message: "Signed in successfully", data: { result: oldUser, a_Token:token, r_Token:refreshToken } });
 
@@ -46,7 +45,8 @@ export const signin = async (req, res) => {
 };
 
 export const signup = async (req, res) => {
-  const { email, password, firstName, lastName, isAdmin, isOrganizer } = req.body;
+  const { email, password, firstName, lastName, isAdmin, isOrganizer, dateOfBirth, address, phoneNumber } = req.body;
+  const userImage = req.file;
 
   try {
     const existingUser = await UserModel.findOne({ email });
@@ -64,7 +64,11 @@ export const signup = async (req, res) => {
       isAdmin: isAdmin || false,
       isOrganizer: isOrganizer || false,
       isActive: true,
-      status: 'pending'
+      status: 'pending',
+      dateOfBirth,
+      address,
+      phoneNumber,
+      userImage: userImage ? userImage.path : null
     };
 
     const result = await UserModel.create(pendingUser);
@@ -79,15 +83,12 @@ export const signup = async (req, res) => {
 
     const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
 
-    logger.info(`User signed up successfully for email: ${email}`);
-    ;
-    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", data: { result, token } });
+    result._doc.userImage = userImage ? `${req.protocol}://${req.get('host')}/${result.userImage}` : null;
+    const user = await UserModel.findById(result._id).select('-password');
 
-  } catch (error) {
-    logger.error(`Signup error for email: ${email}`, error);
-    if (error.message === 'Failed to create wallet') {
-      await UserModel.deleteOne({ email });
-    }
+    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", token: token, user: user });
+  } catch (err) {
+    logger.error(`Signup error for email: ${email}`, err);
     res.status(500).json({ code: 500, success: false, message: "Something went wrong" });
   }
 };
@@ -95,7 +96,8 @@ export const signup = async (req, res) => {
 
 export const updateUser = async (req, res) => {
   const { id } = req.params;
-  const { firstName, lastName, dateOfBirth, address, phoneNumber, photo } = req.body;
+  const {  firstName, lastName,  dateOfBirth, address, phoneNumber } = req.body;
+  const userImage = req.file;
 
   logger.info(`Update user attempt for id: ${id}`);
 
@@ -104,18 +106,24 @@ export const updateUser = async (req, res) => {
     return res.status(404).json({ code: 404, success: false, message: `No user with id: ${id}` });
   }
 
-  const updatedUser = { name: `${firstName} ${lastName}`, dateOfBirth, address, phoneNumber, photo, _id: id };
-
+  const updatedUser = { name: `${firstName} ${lastName}`, dateOfBirth, address, phoneNumber, userImage, _id: id };
+  
   try {
-    await UserModel.findByIdAndUpdate(id, updatedUser, { new: true });
+    const updatedUser = await UserModel.findByIdAndUpdate(id, req.body, { new: true });
+  
+    if (!updatedUser) {
+      return res.status(404).json({ success: false, message: 'User not found', statusCode: 404 });
+    }
+    
+    const updatedUserWithoutPassword = await UserModel.findById(updatedUser._id).select('-password -__v');
+    updatedUserWithoutPassword._doc.userImage = userImage ? `${req.protocol}://${req.get('host')}/${updatedUserWithoutPassword.userImage}` : null;
+    res.status(200).json({ success: true, message: 'User updated successfully', user: updatedUserWithoutPassword, statusCode: 200 });    
     logger.info(`User updated successfully for id: ${id}`);
-    res.json({ code: 200, success: true, message: "User updated successfully.", data: updatedUser });
   } catch (error) {
     logger.error(`Update user error for id: ${id}`, error);
     res.status(500).json({ code: 500, success: false, message: "Something went wrong" });
   }
 };
-
 
 export const deleteUser = async (req, res) => {
   const { id } = req.params;
