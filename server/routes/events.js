@@ -27,7 +27,7 @@ const upload = multer({ storage: storage, fileFilter: fileFilter });
 const router = express.Router();
 
 router.post('/create', upload.single('image'), auth, checkIsOrganizer, createEvent);
-router.patch('/update/:eventId', auth, checkIsOrganizer, updateEvent);
+router.patch('/update/:eventId',upload.single('image'), auth, checkIsOrganizer, updateEvent);
 router.delete('/delete/:eventId', auth, checkIsOrganizer, deleteEvent);
 router.get('/get', auth, getEvents);
 

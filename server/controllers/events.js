@@ -106,19 +106,25 @@ export const createEvent = async (req, res) => {
             description,
             attendees,
             tags,
-            image: image ? image.path : null, 
+            image: image ? image.path : null,
         });
 
         await event.save();
+        const populatedEvent = await Event.findById(event._id).populate({
+            path: 'organizer',
+            select: '-password -__v'
+        });
+
         logger.info('Event created successfully');
-        io.emit('newEvent', event);
-        event._doc.image = image ? `${req.protocol}://${req.get('host')}/${event.image}` : null;
-        res.status(201).json({ success: true, message: 'Event created successfully', data: event, statusCode: 201 });
+        io.emit('newEvent', populatedEvent);
+        populatedEvent._doc.image = image ? `${req.protocol}://${req.get('host')}/${populatedEvent.image}` : null;
+        res.status(201).json({ success: true, message: 'Event created successfully', data: populatedEvent, statusCode: 201 });
     } catch (error) {
         logger.error(error);
         res.status(500).json({ success: false, message: 'An error occurred while creating the event', statusCode: 500 });
     }
 };
+
 
 
 export const updateEvent = async (req, res) => {
@@ -203,14 +209,17 @@ export const updateEvent = async (req, res) => {
                 time,
                 price,
                 totalTickets,
-                organizerUser,
+                organizer: organizerUser._id,
                 eventId,
                 location,
                 description,
                 tags,
                 image
-            }, { new: true }); 
-
+            }, { new: true }).populate({
+                path: 'organizer',
+                select: '-password -__v'
+            }); 
+        
             res.status(200).json({ success: true, message: 'Event updated successfully', event, statusCode: 200 });
         } catch (error) {
             logger.error('Error updating event in MongoDB:', error);
@@ -366,8 +375,14 @@ export const getEvents = async (req, res) => {
 
         const sortOrder = sort === 'desc' ? -1 : 1;
 
-        const events = await Event.find(queryObject).sort({date: sortOrder}).skip(skip).limit(limit);
-
+        const events = await Event.find(queryObject)
+            .populate({
+                path: 'organizer',
+                select: '-password -__v',
+            })
+            .sort({ date: sortOrder })
+            .skip(skip)
+            .limit(limit);
         const updatedEvents = events.map(event => {
             const imageUrl = event.image ? `${req.protocol}://${req.get('host')}/${event.image}` : null;
             return { ...event._doc, image: imageUrl };
