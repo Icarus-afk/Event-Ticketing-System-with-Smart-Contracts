@@ -1,5 +1,5 @@
 import express from 'express';
-import { signin, signup, deleteUser, updateUser,getUserDetails, refreshToken } from '../controllers/user.js'
+import { signin, signup, deleteUser, updateUser,getUserDetails, refreshToken, verifyToken } from '../controllers/user.js'
 import auth from '../middleware/auth.js';
 import passwordStrength from '../middleware/passwordStrength.js'
 
@@ -27,6 +27,7 @@ const upload = multer({ storage: storage, fileFilter: fileFilter });
 
 const router = express.Router();
 
+router.get('/verify-token', verifyToken);
 router.post('/signin', signin);
 router.post('/signup', upload.single('userImage'), passwordStrength, signup);
 router.post('/refresh-token', refreshToken);

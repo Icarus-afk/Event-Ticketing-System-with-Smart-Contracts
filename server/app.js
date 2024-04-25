@@ -13,7 +13,10 @@ import path from 'path';
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
 import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
 
+
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -24,20 +27,29 @@ const store = MongoStore.create({ mongoUrl: process.env.MONGO_STRING });
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(cookieParser());
 
-app.use(session({
-    secret: process.env.SESSION_SECRET || 'your-secret-key',
-    resave: false,
-    saveUninitialized: false,
-    store: store
-  }));
+
   
-// app.use(cors({
-//     origin: ['http://localhost:5173', 'http://localhost:8000'], 
-//     credentials: true
-// }));
+app.use(cors({
+    origin: ['http://localhost:5173', 'http://localhost:8000', 'http://127.0.0.1:5173'], 
+    credentials: true
+}));
 // // app.use(cors("*"));  
-app.use(cors());
+// app.use(cors());
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: true,
+  saveUninitialized: true, 
+  store: store,
+  cookie: {
+    secure: false, // Send cookie over HTTP for testing purposes
+    sameSite: 'lax', // Send cookie with same-site and cross-site requests for testing purposes
+    httpOnly: true,
+    maxAge: 24 * 60 * 60 * 1000
+  }
+}));
+
 app.use(errorHandler);
 app.use(logger);
 app.use(limiter);

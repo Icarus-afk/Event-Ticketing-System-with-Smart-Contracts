@@ -284,3 +284,5 @@ value at "/0" is required
 2024-04-24 16:49:17 [error]: Signup error for email:  test@example2.com UserModel.create(...).populate is not a function
 2024-04-24 16:53:26 [error]: Error Occured ---> connect ECONNREFUSED 172.17.0.1:27017
 2024-04-24 18:03:53 [error]: Update user error for id: 6628e464493960c05d50d4ad result is not defined
+2024-04-25 00:31:15 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-25 00:31:20 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545

@@ -7,7 +7,6 @@ import dotenv from 'dotenv';
 import logger from '../utils/consoleLogger.js'
 import redisClient from '../utils//initRedis.js';
 
-
 dotenv.config();
 
 
@@ -33,10 +32,19 @@ export const signin = async (req, res) => {
     }
 
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1h" });
-    const refreshToken = jwt.sign({ id: oldUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
+
+    res.cookie('token', token, {
+      httpOnly: true, 
+      secure: false, 
+      sameSite: 'lax', 
+      maxAge:  60 * 60 * 1000,
+      path: '/'
+    });
+
+    // const refreshToken = jwt.sign({ id: oldUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
 
     logger.info(`User signed in successfully for email: ${email}`);
-    res.status(200).json({ code: 200, success: true, message: "Signed in successfully", data: { result: oldUser, a_Token:token, r_Token:refreshToken } });
+    res.status(200).json({ code: 200, success: true, message: "Signed in successfully", data: { result: oldUser } });
 
   } catch (err) {
     logger.error(`Signin error for email: ${email}`, err);
@@ -199,5 +207,28 @@ export const refreshToken = async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ success: false, message: 'Internal server error',  code: 500 });
+  }
+};
+
+export const verifyToken = async (req, res) => {
+  console.log('Verifying token');
+
+  const token = req.cookies.token;
+
+  if (token) {
+    console.log('Token found in cookies');
+
+    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+      if (err) {
+        console.log('Error verifying token:', err);
+        return res.sendStatus(403);
+      }
+
+      console.log('Token verified successfully');
+      res.sendStatus(200);
+    });
+  } else {
+    console.log('No token found in cookies');
+    res.sendStatus(401);
   }
 };

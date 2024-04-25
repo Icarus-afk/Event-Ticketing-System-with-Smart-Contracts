@@ -9909,3 +9909,375 @@ value at "/0" is required
 2024-04-24 18:28:51 [info]: Connected to Redis
 2024-04-24 18:28:51 [info]: Database connected successfully
 2024-04-24 18:28:51 [info]: Server running on port = 8000
+2024-04-24 23:39:56 [info]: Connected to Redis
+2024-04-24 23:39:56 [info]: Database connected successfully
+2024-04-24 23:39:56 [info]: Server running on port = 8000
+2024-04-24 23:40:03 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:40:04 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:41:06 [info]: Getting events...
+2024-04-24 23:41:06 [info]: Events retrieved from database
+2024-04-24 23:41:06 [info]: Getting events...
+2024-04-24 23:41:06 [info]: Events retrieved from database
+2024-04-24 23:41:11 [info]: Getting events...
+2024-04-24 23:41:11 [info]: Events retrieved from database
+2024-04-24 23:42:22 [info]: Getting events...
+2024-04-24 23:42:22 [info]: Events retrieved from database
+2024-04-24 23:42:31 [info]: Connected to Redis
+2024-04-24 23:42:31 [info]: Database connected successfully
+2024-04-24 23:42:31 [info]: Server running on port = 8000
+2024-04-24 23:42:42 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:42:42 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:44:29 [info]: Connected to Redis
+2024-04-24 23:44:29 [info]: Database connected successfully
+2024-04-24 23:44:29 [info]: Server running on port = 8000
+2024-04-24 23:44:32 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:44:32 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:45:48 [info]: Connected to Redis
+2024-04-24 23:45:48 [info]: Database connected successfully
+2024-04-24 23:45:48 [info]: Server running on port = 8000
+2024-04-24 23:45:58 [info]: Connected to Redis
+2024-04-24 23:45:58 [info]: Database connected successfully
+2024-04-24 23:45:58 [info]: Server running on port = 8000
+2024-04-24 23:46:05 [info]: Connected to Redis
+2024-04-24 23:46:05 [info]: Database connected successfully
+2024-04-24 23:46:05 [info]: Server running on port = 8000
+2024-04-24 23:46:12 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:46:12 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:47:35 [info]: Connected to Redis
+2024-04-24 23:47:35 [info]: Database connected successfully
+2024-04-24 23:47:35 [info]: Server running on port = 8000
+2024-04-24 23:47:38 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:47:38 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:52:02 [info]: Connected to Redis
+2024-04-24 23:52:02 [info]: Database connected successfully
+2024-04-24 23:52:02 [info]: Server running on port = 8000
+2024-04-24 23:53:27 [info]: Connected to Redis
+2024-04-24 23:53:27 [info]: Database connected successfully
+2024-04-24 23:53:27 [info]: Server running on port = 8000
+2024-04-24 23:53:31 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:53:32 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:57:08 [info]: Connected to Redis
+2024-04-24 23:57:08 [info]: Database connected successfully
+2024-04-24 23:57:08 [info]: Server running on port = 8000
+2024-04-24 23:57:19 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-24 23:57:19 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:01:26 [info]: Connected to Redis
+2024-04-25 00:01:26 [info]: Database connected successfully
+2024-04-25 00:01:26 [info]: Server running on port = 8000
+2024-04-25 00:01:34 [info]: Connected to Redis
+2024-04-25 00:01:34 [info]: Database connected successfully
+2024-04-25 00:01:34 [info]: Server running on port = 8000
+2024-04-25 00:01:36 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:01:36 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:02:58 [info]: Connected to Redis
+2024-04-25 00:02:58 [info]: Database connected successfully
+2024-04-25 00:02:58 [info]: Server running on port = 8000
+2024-04-25 00:03:13 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:03:13 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:06:27 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:06:27 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:11:24 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:11:24 [info]: Invalid credentials for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:11:42 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:11:42 [info]: Invalid credentials for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:11:51 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:11:51 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:13:03 [info]: Connected to Redis
+2024-04-25 00:13:03 [info]: Database connected successfully
+2024-04-25 00:13:03 [info]: Server running on port = 8000
+2024-04-25 00:13:17 [info]: Connected to Redis
+2024-04-25 00:13:17 [info]: Database connected successfully
+2024-04-25 00:13:17 [info]: Server running on port = 8000
+2024-04-25 00:14:48 [info]: Connected to Redis
+2024-04-25 00:14:48 [info]: Database connected successfully
+2024-04-25 00:14:48 [info]: Server running on port = 8000
+2024-04-25 00:14:49 [info]: Connected to Redis
+2024-04-25 00:14:49 [info]: Database connected successfully
+2024-04-25 00:14:49 [info]: Server running on port = 8000
+2024-04-25 00:15:18 [info]: Connected to Redis
+2024-04-25 00:15:18 [info]: Database connected successfully
+2024-04-25 00:15:18 [info]: Server running on port = 8000
+2024-04-25 00:15:32 [info]: Connected to Redis
+2024-04-25 00:15:32 [info]: Database connected successfully
+2024-04-25 00:15:32 [info]: Server running on port = 8000
+2024-04-25 00:15:45 [info]: Connected to Redis
+2024-04-25 00:15:45 [info]: Database connected successfully
+2024-04-25 00:15:45 [info]: Server running on port = 8000
+2024-04-25 00:16:04 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:16:04 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:16:16 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:16:16 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:17:19 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:17:19 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:20:56 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:20:56 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:21:33 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:21:33 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:23:08 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:23:09 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:24:30 [info]: Connected to Redis
+2024-04-25 00:24:30 [info]: Database connected successfully
+2024-04-25 00:24:30 [info]: Server running on port = 8000
+2024-04-25 00:24:35 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:24:35 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:25:14 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:25:14 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:26:37 [info]: Database connected successfully
+2024-04-25 00:26:37 [info]: Server running on port = 8000
+2024-04-25 00:26:37 [info]: Connected to Redis
+2024-04-25 00:30:37 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:30:37 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:31:15 [info]: Creating event...
+2024-04-25 00:31:15 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-25 00:31:20 [info]: Creating event...
+2024-04-25 00:31:20 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-25 00:32:14 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:32:15 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:41:47 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:41:47 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 00:51:44 [info]: Connected to Redis
+2024-04-25 00:51:44 [info]: Database connected successfully
+2024-04-25 00:51:44 [info]: Server running on port = 8000
+2024-04-25 00:51:55 [info]: Connected to Redis
+2024-04-25 00:51:55 [info]: Database connected successfully
+2024-04-25 00:51:55 [info]: Server running on port = 8000
+2024-04-25 00:52:05 [info]: Connected to Redis
+2024-04-25 00:52:05 [info]: Database connected successfully
+2024-04-25 00:52:05 [info]: Server running on port = 8000
+2024-04-25 00:52:11 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:52:11 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:53:22 [info]: Connected to Redis
+2024-04-25 00:53:22 [info]: Database connected successfully
+2024-04-25 00:53:22 [info]: Server running on port = 8000
+2024-04-25 00:53:28 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:53:28 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:53:40 [info]: Connected to Redis
+2024-04-25 00:53:40 [info]: Database connected successfully
+2024-04-25 00:53:40 [info]: Server running on port = 8000
+2024-04-25 00:54:35 [info]: Connected to Redis
+2024-04-25 00:54:35 [info]: Database connected successfully
+2024-04-25 00:54:35 [info]: Server running on port = 8000
+2024-04-25 00:54:43 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:54:43 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:54:55 [info]: Connected to Redis
+2024-04-25 00:54:55 [info]: Database connected successfully
+2024-04-25 00:54:55 [info]: Server running on port = 8000
+2024-04-25 00:55:51 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:55:51 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:57:02 [info]: Connected to Redis
+2024-04-25 00:57:02 [info]: Database connected successfully
+2024-04-25 00:57:02 [info]: Server running on port = 8000
+2024-04-25 00:57:08 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:57:08 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:57:27 [info]: Connected to Redis
+2024-04-25 00:57:27 [info]: Database connected successfully
+2024-04-25 00:57:27 [info]: Server running on port = 8000
+2024-04-25 00:57:30 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:57:30 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:58:59 [info]: Connected to Redis
+2024-04-25 00:58:59 [info]: Database connected successfully
+2024-04-25 00:58:59 [info]: Server running on port = 8000
+2024-04-25 00:59:20 [info]: Connected to Redis
+2024-04-25 00:59:20 [info]: Database connected successfully
+2024-04-25 00:59:20 [info]: Server running on port = 8000
+2024-04-25 00:59:35 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 00:59:35 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 01:00:52 [info]: Connected to Redis
+2024-04-25 01:00:52 [info]: Database connected successfully
+2024-04-25 01:00:52 [info]: Server running on port = 8000
+2024-04-25 01:00:57 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 01:00:57 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 01:01:17 [info]: Connected to Redis
+2024-04-25 01:01:17 [info]: Database connected successfully
+2024-04-25 01:01:17 [info]: Server running on port = 8000
+2024-04-25 01:01:23 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 01:01:23 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 01:01:33 [info]: Connected to Redis
+2024-04-25 01:01:33 [info]: Database connected successfully
+2024-04-25 01:01:33 [info]: Server running on port = 8000
+2024-04-25 01:02:00 [info]: Connected to Redis
+2024-04-25 01:02:00 [info]: Database connected successfully
+2024-04-25 01:02:00 [info]: Server running on port = 8000
+2024-04-25 01:02:20 [info]: Connected to Redis
+2024-04-25 01:02:20 [info]: Database connected successfully
+2024-04-25 01:02:20 [info]: Server running on port = 8000
+2024-04-25 01:02:25 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 01:02:25 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 01:02:47 [info]: Connected to Redis
+2024-04-25 01:02:47 [info]: Database connected successfully
+2024-04-25 01:02:47 [info]: Server running on port = 8000
+2024-04-25 01:03:23 [info]: Connected to Redis
+2024-04-25 01:03:23 [info]: Database connected successfully
+2024-04-25 01:03:23 [info]: Server running on port = 8000
+2024-04-25 01:03:29 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 01:03:29 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 01:13:35 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:13:35 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:14:35 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:14:35 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:16:33 [info]: Connected to Redis
+2024-04-25 01:16:33 [info]: Database connected successfully
+2024-04-25 01:16:33 [info]: Server running on port = 8000
+2024-04-25 01:17:15 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:17:15 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:17:35 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:17:36 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:23:52 [info]: Signin attempt for email: undefined
+2024-04-25 01:23:52 [info]: User doesn't exist for email: undefined
+2024-04-25 01:24:09 [info]: Signin attempt for email: undefined
+2024-04-25 01:24:09 [info]: User doesn't exist for email: undefined
+2024-04-25 01:24:34 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:24:35 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:26:34 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:26:34 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:28:30 [info]: Connected to Redis
+2024-04-25 01:28:30 [info]: Database connected successfully
+2024-04-25 01:28:30 [info]: Server running on port = 8000
+2024-04-25 01:28:32 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:28:32 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:29:59 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:30:00 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:30:38 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:30:38 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:32:48 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:32:48 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:33:49 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:33:49 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 01:34:06 [info]: Connected to Redis
+2024-04-25 01:34:06 [info]: Database connected successfully
+2024-04-25 01:34:06 [info]: Server running on port = 8000
+2024-04-25 09:56:03 [info]: Connected to Redis
+2024-04-25 09:56:03 [info]: Database connected successfully
+2024-04-25 09:56:03 [info]: Server running on port = 8000
+2024-04-25 09:56:28 [info]: Signin attempt for email: ahmed.ehsan21@gmail.com
+2024-04-25 09:56:28 [info]: User signed in successfully for email: ahmed.ehsan21@gmail.com
+2024-04-25 09:57:39 [info]: Signin attempt for email: ahmed.ehsan21@gmail.com
+2024-04-25 09:57:39 [info]: User signed in successfully for email: ahmed.ehsan21@gmail.com
+2024-04-25 10:02:04 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:02:04 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:04:18 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:04:18 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:04:19 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:04:20 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:04:20 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:04:21 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:04:28 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:04:29 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:07:08 [info]: Connected to Redis
+2024-04-25 10:07:08 [info]: Database connected successfully
+2024-04-25 10:07:08 [info]: Server running on port = 8000
+2024-04-25 10:07:16 [info]: Connected to Redis
+2024-04-25 10:07:16 [info]: Database connected successfully
+2024-04-25 10:07:16 [info]: Server running on port = 8000
+2024-04-25 10:09:23 [info]: Connected to Redis
+2024-04-25 10:09:23 [info]: Database connected successfully
+2024-04-25 10:09:23 [info]: Server running on port = 8000
+2024-04-25 10:09:28 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:09:28 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:14:23 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:14:23 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:14:48 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:14:48 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:16:00 [info]: Connected to Redis
+2024-04-25 10:16:00 [info]: Database connected successfully
+2024-04-25 10:16:00 [info]: Server running on port = 8000
+2024-04-25 10:17:54 [info]: Connected to Redis
+2024-04-25 10:17:54 [info]: Database connected successfully
+2024-04-25 10:17:54 [info]: Server running on port = 8000
+2024-04-25 10:17:57 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:17:57 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:18:27 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:18:27 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:18:40 [info]: Connected to Redis
+2024-04-25 10:18:40 [info]: Database connected successfully
+2024-04-25 10:18:40 [info]: Server running on port = 8000
+2024-04-25 10:18:55 [info]: Connected to Redis
+2024-04-25 10:18:55 [info]: Database connected successfully
+2024-04-25 10:18:55 [info]: Server running on port = 8000
+2024-04-25 10:18:58 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:18:58 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:20:17 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:20:17 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:20:38 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:20:38 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:20:40 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:20:40 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:20:40 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:20:40 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:23:37 [info]: Connected to Redis
+2024-04-25 10:23:37 [info]: Database connected successfully
+2024-04-25 10:23:37 [info]: Server running on port = 8000
+2024-04-25 10:23:43 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:23:43 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:25:00 [info]: Connected to Redis
+2024-04-25 10:25:00 [info]: Database connected successfully
+2024-04-25 10:25:00 [info]: Server running on port = 8000
+2024-04-25 10:25:03 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:25:03 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:25:12 [info]: Connected to Redis
+2024-04-25 10:25:12 [info]: Database connected successfully
+2024-04-25 10:25:12 [info]: Server running on port = 8000
+2024-04-25 10:25:16 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:25:16 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:26:51 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:51 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:53 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:53 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:55 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:55 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:57 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:57 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:57 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:58 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:58 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:58 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:58 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:59 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:59 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:59 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:26:59 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:27:00 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:27:02 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:27:02 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:27:03 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:27:03 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:31:29 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:31:29 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:32:17 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:32:17 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:33:29 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:33:30 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:33:33 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:33:33 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:33:43 [info]: Connected to Redis
+2024-04-25 10:33:43 [info]: Database connected successfully
+2024-04-25 10:33:43 [info]: Server running on port = 8000
+2024-04-25 10:33:44 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:33:44 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:33:45 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:33:45 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:37:48 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:37:48 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-25 10:37:54 [info]: Connected to Redis
+2024-04-25 10:37:54 [info]: Database connected successfully
+2024-04-25 10:37:54 [info]: Server running on port = 8000
+2024-04-25 10:41:06 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:41:06 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:41:15 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:41:15 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:41:31 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:41:31 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:44:10 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:44:10 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:45:35 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:45:35 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:49:23 [info]: Getting events...
+2024-04-25 10:49:23 [info]: Events retrieved from database
+2024-04-25 10:49:23 [info]: Getting events...
+2024-04-25 10:49:23 [info]: Events retrieved from database
+2024-04-25 10:49:28 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:49:28 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-25 10:49:28 [info]: Getting events...
+2024-04-25 10:49:28 [info]: Events retrieved from database
+2024-04-25 10:49:28 [info]: Getting events...
+2024-04-25 10:49:28 [info]: Events retrieved from database
