@@ -4,7 +4,6 @@ import { Button, Input, Box, VStack, Heading, Text, ChakraProvider } from '@chak
 import { Link } from 'react-router-dom';
 import { useCustomToast } from '../components/useCustomToast';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Cookies from 'js-cookie';
 
 
 const SignIn = () => {
@@ -22,11 +21,13 @@ const SignIn = () => {
     const config = {
       method: 'post',
       url: 'http://localhost:8000/user/signin',
-      headers: {
-        'Content-Type': 'application/json',
+      data: {
+        email: email,
+        password: password,
       },
-      data: JSON.stringify({ email, password }),
+      withCredentials: true
     };
+  
 
     console.log('Config:', config);
 
@@ -35,12 +36,6 @@ const SignIn = () => {
       console.log('Response:', response);
 
       if (response.data.success) {
-        Cookies.set('a_Token', response.data.data.a_Token, { expires: new Date(Date.now() + 60 * 60 * 1000) }); // 1 hour
-        Cookies.set('r_Token', response.data.data.r_Token, { expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) }); // 7 days
-        console.log('Tokens set:', {
-          a_Token: Cookies.get('a_Token'),
-          r_Token: Cookies.get('r_Token'),
-        });
         showSuccessToast(response.data.message);
         navigate(from.pathname)
       } else {

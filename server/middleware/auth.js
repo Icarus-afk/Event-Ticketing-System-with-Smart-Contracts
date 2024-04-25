@@ -8,8 +8,7 @@ const secret = process.env.JWT_SECRET;
 
 const auth = async (req, res, next) => {
   try {
-    const token = req.cookies.token; // Read the token from the cookies
-
+    const token = req.cookies.token; 
     if (!token) {
       throw new jwt.JsonWebTokenError('No token provided');
     }

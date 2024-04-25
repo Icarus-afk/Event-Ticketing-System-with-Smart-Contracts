@@ -2,7 +2,6 @@ import { Box, Flex, Input, Button, Grid, LinkBox, LinkOverlay, Image, Text } fro
 import { FaRegClock } from 'react-icons/fa';
 import { usePaginator, Paginator, Container, PageGroup } from 'chakra-paginator';
 import axios from 'axios';
-import Cookies from 'js-cookie';
 import Navbar from '../components/customNavbar';
 import { useState, useEffect, useCallback } from 'react';
 import DatePicker from 'react-datepicker';
@@ -26,9 +25,7 @@ const HomePage = () => {
         const config = {
             method: 'get',
             url: url,
-            headers: {
-                'Authorization': `Bearer ${Cookies.get('a_Token')}`
-            },
+            withCredentials: true
         };
 
         try {
