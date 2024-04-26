@@ -15,7 +15,7 @@ dotenv.config()
 
 
 const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
-const { web3Instance, contract: TicketContract } = initContract('http://localhost:7545', contractData.abi, process.env.EVENT_BLOCK);
+const { web3Instance, contract: EventManagementContract } = initContract('http://localhost:7545', contractData.abi, process.env.EVENT_BLOCK);
 
 
 export const createEvent = async (req, res) => {
