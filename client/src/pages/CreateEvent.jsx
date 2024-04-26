@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack } from '@chakra-ui/react';
+import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack, HStack, Heading, Flex } from '@chakra-ui/react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
@@ -57,47 +57,41 @@ const CreateEventPage = () => {
     };
 
     return (
-        <Box p={5}>
-            <VStack spacing={4} as="form" onSubmit={handleSubmit}>
-                <FormControl id="name">
-                    <FormLabel>Event Name</FormLabel>
-                    <Input type="text" name="name" value={event.name} onChange={handleChange} />
-                </FormControl>
-                <FormControl id="date">
-                    <FormLabel>Date</FormLabel>
-                    <Input type="date" name="date" value={event.date} onChange={handleChange} />
-                </FormControl>
-                <FormControl id="time">
-                    <FormLabel>Time</FormLabel>
-                    <Input type="time" name="time" value={event.time} onChange={handleChange} />
-                </FormControl>
-                <FormControl id="price">
-                    <FormLabel>Price</FormLabel>
-                    <Input type="number" name="price" value={event.price} onChange={handleChange} />
-                </FormControl>
-                <FormControl id="totalTickets">
-                    <FormLabel>Total Tickets</FormLabel>
-                    <Input type="number" name="totalTickets" value={event.totalTickets} onChange={handleChange} />
-                </FormControl>
-                <FormControl id="location">
-                    <FormLabel>Location</FormLabel>
-                    <Input type="text" name="location" value={event.location} onChange={handleChange} />
-                </FormControl>
-                <FormControl id="description">
-                    <FormLabel>Description</FormLabel>
-                    <Textarea name="description" value={event.description} onChange={handleChange} />
-                </FormControl>
-                <FormControl id="tags">
-                    <FormLabel>Tags</FormLabel>
-                    <Input type="text" name="tags" value={event.tags} onChange={handleChange} />
-                </FormControl>
-                <FormControl id="image">
-                    <FormLabel>Image</FormLabel>
-                    <Input type="file" name="image" onChange={handleImageChange} />
-                </FormControl>
-                <Button colorScheme="blue" type="submit">Create Event</Button>
-            </VStack>
-        </Box>
+        <Flex justifyContent="center" alignItems="center" style={{ minHeight: '100vh' }}>
+            <Box p={5} shadow="md" borderWidth="1px" borderRadius="md" bg="white" flex="0 1 800px">
+                <Heading mb={5}>Create Event</Heading>
+                <VStack spacing={4} as="form" onSubmit={handleSubmit}>
+                    <FormControl id="date-time">
+                        <FormLabel>Date and Time</FormLabel>
+                        <HStack>
+                            <Input type="date" name="date" value={event.date} onChange={handleChange} placeholder="Date" />
+                            <Input type="time" name="time" value={event.time} onChange={handleChange} placeholder="Time" />
+                        </HStack>
+                    </FormControl>
+                    <FormControl id="details">
+                        <FormLabel>Event Details</FormLabel>
+                        <VStack spacing={2}>
+                            <Input type="text" name="location" value={event.location} onChange={handleChange} placeholder="Location" />
+                            <Input type="number" name="price" value={event.price} onChange={handleChange} placeholder="Price" />
+                            <Input type="number" name="totalTickets" value={event.totalTickets} onChange={handleChange} placeholder="Total Tickets" />
+                        </VStack>
+                    </FormControl>
+                    <FormControl id="description">
+                        <FormLabel>Description</FormLabel>
+                        <Textarea name="description" value={event.description} onChange={handleChange} placeholder="Describe the event..." />
+                    </FormControl>
+                    <FormControl id="tags">
+                        <FormLabel>Tags</FormLabel>
+                        <Input type="text" name="tags" value={event.tags} onChange={handleChange} placeholder="Enter tags separated by commas" />
+                    </FormControl>
+                    <FormControl id="image">
+                        <FormLabel>Event Image</FormLabel>
+                        <Input type="file" name="image" onChange={handleImageChange} />
+                    </FormControl>
+                    <Button colorScheme="teal" type="submit">Create Event</Button>
+                </VStack>
+            </Box>
+        </Flex>
     );
 };
 

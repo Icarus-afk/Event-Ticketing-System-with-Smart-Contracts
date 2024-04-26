@@ -1,11 +1,13 @@
-import { Box, Flex, Input, Button, Grid, LinkBox, LinkOverlay, Image, Text } from '@chakra-ui/react';
-import { FaRegClock } from 'react-icons/fa';
+import { Box, Flex, Input, Button, Grid, LinkOverlay, Image, Text, useDisclosure, IconButton } from '@chakra-ui/react';
+import { FaRegClock, FaRegEye } from 'react-icons/fa';
 import { usePaginator, Paginator, Container, PageGroup } from 'chakra-paginator';
 import axios from 'axios';
 import Navbar from '../components/customNavbar';
 import { useState, useEffect, useCallback } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import EventModal from '../components/EventModal'
+import { useNavigate } from 'react-router-dom'
 
 const HomePage = () => {
     const [events, setEvents] = useState([]);
@@ -14,6 +16,10 @@ const HomePage = () => {
     const [searchQuery, setSearchQuery] = useState(null);
     const [searchDate, setSearchDate] = useState(null);
     const [searchButtonClicked, setSearchButtonClicked] = useState(false);
+    const [selectedEvent, setSelectedEvent] = useState(null);
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
+
 
     const fetchEvents = useCallback(async (search = false) => {
         let url = `http://localhost:8000/event/get?page=${currentPage}&limit=9`;
@@ -53,6 +59,37 @@ const HomePage = () => {
     const handleSearch = () => {
         setSearchButtonClicked(true);
     };
+
+    const handleEventClick = async (eventId) => {
+        console.log('handleEventClick called with eventId:', eventId);
+    
+        event.stopPropagation();
+    
+        const url = `http://localhost:8000/event/get/?eventId=${eventId}`;
+        console.log("url -->", url);
+        const config = {
+            method: 'get',
+            url: url,
+            withCredentials: true
+        };
+    
+        try {
+            const response = await axios(config);
+            console.log(response.data)
+            setSelectedEvent(response.data.data[0]); // Access the first element of the data array
+        } catch (error) {
+            console.error('Failed to fetch event:', error);
+        }
+    };
+    
+    useEffect(() => {
+        if (selectedEvent) {
+            console.log(selectedEvent);
+            onOpen();
+        }
+    }, [onOpen, selectedEvent]);
+
+
     return (
         <>
             <Navbar />
@@ -87,23 +124,42 @@ const HomePage = () => {
                     justifyContent="start"
                 >
                     {events.map((event) => (
-                        <LinkBox as={Box} maxW="md" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="lg" bg="white" key={event._id}>
+                        <Box
+                            maxW="md"
+                            borderWidth="1px"
+                            borderRadius="lg"
+                            overflow="hidden"
+                            boxShadow="lg"
+                            bg="white"
+                            key={event._id}
+                        >
                             <Box boxSize="400px">
-                                <Image src={event.image && event.image !== "http://localhost:8000/" ? event.image : "/src/assets/event_placeholder.png"} alt={event.name} objectFit="cover" />
+                                <Image
+                                    src={event.image && event.image !== "http://localhost:8000/" ? event.image : "/src/assets/event_placeholder.png"}
+                                    alt={event.name}
+                                    objectFit="cover"
+                                />
                             </Box>
                             <Box p="6">
                                 <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
-                                    <LinkOverlay href={`/event/${event._id}`}>{event.name}</LinkOverlay>
+                                    {event.name}
                                 </Box>
                                 <Box d="flex" alignItems="center" mt={2}>
                                     <FaRegClock size={20} style={{ marginRight: '5px' }} />
                                     {new Date(event.date).toLocaleDateString()} at {event.time}
                                 </Box>
                                 <Text mt={2}>{event.description}</Text>
+                                <IconButton
+                                    aria-label="Open event"
+                                    icon={<FaRegEye />}
+                                    onClick={() => handleEventClick(event.eventId)}
+                                />
                             </Box>
-                        </LinkBox>
+                        </Box>
                     ))}
                 </Grid>
+                {selectedEvent && <EventModal isOpen={isOpen} onClose={onClose} event={selectedEvent} />}
+
             </Flex>
             <Box display="flex" justifyContent="center" mt={4}>
                 <Paginator
