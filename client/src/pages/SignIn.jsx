@@ -7,63 +7,63 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 
 const SignIn = () => {
-  const { showSuccessToast, showErrorToast } = useCustomToast();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+	const { showSuccessToast, showErrorToast } = useCustomToast();
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
 
-  const navigate = useNavigate()
-  const location = useLocation();
-  const { from } = location.state || { from: { pathname: "/" } };
+	const navigate = useNavigate()
+	const location = useLocation();
+	const { from } = location.state || { from: { pathname: "/" } };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+	const handleSubmit = async (e) => {
+		e.preventDefault();
 
-    const config = {
-      method: 'post',
-      url: 'http://localhost:8000/user/signin',
-      data: {
-        email: email,
-        password: password,
-      },
-      withCredentials: true
-    };
-  
+		const config = {
+			method: 'post',
+			url: 'http://localhost:8000/user/signin',
+			data: {
+				email: email,
+				password: password,
+			},
+			withCredentials: true
+		};
 
-    console.log('Config:', config);
 
-    try {
-      const response = await axios(config);
-      console.log('Response:', response);
+		console.log('Config:', config);
 
-      if (response.data.success) {
-        showSuccessToast(response.data.message);
-        navigate(from.pathname)
-      } else {
-        showErrorToast(response.data.message);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      showErrorToast(error.response && error.response.data.message ? error.response.data.message : "An error occurred...");
-    }
-  };
+		try {
+			const response = await axios(config);
+			console.log('Response:', response);
 
-  return (
-    <ChakraProvider>
+			if (response.data.success) {
+				showSuccessToast(response.data.message);
+				navigate(from.pathname)
+			} else {
+				showErrorToast(response.data.message);
+			}
+		} catch (error) {
+			console.error('Error:', error);
+			showErrorToast(error.response && error.response.data.message ? error.response.data.message : "An error occurred...");
+		}
+	};
 
-      <VStack align="center" justify="center" h="100vh" bg="gray.100">
-        <Heading mb="6" size="lg" fontWeight="bold" color="purple.500">Sign In</Heading>
-        <Box as="form" onSubmit={handleSubmit} p="6" bg="white" rounded="md" shadow="md" w="md">
-          <Input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} borderColor="purple.500" focusBorderColor="purple.700" />
-          <Input type="password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} mt="4" borderColor="purple.500" focusBorderColor="purple.700" />
-          <Button colorScheme="purple" w="full" mt="6" type="submit">Sign In</Button>
-          <Text textAlign="center" mt="6">
-            Don&apos;t have an account? <Box as={Link} to="/signup" color="purple.500" _hover={{ color: 'purple.700' }}>Sign Up</Box>
-          </Text>
-        </Box>
-      </VStack>
-    </ ChakraProvider>
+	return (
+		<ChakraProvider>
 
-  );
+			<VStack align="center" justify="center" h="100vh" bg="gray.100">
+				<Heading mb="6" size="lg" fontWeight="bold" color="purple.500">Sign In</Heading>
+				<Box as="form" onSubmit={handleSubmit} p="6" bg="white" rounded="md" shadow="md" w="md">
+					<Input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} borderColor="purple.500" focusBorderColor="purple.700" />
+					<Input type="password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} mt="4" borderColor="purple.500" focusBorderColor="purple.700" />
+					<Button colorScheme="purple" w="full" mt="6" type="submit">Sign In</Button>
+					<Text textAlign="center" mt="6">
+						Don&apos;t have an account? <Box as={Link} to="/signup" color="purple.500" _hover={{ color: 'purple.700' }}>Sign Up</Box>
+					</Text>
+				</Box>
+			</VStack>
+		</ ChakraProvider>
+
+	);
 };
 
 export default SignIn;

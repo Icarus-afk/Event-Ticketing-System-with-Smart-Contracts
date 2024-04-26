@@ -30,6 +30,7 @@ const HomePage = () => {
 
         try {
             const response = await axios(config);
+            console.log(response);
             setEvents(response.data.data);
             setCurrentPage(response.data.currentPage);
             setTotalPages(response.data.totalPages);
@@ -78,25 +79,32 @@ const HomePage = () => {
                 </Box>
                 <Button colorScheme="purple" size="md" onClick={handleSearch} ml={1}>Search</Button>
             </Flex>
-            <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }} gap={6} p={4}>
-                {events.map((event) => (
-                    <LinkBox as={Box} maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="lg" bg="white" key={event._id}>
-                        <Box boxSize="100%" aspectRatio={16 / 9}>
-                            <Image src={event.image} alt={event.name} objectFit="cover" />
-                        </Box>
-                        <Box p="6">
-                            <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
-                                <LinkOverlay href={`/event/${event._id}`}>{event.name}</LinkOverlay>
+            <Flex justifyContent="center">
+                <Grid
+                    templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
+                    gap={6}
+                    p={4}
+                    justifyContent="start"
+                >
+                    {events.map((event) => (
+                        <LinkBox as={Box} maxW="md" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="lg" bg="white" key={event._id}>
+                            <Box boxSize="400px">
+                                <Image src={event.image && event.image !== "http://localhost:8000/" ? event.image : "/src/assets/event_placeholder.png"} alt={event.name} objectFit="cover" />
                             </Box>
-                            <Box d="flex" alignItems="center" mt={2}>
-                                <FaRegClock size={20} style={{ marginRight: '5px' }} />
-                                {new Date(event.date).toLocaleDateString()} at {event.time}
+                            <Box p="6">
+                                <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
+                                    <LinkOverlay href={`/event/${event._id}`}>{event.name}</LinkOverlay>
+                                </Box>
+                                <Box d="flex" alignItems="center" mt={2}>
+                                    <FaRegClock size={20} style={{ marginRight: '5px' }} />
+                                    {new Date(event.date).toLocaleDateString()} at {event.time}
+                                </Box>
+                                <Text mt={2}>{event.description}</Text>
                             </Box>
-                            <Text mt={2}>{event.description}</Text>
-                        </Box>
-                    </LinkBox>
-                ))}
-            </Grid>
+                        </LinkBox>
+                    ))}
+                </Grid>
+            </Flex>
             <Box display="flex" justifyContent="center" mt={4}>
                 <Paginator
                     currentPage={currentPage}
