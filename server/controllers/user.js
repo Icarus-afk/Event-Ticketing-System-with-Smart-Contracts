@@ -6,6 +6,7 @@ import { createWallet } from "../utils/initWallet.js";
 import dotenv from 'dotenv';
 import logger from '../utils/consoleLogger.js'
 import redisClient from '../utils//initRedis.js';
+import { generateToken } from "../utils/generateToken.js";
 
 dotenv.config();
 
@@ -31,7 +32,7 @@ export const signin = async (req, res) => {
       return res.status(400).json({ code: 400, success: false, message: "Invalid credentials" });
     }
 
-    const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: "1h" });
+    const token = generateToken(oldUser.email, oldUser._id, secret, "1h");
 
     res.cookie('token', token, {
       httpOnly: true, 
@@ -89,7 +90,7 @@ export const signup = async (req, res) => {
 
     await UserModel.updateOne({ _id: result._id }, { status: 'active' });
 
-    const token = jwt.sign({ email: result.email, id: result._id }, secret, { expiresIn: "1h" });
+    const token = generateToken(result.email, result._id, secret, "1h");
 
     result._doc.userImage = userImage ? `${req.protocol}://${req.get('host')}/${result.userImage}` : null;
     const user = await UserModel.findById(result._id).select('-password');
@@ -199,7 +200,7 @@ export const refreshToken = async (req, res) => {
       return res.status(404).json({ success: false, message: 'User not found', code: 404 });
     }
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = generateToken(user._id, process.env.JWT_SECRET, '1h');
 
     // res.cookie('accessToken', token, { httpOnly: true, secure: true });
     // res.cookie('refreshToken', newRefreshToken, { httpOnly: true, secure: true });

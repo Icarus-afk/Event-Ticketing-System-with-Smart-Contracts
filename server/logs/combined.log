@@ -10411,3 +10411,52 @@ value at "/0" is required
 2024-04-26 13:50:16 [info]: Connected to Redis
 2024-04-26 13:50:16 [info]: Database connected successfully
 2024-04-26 13:50:16 [info]: Server running on port = 8000
+2024-04-26 18:34:55 [info]: Connected to Redis
+2024-04-26 18:34:55 [info]: Database connected successfully
+2024-04-26 18:34:55 [info]: Server running on port = 8000
+2024-04-26 18:35:34 [info]: Signin attempt for email: ahmed.ehsan23@gmail.com
+2024-04-26 18:35:34 [info]: User signed in successfully for email: ahmed.ehsan23@gmail.com
+2024-04-26 18:35:51 [info]: Creating event...
+2024-04-26 18:35:51 [error]: request to http://localhost:7545/ failed, reason: connect ECONNREFUSED 127.0.0.1:7545
+2024-04-26 18:35:59 [info]: Creating event...
+2024-04-26 18:35:59 [info]: Event created successfully
+2024-04-26 18:39:30 [info]: Connected to Redis
+2024-04-26 18:39:30 [info]: Database connected successfully
+2024-04-26 18:39:30 [info]: Server running on port = 8000
+2024-04-26 18:40:00 [info]: Connected to Redis
+2024-04-26 18:40:00 [info]: Database connected successfully
+2024-04-26 18:40:00 [info]: Server running on port = 8000
+2024-04-26 18:40:11 [info]: Connected to Redis
+2024-04-26 18:40:11 [info]: Database connected successfully
+2024-04-26 18:40:11 [info]: Server running on port = 8000
+2024-04-26 18:40:28 [info]: Issuing ticket...
+2024-04-26 18:40:28 [error]: TicketContract is not defined
+2024-04-26 18:40:41 [info]: Connected to Redis
+2024-04-26 18:40:41 [info]: Database connected successfully
+2024-04-26 18:40:41 [info]: Server running on port = 8000
+2024-04-26 18:40:44 [info]: Issuing ticket...
+2024-04-26 18:40:44 [error]: TicketContract is not defined
+2024-04-26 18:40:48 [info]: Connected to Redis
+2024-04-26 18:40:48 [info]: Database connected successfully
+2024-04-26 18:40:48 [info]: Server running on port = 8000
+2024-04-26 18:41:33 [info]: Issuing ticket...
+2024-04-26 18:41:33 [error]: TicketContract is not defined
+2024-04-26 18:41:44 [info]: Connected to Redis
+2024-04-26 18:41:44 [info]: Database connected successfully
+2024-04-26 18:41:44 [info]: Server running on port = 8000
+2024-04-26 18:41:48 [info]: Issuing ticket...
+2024-04-26 18:41:48 [error]: contractAddress is not defined
+2024-04-26 18:42:44 [info]: Connected to Redis
+2024-04-26 18:42:44 [info]: Database connected successfully
+2024-04-26 18:42:44 [info]: Server running on port = 8000
+2024-04-26 18:42:45 [info]: Issuing ticket...
+2024-04-26 18:42:45 [error]: contractAddress is not defined
+2024-04-26 18:42:55 [info]: Connected to Redis
+2024-04-26 18:42:55 [info]: Database connected successfully
+2024-04-26 18:42:55 [info]: Server running on port = 8000
+2024-04-26 18:42:57 [info]: Issuing ticket...
+2024-04-26 18:42:57 [info]: Transaction hash: 0x23ab0dab45e31b4fc8c6d675c8921d7d748eabe7e6009caa4cbe86fa90f8d54e
+2024-04-26 18:42:57 [info]: Ticket issued successfully
+2024-04-26 18:45:03 [info]: Connected to Redis
+2024-04-26 18:45:03 [info]: Database connected successfully
+2024-04-26 18:45:03 [info]: Server running on port = 8000

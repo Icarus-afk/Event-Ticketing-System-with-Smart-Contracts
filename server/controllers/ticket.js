@@ -8,6 +8,7 @@ import Event from '../models/event.js';
 import User from "../models/user.js";
 import jwt from 'jsonwebtoken'
 import logger from '../utils/consoleLogger.js'
+import { initContract } from '../utils/initContract.js';
 
 
 dotenv.config();
@@ -15,11 +16,7 @@ dotenv.config();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
-
-const web3Instance = new Web3('http://localhost:7545');
-const contractABI = contractData.abi;
-const contractAddress = '0x4dFFE195b61e03E14d11450D9C6c05Dd02343F25';
-const TicketContract = new web3Instance.eth.Contract(contractABI, contractAddress);
+const { web3Instance, contract: TicketContract } = initContract('http://localhost:7545', contractData.abi, process.env.TICKET_BLOCK);
 
 
 export const issueTicket = async (req, res) => {
@@ -71,7 +68,7 @@ export const issueTicket = async (req, res) => {
 
         const tx = {
             'nonce': nonce,
-            'to': contractAddress,
+            'to': process.env.TICKET_BLOCK,
             'gasPrice': web3Instance.utils.toHex(20 * 1e9),
             'gasLimit': web3Instance.utils.toHex(210000), 
             'data': TicketContract.methods.issueTicket(from, eventId).encodeABI()
@@ -180,7 +177,7 @@ export const transferTicket = async (req, res) => {
 
         const tx = {
             'nonce': nonce,
-            'to': contractAddress,
+            'to': process.env.TICKET_BLOCK,
             'gasPrice': web3Instance.utils.toHex(20 * 1e9),
             'gasLimit': web3Instance.utils.toHex(210000),
             'data': TicketContract.methods.transferTicket(toWallet.address, eventId).encodeABI()

@@ -8,16 +8,14 @@ import dotenv from 'dotenv'
 import crypto from 'crypto';
 import logger from '../utils/consoleLogger.js'
 import { getIo } from '../utils/initSocket.js';
+import { initContract } from '../utils/initContract.js';
 // import { handleImageUpload } from "../utils/imageHandler.js";
 
 dotenv.config()
 
 
 const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
-const web3Instance = new Web3('http://localhost:7545');
-const contractABI = contractData.abi;
-const contractAddress = '0x914a5DB53877D3f4A0F0F664Ce3264F3800D4B4B';
-const EventManagementContract = new web3Instance.eth.Contract(contractABI, contractAddress);
+const { web3Instance, contract: TicketContract } = initContract('http://localhost:7545', contractData.abi, process.env.EVENT_BLOCK);
 
 
 export const createEvent = async (req, res) => {
