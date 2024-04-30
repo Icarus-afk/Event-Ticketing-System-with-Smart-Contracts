@@ -33,11 +33,11 @@ export const signin = async (req, res) => {
     }
 
     const token = generateToken(oldUser.email, oldUser._id, secret, "1h");
-
+    console.log("Token -->", token);
     res.cookie('token', token, {
       httpOnly: true, 
       secure: false, 
-      sameSite: 'lax', 
+      sameSite: 'none', 
       maxAge:  60 * 60 * 1000,
       path: '/'
     });
@@ -54,7 +54,7 @@ export const signin = async (req, res) => {
 };
 
 export const signup = async (req, res) => {
-  const { email, password, firstName, lastName, isAdmin, isOrganizer, dateOfBirth, address, phoneNumber } = req.body;
+  const { email, password, firstName, lastName, isAdmin, isOrganizer, dateOfBirth, address, phoneNumber, bio, interests, organizations } = req.body;
   const userImage = req.file;
 
   try {
@@ -77,12 +77,16 @@ export const signup = async (req, res) => {
       dateOfBirth,
       address,
       phoneNumber,
-      userImage: userImage ? userImage.path : null
+      userImage: userImage ? userImage.path : null,
+      bio, 
+      interests, 
+      joinedAt: new Date(), 
+      organizations 
     };
 
     const result = await UserModel.create(pendingUser);
 
-    const wallet = await createWallet(result._id);
+    const wallet = await createWallet(result._id, "user");
 
     if (!wallet) {
       throw new Error('Failed to create wallet');
@@ -95,17 +99,16 @@ export const signup = async (req, res) => {
     result._doc.userImage = userImage ? `${req.protocol}://${req.get('host')}/${result.userImage}` : null;
     const user = await UserModel.findById(result._id).select('-password');
 
-    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", token: token, user: user });
+    res.status(201).json({ code: 201, success: true, message: "User signed up successfully", user: user });
   } catch (err) {
     logger.error(`Signup error for email: ${email}`, err);
     res.status(500).json({ code: 500, success: false, message: "Something went wrong" });
   }
 };
 
-
 export const updateUser = async (req, res) => {
   const { id } = req.params;
-  const {  firstName, lastName,  dateOfBirth, address, phoneNumber } = req.body;
+  const { firstName, lastName, dateOfBirth, address, phoneNumber, bio, interests, joinedAt, organizations } = req.body;
   const userImage = req.file;
 
   logger.info(`Update user attempt for id: ${id}`);
@@ -115,10 +118,10 @@ export const updateUser = async (req, res) => {
     return res.status(404).json({ code: 404, success: false, message: `No user with id: ${id}` });
   }
 
-  const updatedUser = { name: `${firstName} ${lastName}`, dateOfBirth, address, phoneNumber, userImage, _id: id };
+  const updatedUser = { name: `${firstName} ${lastName}`, dateOfBirth, address, phoneNumber, userImage, bio, interests, joinedAt, organizations, _id: id };
   
   try {
-    const updatedUser = await UserModel.findByIdAndUpdate(id, req.body, { new: true });
+    const updatedUser = await UserModel.findByIdAndUpdate(id, updatedUser, { new: true });
   
     if (!updatedUser) {
       return res.status(404).json({ success: false, message: 'User not found', statusCode: 404 });
@@ -133,6 +136,7 @@ export const updateUser = async (req, res) => {
     res.status(500).json({ code: 500, success: false, message: "Something went wrong" });
   }
 };
+
 
 export const deleteUser = async (req, res) => {
   const { id } = req.params;

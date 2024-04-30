@@ -9,6 +9,7 @@ const secret = process.env.JWT_SECRET;
 const auth = async (req, res, next) => {
   try {
     const token = req.cookies.token; 
+    console.log(token);
     if (!token) {
       throw new jwt.JsonWebTokenError('No token provided');
     }
@@ -31,6 +32,8 @@ const auth = async (req, res, next) => {
     req.user = await User.findById(req.userId);
 
     next();
+    console.log('User ID:', req.userId);
+console.log('User:', req.user);
   } catch (error) {
     if (error instanceof jwt.JsonWebTokenError) {
       return res.status(401).json({ success: false, message: 'Invalid token. Please sign in again.', statusCode: 401 });

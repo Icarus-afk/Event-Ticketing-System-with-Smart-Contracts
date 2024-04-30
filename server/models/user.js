@@ -11,7 +11,13 @@ const userSchema = mongoose.Schema({
   isAdmin: { type: Boolean, default: false },
   isOrganizer: { type: Boolean, default: false },
   userImage: { type: String },
-  isActive: { type: Boolean, default: false, required: true }
+  isActive: { type: Boolean, default: false, required: true },
+  bio: { type: String }, 
+  interests: [{ type: String }], 
+  joinedAt: { type: Date, default: Date.now },
+  organizations: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Organizer' }]
 });
 
-export default mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
+
+export default User;

@@ -15,11 +15,10 @@ function handleError(error) {
   logger.error(error);
 }
 
-export const createWallet = async (userId) => {
+export const createWallet = async (id, type) => {
   try {
     const accountbef = await web3.eth.getAccounts();
     logger.info('Accounts ----> :', accountbef);
-    logger.info('Creating wallet for user:', userId);
 
     const wallet = Wallet.createRandom();
 
@@ -38,8 +37,13 @@ export const createWallet = async (userId) => {
       privateKey: encryptedPrivateKey,
       publicKey: publicKey,
       iv: iv.toString('hex'),
-      userId: userId,
     });
+
+    if (type === 'user') {
+      newWallet.userId = id;
+    } else if (type === 'organizer') {
+      newWallet.organizationId = id;
+    }
 
     await newWallet.save();
 

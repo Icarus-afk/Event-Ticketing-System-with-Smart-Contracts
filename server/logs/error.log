@@ -292,3 +292,36 @@ value at "/0" is required
 2024-04-26 18:41:33 [error]: TicketContract is not defined
 2024-04-26 18:41:48 [error]: contractAddress is not defined
 2024-04-26 18:42:45 [error]: contractAddress is not defined
+2024-04-30 19:07:08 [error]: Signin error for email:  test2@example.com option sameSite is invalid
+2024-04-30 19:07:10 [error]: Signin error for email:  test2@example.com option sameSite is invalid
+2024-04-30 19:07:10 [error]: Signin error for email:  test2@example.com option sameSite is invalid
+2024-04-30 19:43:47 [error]: Organization validation failed: name: Path `name` is required., description: Path `description` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+2024-04-30 19:44:11 [error]: Organization validation failed: name: Path `name` is required., description: Path `description` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+2024-04-30 19:44:52 [error]: Organization validation failed: name: Path `name` is required., description: Path `description` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+2024-04-30 19:46:01 [error]: Organization validation failed: name: Path `name` is required., description: Path `description` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+2024-04-30 19:46:52 [error]: Organization validation failed: name: Path `name` is required., description: Path `description` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+2024-04-30 19:48:14 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 19:51:53 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 19:52:29 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 19:53:11 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 19:54:24 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 20:31:58 [error]: Organization is not defined
+2024-04-30 20:32:55 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 20:33:50 [error]: _id is not defined
+2024-04-30 20:36:03 [error]: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "Organization"
+2024-04-30 20:53:24 [error]: type is not defined
+2024-04-30 20:53:24 [error]: Signup error for email:  test2@example.com Failed to create wallet
+2024-04-30 20:54:06 [error]: type is not defined
+2024-04-30 20:54:06 [error]: Signup error for email:  test2@example.com Failed to create wallet
+2024-04-30 20:55:01 [error]: id is not defined
+2024-04-30 20:55:01 [error]: Signup error for email:  test2@example.com Failed to create wallet
+2024-04-30 20:56:02 [error]: userId is not defined
+2024-04-30 20:56:02 [error]: Signup error for email:  test2@example.com Failed to create wallet
+2024-04-30 21:01:58 [error]: organizerUser is not defined
+2024-04-30 21:08:54 [error]: Error updating event Cast to ObjectId failed for value "35" (type string) at path "_id" for model "Event"
+2024-04-30 21:10:09 [error]: Error updating event Cast to ObjectId failed for value "35" (type string) at path "_id" for model "Event"
+2024-04-30 21:10:55 [error]: Error updating event Cast to ObjectId failed for value "35" (type number) at path "_id" for model "Event"
+2024-04-30 21:11:11 [error]: Error updating event Cast to ObjectId failed for value "35" (type string) at path "_id" for model "Event"
+2024-04-30 21:11:30 [error]: Error updating event Cast to ObjectId failed for value "35" (type number) at path "_id" for model "Event"
+2024-04-30 21:14:47 [error]: Error updating event Organizer is not defined
+2024-04-30 21:17:07 [error]: Error deleting event in smart contract: decryptedPrivateKey is not defined

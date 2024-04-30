@@ -10979,3 +10979,461 @@ value at "/0" is required
 2024-04-26 20:37:03 [info]: Events retrieved from database
 2024-04-26 20:37:08 [info]: Getting events...
 2024-04-26 20:37:08 [info]: Events retrieved from database
+2024-04-28 10:35:56 [info]: Connected to Redis
+2024-04-28 10:35:56 [info]: Database connected successfully
+2024-04-28 10:35:56 [info]: Server running on port = 8000
+2024-04-28 10:50:40 [info]: Connected to Redis
+2024-04-28 10:50:40 [info]: Database connected successfully
+2024-04-28 10:50:40 [info]: Server running on port = 8000
+2024-04-28 10:51:37 [info]: Connected to Redis
+2024-04-28 10:51:37 [info]: Database connected successfully
+2024-04-28 10:52:17 [info]: Connected to Redis
+2024-04-28 10:52:17 [info]: Database connected successfully
+2024-04-28 10:52:17 [info]: Server running on port = 8000
+2024-04-28 11:01:31 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:01:31 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:01:41 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:01:41 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:02:07 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:02:07 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:02:24 [info]: Connected to Redis
+2024-04-28 11:02:24 [info]: Database connected successfully
+2024-04-28 11:02:24 [info]: Server running on port = 8000
+2024-04-28 11:03:50 [info]: Connected to Redis
+2024-04-28 11:03:50 [info]: Database connected successfully
+2024-04-28 11:03:50 [info]: Server running on port = 8000
+2024-04-28 11:03:51 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:03:51 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:04:06 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:04:07 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:05:12 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:05:12 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:05:26 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:05:26 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:06:03 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:06:03 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:06:33 [info]: Connected to Redis
+2024-04-28 11:06:33 [info]: Database connected successfully
+2024-04-28 11:06:33 [info]: Server running on port = 8000
+2024-04-28 11:06:34 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:06:34 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:08:15 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:08:15 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:08:49 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:08:49 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:09:12 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:09:12 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:10:09 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:10:09 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:10:35 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:10:36 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:10:40 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:10:40 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:10:42 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:10:42 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:12:02 [info]: Connected to Redis
+2024-04-28 11:12:02 [info]: Database connected successfully
+2024-04-28 11:12:02 [info]: Server running on port = 8000
+2024-04-28 11:12:03 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:12:03 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:12:13 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:12:13 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:13:09 [info]: Connected to Redis
+2024-04-28 11:13:09 [info]: Database connected successfully
+2024-04-28 11:13:09 [info]: Server running on port = 8000
+2024-04-28 11:13:13 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:13:13 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-04-28 11:13:13 [info]: Getting events...
+2024-04-28 11:13:13 [info]: Events retrieved from database
+2024-04-28 11:13:13 [info]: Getting events...
+2024-04-28 11:13:13 [info]: Events retrieved from database
+2024-04-28 11:13:23 [info]: Getting events...
+2024-04-28 11:13:23 [info]: Events retrieved from database
+2024-04-28 11:13:23 [info]: Getting events...
+2024-04-28 11:13:23 [info]: Events retrieved from database
+2024-04-28 11:13:29 [info]: Getting events...
+2024-04-28 11:13:29 [info]: Events retrieved from database
+2024-04-28 11:13:30 [info]: Getting events...
+2024-04-28 11:13:30 [info]: Events retrieved from database
+2024-04-28 11:16:47 [info]: Getting events...
+2024-04-28 11:16:47 [info]: Events retrieved from database
+2024-04-28 11:16:48 [info]: Getting events...
+2024-04-28 11:16:48 [info]: Events retrieved from database
+2024-04-28 17:40:22 [info]: Connected to Redis
+2024-04-28 17:40:22 [info]: Database connected successfully
+2024-04-28 17:40:22 [info]: Server running on port = 8000
+2024-04-30 18:58:33 [info]: Connected to Redis
+2024-04-30 18:58:33 [info]: Database connected successfully
+2024-04-30 18:58:33 [info]: Server running on port = 8000
+2024-04-30 18:59:25 [info]: Connected to Redis
+2024-04-30 18:59:25 [info]: Database connected successfully
+2024-04-30 18:59:25 [info]: Server running on port = 8000
+2024-04-30 19:00:40 [info]: Connected to Redis
+2024-04-30 19:00:40 [info]: Database connected successfully
+2024-04-30 19:00:40 [info]: Server running on port = 8000
+2024-04-30 19:03:34 [info]: Connected to Redis
+2024-04-30 19:03:34 [info]: Database connected successfully
+2024-04-30 19:03:34 [info]: Server running on port = 8000
+2024-04-30 19:03:41 [info]: Accounts ----> :
+2024-04-30 19:03:41 [info]: Creating wallet for user:
+2024-04-30 19:03:41 [info]: Wallet saved successfully
+2024-04-30 19:03:41 [info]: Wallet connected to Ganache network
+2024-04-30 19:04:33 [info]: Database connected successfully
+2024-04-30 19:04:33 [info]: Server running on port = 8000
+2024-04-30 19:04:33 [info]: Connected to Redis
+2024-04-30 19:05:18 [info]: Signin attempt for email: test2@example.com
+2024-04-30 19:05:18 [info]: User doesn't exist for email: test2@example.com
+2024-04-30 19:06:35 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 19:06:35 [info]: Invalid credentials for email:  test2@example.com
+2024-04-30 19:07:08 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 19:07:08 [error]: Signin error for email:  test2@example.com option sameSite is invalid
+2024-04-30 19:07:10 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 19:07:10 [error]: Signin error for email:  test2@example.com option sameSite is invalid
+2024-04-30 19:07:10 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 19:07:10 [error]: Signin error for email:  test2@example.com option sameSite is invalid
+2024-04-30 19:07:30 [info]: Connected to Redis
+2024-04-30 19:07:30 [info]: Database connected successfully
+2024-04-30 19:07:30 [info]: Server running on port = 8000
+2024-04-30 19:07:34 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 19:07:34 [info]: User signed in successfully for email:  test2@example.com
+2024-04-30 19:08:53 [info]: Connected to Redis
+2024-04-30 19:08:53 [info]: Database connected successfully
+2024-04-30 19:08:53 [info]: Server running on port = 8000
+2024-04-30 19:09:02 [info]: Connected to Redis
+2024-04-30 19:09:02 [info]: Database connected successfully
+2024-04-30 19:09:02 [info]: Server running on port = 8000
+2024-04-30 19:10:08 [info]: Connected to Redis
+2024-04-30 19:10:08 [info]: Database connected successfully
+2024-04-30 19:10:08 [info]: Server running on port = 8000
+2024-04-30 19:11:04 [info]: Connected to Redis
+2024-04-30 19:11:04 [info]: Database connected successfully
+2024-04-30 19:11:04 [info]: Server running on port = 8000
+2024-04-30 19:12:49 [info]: Connected to Redis
+2024-04-30 19:12:49 [info]: Database connected successfully
+2024-04-30 19:12:49 [info]: Server running on port = 8000
+2024-04-30 19:12:53 [info]: Connected to Redis
+2024-04-30 19:12:53 [info]: Database connected successfully
+2024-04-30 19:12:53 [info]: Server running on port = 8000
+2024-04-30 19:13:00 [info]: Connected to Redis
+2024-04-30 19:13:00 [info]: Database connected successfully
+2024-04-30 19:13:00 [info]: Server running on port = 8000
+2024-04-30 19:14:10 [info]: Connected to Redis
+2024-04-30 19:14:10 [info]: Database connected successfully
+2024-04-30 19:14:10 [info]: Server running on port = 8000
+2024-04-30 19:14:13 [info]: Connected to Redis
+2024-04-30 19:14:13 [info]: Database connected successfully
+2024-04-30 19:14:13 [info]: Server running on port = 8000
+2024-04-30 19:15:56 [info]: Connected to Redis
+2024-04-30 19:15:56 [info]: Database connected successfully
+2024-04-30 19:15:56 [info]: Server running on port = 8000
+2024-04-30 19:16:16 [info]: Connected to Redis
+2024-04-30 19:16:16 [info]: Database connected successfully
+2024-04-30 19:16:16 [info]: Server running on port = 8000
+2024-04-30 19:16:26 [info]: Connected to Redis
+2024-04-30 19:16:26 [info]: Database connected successfully
+2024-04-30 19:16:26 [info]: Server running on port = 8000
+2024-04-30 19:41:20 [info]: Connected to Redis
+2024-04-30 19:41:20 [info]: Database connected successfully
+2024-04-30 19:41:20 [info]: Server running on port = 8000
+2024-04-30 19:41:28 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 19:41:28 [info]: User signed in successfully for email:  test2@example.com
+2024-04-30 19:43:47 [error]: Organization validation failed: name: Path `name` is required., description: Path `description` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+2024-04-30 19:44:11 [error]: Organization validation failed: name: Path `name` is required., description: Path `description` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+2024-04-30 19:44:52 [error]: Organization validation failed: name: Path `name` is required., description: Path `description` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+2024-04-30 19:45:59 [info]: Connected to Redis
+2024-04-30 19:45:59 [info]: Database connected successfully
+2024-04-30 19:45:59 [info]: Server running on port = 8000
+2024-04-30 19:46:01 [error]: Organization validation failed: name: Path `name` is required., description: Path `description` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+2024-04-30 19:46:52 [error]: Organization validation failed: name: Path `name` is required., description: Path `description` is required., address: Path `address` is required., phoneNumber: Path `phoneNumber` is required., email: Path `email` is required.
+2024-04-30 19:48:09 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 19:48:09 [info]: User signed in successfully for email:  test2@example.com
+2024-04-30 19:48:14 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 19:48:45 [info]: Connected to Redis
+2024-04-30 19:48:45 [info]: Database connected successfully
+2024-04-30 19:48:45 [info]: Server running on port = 8000
+2024-04-30 19:51:51 [info]: Connected to Redis
+2024-04-30 19:51:51 [info]: Database connected successfully
+2024-04-30 19:51:51 [info]: Server running on port = 8000
+2024-04-30 19:51:53 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 19:52:29 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 19:52:58 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 19:52:58 [info]: User doesn't exist for email:  test2@example.com
+2024-04-30 19:53:03 [info]: Accounts ----> :
+2024-04-30 19:53:03 [info]: Creating wallet for user:
+2024-04-30 19:53:03 [info]: Wallet saved successfully
+2024-04-30 19:53:03 [info]: Wallet connected to Ganache network
+2024-04-30 19:53:07 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 19:53:07 [info]: User signed in successfully for email:  test2@example.com
+2024-04-30 19:53:11 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 19:54:21 [info]: Connected to Redis
+2024-04-30 19:54:21 [info]: Database connected successfully
+2024-04-30 19:54:22 [info]: Server running on port = 8000
+2024-04-30 19:54:24 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 19:55:49 [info]: Connected to Redis
+2024-04-30 19:55:49 [info]: Database connected successfully
+2024-04-30 19:55:49 [info]: Server running on port = 8000
+2024-04-30 20:19:44 [info]: Connected to Redis
+2024-04-30 20:19:44 [info]: Database connected successfully
+2024-04-30 20:19:44 [info]: Server running on port = 8000
+2024-04-30 20:19:47 [info]: Accounts ----> :
+2024-04-30 20:19:47 [info]: Creating wallet for user:
+2024-04-30 20:19:47 [info]: Wallet saved successfully
+2024-04-30 20:19:48 [info]: Wallet connected to Ganache network
+2024-04-30 20:21:58 [info]: Connected to Redis
+2024-04-30 20:21:58 [info]: Database connected successfully
+2024-04-30 20:21:58 [info]: Server running on port = 8000
+2024-04-30 20:25:11 [info]: Connected to Redis
+2024-04-30 20:25:11 [info]: Database connected successfully
+2024-04-30 20:25:11 [info]: Server running on port = 8000
+2024-04-30 20:27:02 [info]: Connected to Redis
+2024-04-30 20:27:02 [info]: Database connected successfully
+2024-04-30 20:27:02 [info]: Server running on port = 8000
+2024-04-30 20:27:08 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 20:27:08 [info]: Invalid credentials for email:  test2@example.com
+2024-04-30 20:27:13 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 20:27:13 [info]: Invalid credentials for email:  test2@example.com
+2024-04-30 20:27:24 [info]: Signin attempt for email: test2@example.com
+2024-04-30 20:27:24 [info]: User doesn't exist for email: test2@example.com
+2024-04-30 20:27:25 [info]: Signin attempt for email: test2@example.com
+2024-04-30 20:27:25 [info]: User doesn't exist for email: test2@example.com
+2024-04-30 20:27:48 [info]: Signin attempt for email: test2@example.com
+2024-04-30 20:27:48 [info]: User signed in successfully for email: test2@example.com
+2024-04-30 20:27:54 [info]: Accounts ----> :
+2024-04-30 20:27:54 [info]: Creating wallet for user:
+2024-04-30 20:27:54 [info]: Wallet saved successfully
+2024-04-30 20:27:54 [info]: Wallet connected to Ganache network
+2024-04-30 20:31:08 [info]: Connected to Redis
+2024-04-30 20:31:08 [info]: Database connected successfully
+2024-04-30 20:31:08 [info]: Server running on port = 8000
+2024-04-30 20:31:55 [info]: Connected to Redis
+2024-04-30 20:31:55 [info]: Database connected successfully
+2024-04-30 20:31:55 [info]: Server running on port = 8000
+2024-04-30 20:31:58 [info]: Creating event...
+2024-04-30 20:31:58 [error]: Organization is not defined
+2024-04-30 20:32:24 [info]: Connected to Redis
+2024-04-30 20:32:24 [info]: Database connected successfully
+2024-04-30 20:32:24 [info]: Server running on port = 8000
+2024-04-30 20:32:39 [info]: Connected to Redis
+2024-04-30 20:32:39 [info]: Database connected successfully
+2024-04-30 20:32:39 [info]: Server running on port = 8000
+2024-04-30 20:32:43 [info]: Creating event...
+2024-04-30 20:32:43 [info]: Organization not found
+2024-04-30 20:32:55 [error]: E11000 duplicate key error collection: Ticket-BC.organizations index: name_1 dup key: { name: "Test Organization" }
+2024-04-30 20:33:16 [info]: Accounts ----> :
+2024-04-30 20:33:16 [info]: Creating wallet for user:
+2024-04-30 20:33:16 [info]: Wallet saved successfully
+2024-04-30 20:33:16 [info]: Wallet connected to Ganache network
+2024-04-30 20:33:35 [info]: Creating event...
+2024-04-30 20:33:35 [info]: Organization not found
+2024-04-30 20:33:48 [info]: Connected to Redis
+2024-04-30 20:33:48 [info]: Database connected successfully
+2024-04-30 20:33:48 [info]: Server running on port = 8000
+2024-04-30 20:33:50 [info]: Creating event...
+2024-04-30 20:33:50 [error]: _id is not defined
+2024-04-30 20:35:31 [info]: Connected to Redis
+2024-04-30 20:35:31 [info]: Database connected successfully
+2024-04-30 20:35:31 [info]: Server running on port = 8000
+2024-04-30 20:36:02 [info]: Connected to Redis
+2024-04-30 20:36:02 [info]: Database connected successfully
+2024-04-30 20:36:02 [info]: Server running on port = 8000
+2024-04-30 20:36:03 [info]: Creating event...
+2024-04-30 20:36:03 [error]: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "Organization"
+2024-04-30 20:37:26 [info]: Connected to Redis
+2024-04-30 20:37:26 [info]: Database connected successfully
+2024-04-30 20:37:26 [info]: Server running on port = 8000
+2024-04-30 20:37:32 [info]: Connected to Redis
+2024-04-30 20:37:32 [info]: Database connected successfully
+2024-04-30 20:37:32 [info]: Server running on port = 8000
+2024-04-30 20:37:34 [info]: Connected to Redis
+2024-04-30 20:37:34 [info]: Database connected successfully
+2024-04-30 20:37:34 [info]: Server running on port = 8000
+2024-04-30 20:37:35 [info]: Creating event...
+2024-04-30 20:37:35 [info]: Organization ID not provided
+2024-04-30 20:37:58 [info]: Connected to Redis
+2024-04-30 20:37:58 [info]: Database connected successfully
+2024-04-30 20:37:58 [info]: Server running on port = 8000
+2024-04-30 20:38:00 [info]: Creating event...
+2024-04-30 20:38:00 [info]: Organization ID not provided
+2024-04-30 20:38:35 [info]: Connected to Redis
+2024-04-30 20:38:35 [info]: Database connected successfully
+2024-04-30 20:38:35 [info]: Server running on port = 8000
+2024-04-30 20:38:37 [info]: Creating event...
+2024-04-30 20:38:37 [info]: Organization wallet not found
+2024-04-30 20:39:14 [info]: Connected to Redis
+2024-04-30 20:39:14 [info]: Database connected successfully
+2024-04-30 20:39:14 [info]: Server running on port = 8000
+2024-04-30 20:39:16 [info]: Creating event...
+2024-04-30 20:39:16 [info]: Organizer's account does not have enough Ether
+2024-04-30 20:41:20 [info]: Connected to Redis
+2024-04-30 20:41:20 [info]: Database connected successfully
+2024-04-30 20:41:20 [info]: Server running on port = 8000
+2024-04-30 20:41:22 [info]: Connected to Redis
+2024-04-30 20:41:22 [info]: Database connected successfully
+2024-04-30 20:41:22 [info]: Server running on port = 8000
+2024-04-30 20:42:40 [info]: Connected to Redis
+2024-04-30 20:42:40 [info]: Database connected successfully
+2024-04-30 20:42:40 [info]: Server running on port = 8000
+2024-04-30 20:43:38 [info]: Connected to Redis
+2024-04-30 20:43:38 [info]: Database connected successfully
+2024-04-30 20:43:38 [info]: Server running on port = 8000
+2024-04-30 20:49:38 [info]: Connected to Redis
+2024-04-30 20:49:38 [info]: Database connected successfully
+2024-04-30 20:49:38 [info]: Server running on port = 8000
+2024-04-30 20:53:24 [info]: Accounts ----> :
+2024-04-30 20:53:24 [info]: Creating wallet for user:
+2024-04-30 20:53:24 [error]: type is not defined
+2024-04-30 20:53:24 [error]: Signup error for email:  test2@example.com Failed to create wallet
+2024-04-30 20:53:38 [info]: Connected to Redis
+2024-04-30 20:53:38 [info]: Database connected successfully
+2024-04-30 20:53:38 [info]: Server running on port = 8000
+2024-04-30 20:54:06 [info]: Accounts ----> :
+2024-04-30 20:54:06 [info]: Creating wallet for user:
+2024-04-30 20:54:06 [error]: type is not defined
+2024-04-30 20:54:06 [error]: Signup error for email:  test2@example.com Failed to create wallet
+2024-04-30 20:54:42 [info]: Connected to Redis
+2024-04-30 20:54:42 [info]: Database connected successfully
+2024-04-30 20:54:42 [info]: Server running on port = 8000
+2024-04-30 20:55:00 [info]: Accounts ----> :
+2024-04-30 20:55:00 [info]: Creating wallet for user:
+2024-04-30 20:55:01 [error]: id is not defined
+2024-04-30 20:55:01 [error]: Signup error for email:  test2@example.com Failed to create wallet
+2024-04-30 20:55:05 [info]: Connected to Redis
+2024-04-30 20:55:05 [info]: Database connected successfully
+2024-04-30 20:55:05 [info]: Server running on port = 8000
+2024-04-30 20:55:37 [info]: Connected to Redis
+2024-04-30 20:55:37 [info]: Database connected successfully
+2024-04-30 20:55:37 [info]: Server running on port = 8000
+2024-04-30 20:56:02 [info]: Accounts ----> :
+2024-04-30 20:56:02 [error]: userId is not defined
+2024-04-30 20:56:02 [error]: Signup error for email:  test2@example.com Failed to create wallet
+2024-04-30 20:56:25 [info]: Connected to Redis
+2024-04-30 20:56:25 [info]: Database connected successfully
+2024-04-30 20:56:25 [info]: Server running on port = 8000
+2024-04-30 20:56:37 [info]: Accounts ----> :
+2024-04-30 20:56:37 [info]: Wallet saved successfully
+2024-04-30 20:56:37 [info]: Wallet connected to Ganache network
+2024-04-30 20:56:42 [info]: Signin attempt for email: test2@example.com
+2024-04-30 20:56:42 [info]: User doesn't exist for email: test2@example.com
+2024-04-30 20:56:48 [info]: Signin attempt for email:  test2@example.com
+2024-04-30 20:56:48 [info]: User signed in successfully for email:  test2@example.com
+2024-04-30 20:56:55 [info]: Accounts ----> :
+2024-04-30 20:56:55 [info]: Wallet saved successfully
+2024-04-30 20:56:55 [info]: Wallet connected to Ganache network
+2024-04-30 20:58:41 [info]: Connected to Redis
+2024-04-30 20:58:41 [info]: Database connected successfully
+2024-04-30 20:58:41 [info]: Server running on port = 8000
+2024-04-30 20:58:53 [info]: Creating event...
+2024-04-30 20:58:53 [info]: Organization not found
+2024-04-30 20:58:58 [info]: Accounts ----> :
+2024-04-30 20:58:59 [info]: Wallet saved successfully
+2024-04-30 20:58:59 [info]: Wallet connected to Ganache network
+2024-04-30 20:59:19 [info]: Connected to Redis
+2024-04-30 20:59:19 [info]: Database connected successfully
+2024-04-30 20:59:19 [info]: Server running on port = 8000
+2024-04-30 20:59:27 [info]: Connected to Redis
+2024-04-30 20:59:27 [info]: Database connected successfully
+2024-04-30 20:59:27 [info]: Server running on port = 8000
+2024-04-30 20:59:36 [info]: Accounts ----> :
+2024-04-30 20:59:36 [info]: Wallet saved successfully
+2024-04-30 20:59:36 [info]: Wallet connected to Ganache network
+2024-04-30 21:00:45 [info]: Connected to Redis
+2024-04-30 21:00:45 [info]: Database connected successfully
+2024-04-30 21:01:36 [info]: Creating event...
+2024-04-30 21:01:36 [info]: Organization wallet not found
+2024-04-30 21:01:55 [info]: Connected to Redis
+2024-04-30 21:01:55 [info]: Database connected successfully
+2024-04-30 21:01:55 [info]: Server running on port = 8000
+2024-04-30 21:01:58 [info]: Creating event...
+2024-04-30 21:01:58 [error]: organizerUser is not defined
+2024-04-30 21:03:23 [info]: Connected to Redis
+2024-04-30 21:03:23 [info]: Database connected successfully
+2024-04-30 21:03:23 [info]: Server running on port = 8000
+2024-04-30 21:03:25 [info]: Creating event...
+2024-04-30 21:03:25 [info]: Event created successfully
+2024-04-30 21:08:13 [info]: Connected to Redis
+2024-04-30 21:08:13 [info]: Database connected successfully
+2024-04-30 21:08:13 [info]: Server running on port = 8000
+2024-04-30 21:08:36 [info]: Connected to Redis
+2024-04-30 21:08:36 [info]: Database connected successfully
+2024-04-30 21:08:36 [info]: Server running on port = 8000
+2024-04-30 21:08:54 [info]: Updating event...
+2024-04-30 21:08:54 [error]: Error updating event Cast to ObjectId failed for value "35" (type string) at path "_id" for model "Event"
+2024-04-30 21:10:07 [info]: Connected to Redis
+2024-04-30 21:10:07 [info]: Database connected successfully
+2024-04-30 21:10:07 [info]: Server running on port = 8000
+2024-04-30 21:10:09 [info]: Updating event...
+2024-04-30 21:10:09 [error]: Error updating event Cast to ObjectId failed for value "35" (type string) at path "_id" for model "Event"
+2024-04-30 21:10:51 [info]: Connected to Redis
+2024-04-30 21:10:51 [info]: Database connected successfully
+2024-04-30 21:10:51 [info]: Server running on port = 8000
+2024-04-30 21:10:55 [info]: Updating event...
+2024-04-30 21:10:55 [error]: Error updating event Cast to ObjectId failed for value "35" (type number) at path "_id" for model "Event"
+2024-04-30 21:11:09 [info]: Connected to Redis
+2024-04-30 21:11:09 [info]: Database connected successfully
+2024-04-30 21:11:09 [info]: Server running on port = 8000
+2024-04-30 21:11:11 [info]: Updating event...
+2024-04-30 21:11:11 [error]: Error updating event Cast to ObjectId failed for value "35" (type string) at path "_id" for model "Event"
+2024-04-30 21:11:19 [info]: Connected to Redis
+2024-04-30 21:11:19 [info]: Database connected successfully
+2024-04-30 21:11:19 [info]: Server running on port = 8000
+2024-04-30 21:11:28 [info]: Connected to Redis
+2024-04-30 21:11:28 [info]: Database connected successfully
+2024-04-30 21:11:28 [info]: Server running on port = 8000
+2024-04-30 21:11:30 [info]: Updating event...
+2024-04-30 21:11:30 [error]: Error updating event Cast to ObjectId failed for value "35" (type number) at path "_id" for model "Event"
+2024-04-30 21:12:00 [info]: Connected to Redis
+2024-04-30 21:12:00 [info]: Database connected successfully
+2024-04-30 21:12:00 [info]: Server running on port = 8000
+2024-04-30 21:12:41 [info]: Connected to Redis
+2024-04-30 21:12:41 [info]: Database connected successfully
+2024-04-30 21:12:41 [info]: Server running on port = 8000
+2024-04-30 21:12:53 [info]: Connected to Redis
+2024-04-30 21:12:53 [info]: Database connected successfully
+2024-04-30 21:12:53 [info]: Server running on port = 8000
+2024-04-30 21:12:54 [info]: Updating event...
+2024-04-30 21:12:54 [info]: Organizer not found
+2024-04-30 21:13:25 [info]: Connected to Redis
+2024-04-30 21:13:25 [info]: Database connected successfully
+2024-04-30 21:13:25 [info]: Server running on port = 8000
+2024-04-30 21:13:27 [info]: Updating event...
+2024-04-30 21:13:27 [info]: Organizer not found
+2024-04-30 21:13:36 [info]: Connected to Redis
+2024-04-30 21:13:36 [info]: Database connected successfully
+2024-04-30 21:13:36 [info]: Server running on port = 8000
+2024-04-30 21:13:38 [info]: Updating event...
+2024-04-30 21:13:38 [info]: Organizer not found
+2024-04-30 21:14:34 [info]: Connected to Redis
+2024-04-30 21:14:34 [info]: Database connected successfully
+2024-04-30 21:14:34 [info]: Server running on port = 8000
+2024-04-30 21:14:37 [info]: Connected to Redis
+2024-04-30 21:14:37 [info]: Database connected successfully
+2024-04-30 21:14:37 [info]: Server running on port = 8000
+2024-04-30 21:14:45 [info]: Connected to Redis
+2024-04-30 21:14:45 [info]: Database connected successfully
+2024-04-30 21:14:45 [info]: Server running on port = 8000
+2024-04-30 21:14:47 [info]: Updating event...
+2024-04-30 21:14:47 [error]: Error updating event Organizer is not defined
+2024-04-30 21:15:01 [info]: Connected to Redis
+2024-04-30 21:15:01 [info]: Database connected successfully
+2024-04-30 21:15:01 [info]: Server running on port = 8000
+2024-04-30 21:15:03 [info]: Updating event...
+2024-04-30 21:15:03 [info]: Organizer not found
+2024-04-30 21:15:13 [info]: Connected to Redis
+2024-04-30 21:15:13 [info]: Database connected successfully
+2024-04-30 21:15:13 [info]: Server running on port = 8000
+2024-04-30 21:15:15 [info]: Updating event...
+2024-04-30 21:15:15 [info]: Organizer's wallet address: 0xE6d7f3Dbae35BBbdcBd0307a4F1677991150343c
+2024-04-30 21:15:20 [info]: Connected to Redis
+2024-04-30 21:15:20 [info]: Database connected successfully
+2024-04-30 21:15:20 [info]: Server running on port = 8000
+2024-04-30 21:16:54 [info]: Connected to Redis
+2024-04-30 21:16:54 [info]: Database connected successfully
+2024-04-30 21:16:54 [info]: Server running on port = 8000
+2024-04-30 21:17:06 [info]: Deleting event...
+2024-04-30 21:17:07 [info]: Organizer's wallet address: 0xE6d7f3Dbae35BBbdcBd0307a4F1677991150343c
+2024-04-30 21:17:07 [error]: Error deleting event in smart contract: decryptedPrivateKey is not defined
+2024-04-30 21:18:26 [info]: Connected to Redis
+2024-04-30 21:18:26 [info]: Database connected successfully
+2024-04-30 21:18:26 [info]: Server running on port = 8000
+2024-04-30 21:18:27 [info]: Deleting event...
+2024-04-30 21:18:27 [info]: Organizer's wallet address: 0xE6d7f3Dbae35BBbdcBd0307a4F1677991150343c

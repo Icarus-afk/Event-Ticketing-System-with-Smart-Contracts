@@ -14,6 +14,7 @@ import session from 'express-session';
 import MongoStore from 'connect-mongo';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
+import organizationRoutes from './routes/organizations.js';
 
 
 dotenv.config();
@@ -57,6 +58,7 @@ app.use(limiter);
 app.use('/user', userRoutes);
 app.use('/event', eventRoutes);
 app.use('/ticket', ticketRoutes);
+app.use('/organization', organizationRoutes);
 app.use('/images/event', express.static(path.join(__dirname, 'images/event')));
 app.use('/images/user_image', express.static(path.join(__dirname, 'images/user_image')));
 

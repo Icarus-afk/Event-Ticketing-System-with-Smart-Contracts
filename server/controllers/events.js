@@ -9,6 +9,7 @@ import crypto from 'crypto';
 import logger from '../utils/consoleLogger.js'
 import { getIo } from '../utils/initSocket.js';
 import { initContract } from '../utils/initContract.js';
+import Organization from '../models/organizer.js';
 // import { handleImageUpload } from "../utils/imageHandler.js";
 
 dotenv.config()
@@ -22,13 +23,16 @@ export const createEvent = async (req, res) => {
     try {
         const io = getIo();
 
+
         logger.info('Creating event...');
         const { name, date, time, price, totalTickets, location, description, attendees, tags } = req.body;
+        const { organizationId } = req.params;
         const image = req.file;
 
-        if (!req.userId) {
-            logger.info('User not authenticated');
-            return res.status(401).json({ success: false, message: 'User not authenticated', statusCode: 401 });
+        console.log(organizationId)
+        if (!organizationId) {
+            logger.info('Organization ID not provided');
+            return res.status(400).json({ success: false, message: 'Organization ID not provided', statusCode: 400 });
         }
 
         if (!totalTickets) {
@@ -36,30 +40,31 @@ export const createEvent = async (req, res) => {
             return res.status(400).json({ success: false, message: 'Total tickets is required', statusCode: 400 });
         }
 
-        const wallet = await Wallet.findOne({ userId: req.userId });
+        const organization = await Organization.findById({ _id: organizationId });
+        if (!organization) {
+            logger.info('Organization not found');
+            return res.status(404).json({ success: false, message: 'Organization not found', statusCode: 404 });
+        }
+
+        const wallet = await Wallet.findOne({ organizationId: organization._id });
         if (!wallet) {
-            logger.info('User wallet not found');
-            return res.status(404).json({ success: false, message: 'User wallet not found', statusCode: 404 });
+            logger.info('Organization wallet not found');
+            return res.status(404).json({ success: false, message: 'Organization wallet not found', statusCode: 404 });
         }
 
         const organizer = wallet.address;
-        const organizerUser = await User.findById(wallet.userId);
-
-        if (!organizerUser) {
-            logger.info('Organizer not found');
-            return res.status(404).json({ success: false, message: 'Organizer not found', statusCode: 404 });
-        }
 
         const balance = await web3Instance.eth.getBalance(organizer);
         if (web3Instance.utils.fromWei(balance, 'ether') < price) {
             logger.info('Organizer\'s account does not have enough Ether');
             return res.status(400).json({ success: false, message: 'Organizer\'s account does not have enough Ether', statusCode: 400 });
         }
+
         if (!wallet.iv) {
             logger.info('Initialization vector is undefined');
-            return res.status(500).json({ success: false, message: 'Initialization vector is undefined', statusCode: 500 });
+            return res.status(400).json({ success: false, message: 'Initialization vector is undefined', statusCode: 400 });
         }
-        const existingEvent = await Event.findOne({ name, organizer: organizerUser._id });
+        const existingEvent = await Event.findOne({ name, organizer: organization._id });
         if (existingEvent) {
             logger.info('Event with this name already exists for this organizer');
             return res.status(400).json({ success: false, message: 'Event with this name already exists for this organizer', statusCode: 400 });
@@ -98,7 +103,7 @@ export const createEvent = async (req, res) => {
             time,
             price,
             totalTickets,
-            organizer: organizerUser._id,
+            organizer: organization._id,
             eventId: (await EventManagementContract.methods.getTotalEvents().call()) - BigInt(1),
             location,
             description,
@@ -135,20 +140,25 @@ export const updateEvent = async (req, res) => {
         const dateTimestamp = Math.floor(eventDate.getTime() / 1000);
 
         const eventIdNumber = parseInt(eventId, 10);
-        const user = await User.findById(req.userId);
-        if (!user) {
-            logger.info('User not found');
-            return res.status(404).json({ success: false, message: 'User not found', statusCode: 404 });
+
+        const event = await Event.findOne({eventId: eventIdNumber});
+
+        console.log("Event", eventIdNumber)
+        if (!event) {
+            logger.info('Event not found');
+            return res.status(404).json({ success: false, message: 'Event not found', statusCode: 404 });
         }
 
-        const wallet = await Wallet.findOne({ userId: req.userId });
+        // Use the organizer's ID to find the wallet
+        const wallet = await Wallet.findOne({ organizationId: event.organizer._id });
+        console.log("Wallet", wallet)
         if (!wallet) {
-            logger.info('User wallet not found');
-            return res.status(404).json({ success: false, message: 'User wallet not found', statusCode: 404 });
+            logger.info('Organizer wallet not found');
+            return res.status(404).json({ success: false, message: 'Organizer wallet not found', statusCode: 404 });
         }
 
         const organizer = wallet.address;
-        const organizerUser = await User.findById(wallet.userId);
+        const organizerUser = await Organization.findById(wallet.organizationId);
 
         if (!organizerUser) {
             logger.info('Organizer not found');
@@ -182,7 +192,7 @@ export const updateEvent = async (req, res) => {
             gas = await updateEvent.estimateGas({ from: organizer });
         } catch (error) {
             logger.error('Error estimating gas:', error);
-            gas = 21000; 
+            gas = 21000;
         }
         const tx = {
             to: EventManagementContract.options.address,
@@ -201,7 +211,7 @@ export const updateEvent = async (req, res) => {
             return res.status(500).json({ message: 'Error updating event in smart contract', error });
         }
         try {
-            const event = await Event.findOneAndUpdate({ eventId }, {
+            const updatedEvent = await Event.findOneAndUpdate({ eventId }, {
                 name,
                 date,
                 time,
@@ -216,9 +226,9 @@ export const updateEvent = async (req, res) => {
             }, { new: true }).populate({
                 path: 'organizer',
                 select: '-password -__v'
-            }); 
-        
-            res.status(200).json({ success: true, message: 'Event updated successfully', event, statusCode: 200 });
+            });
+
+            res.status(200).json({ success: true, message: 'Event updated successfully', event: updatedEvent, statusCode: 200 });
         } catch (error) {
             logger.error('Error updating event in MongoDB:', error);
             res.status(500).json({ success: false, message: 'Error updating event', statusCode: 500 });
@@ -236,22 +246,27 @@ export const deleteEvent = async (req, res) => {
         logger.info('Deleting event...');
         const { eventId } = req.params;
 
-        const user = await User.findById(req.userId);
-        if (!user) {
-            logger.info('User not found');
-            return res.status(404).json({ success: false, message: 'User not found', statusCode: 404 });
+        const event = await Event.findOne({eventId: eventId});
+
+        if (!event) {
+            logger.info('Event not found');
+            return res.status(404).json({ success: false, message: 'Event not found', statusCode: 404 });
         }
 
-        const wallet = await Wallet.findOne({ userId: req.userId });
+        // Use the organizer's ID to find the wallet
+        const wallet = await Wallet.findOne({ organizationId: event.organizer._id });
+
         if (!wallet) {
-            logger.info('User wallet not found');
-            return res.status(404).json({ success: false, message: 'User wallet not found', statusCode: 404 });
+            logger.info('Organizer wallet not found');
+            return res.status(404).json({ success: false, message: 'Organizer wallet not found', statusCode: 404 });
         }
 
         const organizer = wallet.address;
-        if (!organizer) {
-            logger.info('User wallet address is undefined');
-            return res.status(500).json({ success: false, message: 'User wallet address is undefined', statusCode: 500 });
+        const organizerUser = await Organization.findById(wallet.organizationId);
+
+        if (!organizerUser) {
+            logger.info('Organizer not found');
+            return res.status(404).json({ success: false, message: 'Organizer not found', statusCode: 404 });
         }
 
         logger.info(`Organizer's wallet address: ${organizer}`);
@@ -267,34 +282,42 @@ export const deleteEvent = async (req, res) => {
 
         const deleteEvent = EventManagementContract.methods.deleteEvent(eventId);
 
-        const gas = await deleteEvent.estimateGas({ from: organizer });
-
+        let gas;
+        try {
+            gas = await deleteEvent.estimateGas({ from: organizer });
+        } catch (error) {
+            logger.error('Error estimating gas:', error);
+            gas = 21000;
+        }
         const tx = {
             to: EventManagementContract.options.address,
             data: deleteEvent.encodeABI(),
             gas,
             gasPrice: web3Instance.utils.toWei('2', 'gwei'),
-            nonce: await web3Instance.eth.getTransactionCount(organizer)
+            nonce: await web3Instance.eth.getTransactionCount(organizer),
+            from: organizer
         };
 
-        const signedTx = await web3Instance.eth.accounts.signTransaction(tx, decryptedPrivateKey);
-        await web3Instance.eth.sendSignedTransaction(signedTx.rawTransaction);
-
-        const event = await Event.findOne({ eventId });
-        if (!event) {
-            logger.info('Event not found');
-            return res.status(404).json({ success: false, message: 'Event not found', statusCode: 404 });
+        try {
+            const signedTx = await web3Instance.eth.accounts.signTransaction(tx, decryptedPrivateKey);
+            await web3Instance.eth.sendSignedTransaction(signedTx.rawTransaction);
+        } catch (error) {
+            logger.error('Error deleting event in smart contract:', error);
+            return res.status(500).json({ message: 'Error deleting event in smart contract', error });
         }
+        try {
+            await Event.findOneAndDelete({ eventId });
 
-        await Event.deleteOne({ eventId });
-
-        logger.info('Event deleted successfully');
-        res.status(200).json({ success: true, message: 'Event deleted successfully', statusCode: 200 });
+            res.status(200).json({ success: true, message: 'Event deleted successfully', statusCode: 200 });
+        } catch (error) {
+            logger.error('Error deleting event in MongoDB:', error);
+            res.status(500).json({ success: false, message: 'Error deleting event', statusCode: 500 });
+        }
     } catch (error) {
-        logger.error(error);
-        res.status(500).json({ success: false, message: 'An error occurred while deleting the event', statusCode: 500 });
+        logger.error('Error deleting event', error);
+        res.status(500).json({ success: false, message: 'Error deleting event', statusCode: 500 });
     }
-};
+}
 
 
 // export const getEvents = async (req, res) => {
