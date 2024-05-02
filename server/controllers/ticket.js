@@ -70,7 +70,7 @@ export const issueTicket = async (req, res) => {
             'nonce': nonce,
             'to': process.env.TICKET_BLOCK,
             'gasPrice': web3Instance.utils.toHex(20 * 1e9),
-            'gasLimit': web3Instance.utils.toHex(210000), 
+            'gasLimit': web3Instance.utils.toHex(210000),
             'data': TicketContract.methods.issueTicket(from, eventId).encodeABI()
         };
 
@@ -84,6 +84,12 @@ export const issueTicket = async (req, res) => {
             isTransferred: false
         });
         await ticket.save();
+
+        await Event.updateOne(
+            { _id: event._id },
+            { $push: { attendees: req.userId } }
+        );
+
         logger.info('Ticket issued successfully');
         return res.status(200).json({ success: true, message: 'Ticket issued successfully', statusCode: 200 });
 
@@ -133,7 +139,7 @@ export const getTicketsTransferred = async (req, res) => {
 export const transferTicket = async (req, res) => {
     try {
         logger.info('Transferring ticket...');
-        const { to, ticketId } = req.body;  
+        const { to, ticketId } = req.body;
 
         const fromWallet = await Wallet.findOne({ userId: req.userId });
         if (!fromWallet) {
@@ -153,7 +159,7 @@ export const transferTicket = async (req, res) => {
             return res.status(404).json({ success: false, message: 'Recipient wallet not found', statusCode: 404 });
         }
 
-        const ticket = await Ticket.findById(ticketId);
+        let ticket = await Ticket.findById(ticketId);
         if (!ticket) {
             logger.info('Ticket not found');
             return res.status(404).json({ success: false, message: 'Ticket not found', statusCode: 404 });
@@ -185,7 +191,7 @@ export const transferTicket = async (req, res) => {
         const signedTx = await web3Instance.eth.accounts.signTransaction(tx, decryptedPrivateKey);
         const receipt = await web3Instance.eth.sendSignedTransaction(signedTx.rawTransaction);
         logger.info(`Transaction hash: ${receipt.transactionHash}`);
- 
+
         const newOwner = await User.findOne({ email: req.body.to });
         if (!newOwner) {
             logger.info('New owner not found');
@@ -194,6 +200,17 @@ export const transferTicket = async (req, res) => {
 
         ticket.owner = newOwner._id;
         await ticket.save();
+
+        await Event.updateOne(
+            { _id: event._id },
+            { $pull: { attendees: req.userId } }
+        );
+
+        await Event.updateOne(
+            { _id: event._id },
+            { $push: { attendees: newOwner._id } }
+        );
+        ticket = await Ticket.findById(ticket._id).populate('owner', '-password').populate('eventId');
 
         logger.info('Ticket transferred successfully');
         return res.status(200).json({ success: true, message: 'Ticket transferred successfully', ticket, statusCode: 200 });

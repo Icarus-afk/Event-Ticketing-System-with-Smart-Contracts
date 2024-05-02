@@ -325,3 +325,10 @@ value at "/0" is required
 2024-04-30 21:11:30 [error]: Error updating event Cast to ObjectId failed for value "35" (type number) at path "_id" for model "Event"
 2024-04-30 21:14:47 [error]: Error updating event Organizer is not defined
 2024-04-30 21:17:07 [error]: Error deleting event in smart contract: decryptedPrivateKey is not defined
+2024-05-02 19:37:30 [error]: Returned error: insufficient funds for gas * price + value
+2024-05-02 19:46:46 [error]: invalid signature
+2024-05-02 19:53:23 [error]: Updating the path 'attendees' would create a conflict at 'attendees'
+2024-05-02 20:00:42 [error]: Error happened while trying to execute a function inside a smart contract
+2024-05-02 20:00:58 [error]: ticket.populate(...).populate is not a function
+2024-05-02 20:02:36 [error]: Assignment to constant variable.
+2024-05-02 20:03:48 [error]: Error happened while trying to execute a function inside a smart contract

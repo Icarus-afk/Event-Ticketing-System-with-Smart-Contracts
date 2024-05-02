@@ -1,57 +1,56 @@
-import cron from 'node-cron';
 import ethers from 'ethers';
-import Wallet from './models/wallet.js';
 import mongoose from 'mongoose';
+import Wallet from './models/wallet.js';
+import dotenv from 'dotenv';
+import { setInterval } from 'timers';
 
-import dotenv from 'dotenv'
-
-dotenv.config()
+dotenv.config();
 
 const MONGO_STRING = process.env.MONGO_STRING;
+const ETHEREUM_NODE_URL = process.env.ETHEREUM_NODE_URL;
 
-mongoose.connect(String(MONGO_STRING))
-  .then(() => {
-    console.log(`Successfully connect`);
-  })
-  .catch(error => {
-    console.error('Error connecting to MongoDB:', error);
-  });
-
-const provider = new ethers.providers.JsonRpcProvider('http://localhost:7545');
-console.log('Provider created');
-
-async function syncBalances() {
-  console.log('Syncing balances...');
-
-  try {
-    const wallets = await Wallet.find({});
-    console.log(`Found ${wallets.length} wallets`);
-
-    const promises = wallets.map(async (wallet) => {
-      console.log(`Processing wallet ${wallet.address}`);
-      const blockchainBalance = await provider.getBalance(wallet.address);
-      console.log(`Blockchain balance: ${blockchainBalance}`);
-
-      const balanceInEther = ethers.utils.formatEther(blockchainBalance);
-      const balanceInEtherNumber = parseFloat(balanceInEther);
-      console.log(`Balance in Ether: ${balanceInEther}`);
-
-      if (wallet.balance !== balanceInEtherNumber) {
-        console.log('Balance mismatch detected, updating database');
-        wallet.balance = balanceInEther;
-        await wallet.save();
-
-        console.log('Database updated');
-      }
-    });
-
-    await Promise.all(promises);
-  } catch (error) {
-    console.error('Error during sync:', error);
-  }
-
-  console.log('Syncing completed');
+async function connectToMongoDB() {
+  // TODO: Add error handling and reconnection logic
+  await mongoose.connect(MONGO_STRING);
+  console.log('Connected to MongoDB');
 }
 
-cron.schedule('*/5 * * * * *', syncBalances);
-console.log('Cron job scheduled');
+async function createEthereumProvider() {
+  // TODO: Add error handling and reconnection logic
+  const provider = new ethers.providers.WebSocketProvider('HTTP://127.0.0.1:7545');
+  console.log('Connected to Ethereum node');
+  return provider;
+}
+
+async function syncBalances(provider) {
+  const wallets = await Wallet.find({});
+  console.log(`Found ${wallets.length} wallets`);
+
+  wallets.forEach((wallet) => {
+    setInterval(async () => {
+      const newBalance = await provider.getBalance(wallet.address);
+      const balanceInEther = ethers.utils.formatEther(newBalance);
+      const balanceInEtherNumber = parseFloat(balanceInEther);
+
+      if (wallet.balance !== balanceInEtherNumber) {
+        wallet.balance = balanceInEther;
+        await wallet.save();
+        console.log(`Updated balance for ${wallet.address} to ${balanceInEther}`);
+      }
+    }, 1000);  
+
+    console.log(`Subscribed to balance changes for ${wallet.address}`);
+  });
+}
+
+async function main() {
+  await connectToMongoDB();
+  const provider = await createEthereumProvider();
+  await syncBalances(provider);
+  setInterval(() => {}, 1000);  // Keep the script running
+}
+
+main().catch((error) => {
+  console.error('An error occurred:', error);
+  process.exit(1);
+});

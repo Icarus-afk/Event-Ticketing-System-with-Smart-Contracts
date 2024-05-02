@@ -11437,3 +11437,135 @@ value at "/0" is required
 2024-04-30 21:18:26 [info]: Server running on port = 8000
 2024-04-30 21:18:27 [info]: Deleting event...
 2024-04-30 21:18:27 [info]: Organizer's wallet address: 0xE6d7f3Dbae35BBbdcBd0307a4F1677991150343c
+2024-04-30 21:23:20 [info]: Connected to Redis
+2024-04-30 21:23:20 [info]: Database connected successfully
+2024-04-30 21:23:20 [info]: Server running on port = 8000
+2024-05-02 19:20:37 [info]: Connected to Redis
+2024-05-02 19:20:37 [info]: Database connected successfully
+2024-05-02 19:20:37 [info]: Server running on port = 8000
+2024-05-02 19:24:20 [info]: Connected to Redis
+2024-05-02 19:24:20 [info]: Database connected successfully
+2024-05-02 19:24:20 [info]: Server running on port = 8000
+2024-05-02 19:27:41 [info]: Connected to Redis
+2024-05-02 19:27:41 [info]: Database connected successfully
+2024-05-02 19:27:41 [info]: Server running on port = 8000
+2024-05-02 19:33:57 [info]: Connected to Redis
+2024-05-02 19:33:57 [info]: Database connected successfully
+2024-05-02 19:33:57 [info]: Server running on port = 8000
+2024-05-02 19:34:19 [info]: Signin attempt for email:  ahmed.ehsan6@gmail.com
+2024-05-02 19:34:19 [info]: User doesn't exist for email:  ahmed.ehsan6@gmail.com
+2024-05-02 19:34:25 [info]: Signin attempt for email:  ahmed.ehsan26@gmail.com
+2024-05-02 19:34:25 [info]: User doesn't exist for email:  ahmed.ehsan26@gmail.com
+2024-05-02 19:35:32 [info]: Signin attempt for email:  ahmed.ehsan6@gmail.com
+2024-05-02 19:35:32 [info]: User doesn't exist for email:  ahmed.ehsan6@gmail.com
+2024-05-02 19:36:11 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-05-02 19:36:11 [info]: Invalid credentials for email: ahmed.ehsan6@gmail.com
+2024-05-02 19:36:20 [info]: Signin attempt for email: ahmed.ehsan6@gmail.com
+2024-05-02 19:36:21 [info]: User signed in successfully for email: ahmed.ehsan6@gmail.com
+2024-05-02 19:37:19 [info]: Issuing ticket...
+2024-05-02 19:37:19 [info]: Event not found
+2024-05-02 19:37:29 [info]: Issuing ticket...
+2024-05-02 19:37:30 [error]: Returned error: insufficient funds for gas * price + value
+2024-05-02 19:38:46 [info]: Signin attempt for email: ahmed.ehsan26@gmail.com
+2024-05-02 19:38:46 [info]: User signed in successfully for email: ahmed.ehsan26@gmail.com
+2024-05-02 19:38:54 [info]: Issuing ticket...
+2024-05-02 19:38:54 [info]: User wallet not found
+2024-05-02 19:39:26 [info]: Connected to Redis
+2024-05-02 19:39:26 [info]: Database connected successfully
+2024-05-02 19:40:15 [info]: Signin attempt for email: ahmed.ehsan4@gmail.com
+2024-05-02 19:40:15 [info]: Invalid credentials for email: ahmed.ehsan4@gmail.com
+2024-05-02 19:40:21 [info]: Signin attempt for email: ahmed.ehsan4@gmail.com
+2024-05-02 19:40:21 [info]: User signed in successfully for email: ahmed.ehsan4@gmail.com
+2024-05-02 19:40:25 [info]: Issuing ticket...
+2024-05-02 19:40:26 [info]: Transaction hash: 0x7bb2aa13a1cd837e28ac267ded23c6406bd5d469a5c317a9f7b32dc363c209dc
+2024-05-02 19:40:26 [info]: Ticket issued successfully
+2024-05-02 19:46:46 [info]: Getting ticket details...
+2024-05-02 19:46:46 [error]: invalid signature
+2024-05-02 19:49:58 [info]: Connected to Redis
+2024-05-02 19:49:58 [info]: Database connected successfully
+2024-05-02 19:49:58 [info]: Server running on port = 8000
+2024-05-02 19:52:34 [info]: Connected to Redis
+2024-05-02 19:52:34 [info]: Database connected successfully
+2024-05-02 19:52:34 [info]: Server running on port = 8000
+2024-05-02 19:53:17 [info]: Transferring ticket...
+2024-05-02 19:53:17 [info]: Recipient user not found
+2024-05-02 19:53:22 [info]: Transferring ticket...
+2024-05-02 19:53:23 [info]: Transaction hash: 0x34bd909e8b695061c4b63af6b5e3b62295e1c393c47c01acec14741dfd0ca098
+2024-05-02 19:53:23 [error]: Updating the path 'attendees' would create a conflict at 'attendees'
+2024-05-02 19:57:37 [info]: Connected to Redis
+2024-05-02 19:57:37 [info]: Database connected successfully
+2024-05-02 19:57:37 [info]: Server running on port = 8000
+2024-05-02 19:57:42 [info]: Issuing ticket...
+2024-05-02 19:57:42 [info]: Transaction hash: 0x6b7732e6647c5b15ff1abcf5fe78d9575112b30ae521b3c8756b6cb9ca738696
+2024-05-02 19:57:42 [info]: Ticket issued successfully
+2024-05-02 19:57:53 [info]: Transferring ticket...
+2024-05-02 19:57:53 [info]: Recipient wallet not found
+2024-05-02 19:57:58 [info]: Transferring ticket...
+2024-05-02 19:57:58 [info]: Recipient wallet not found
+2024-05-02 19:58:02 [info]: Transferring ticket...
+2024-05-02 19:58:02 [info]: Transaction hash: 0x4bb471ee5a22d7002826e4a81889677ccfadf5709945e3a4c19d28cffd3dd5a0
+2024-05-02 19:58:02 [info]: Ticket transferred successfully
+2024-05-02 20:00:38 [info]: Connected to Redis
+2024-05-02 20:00:38 [info]: Database connected successfully
+2024-05-02 20:00:38 [info]: Server running on port = 8000
+2024-05-02 20:00:42 [info]: Transferring ticket...
+2024-05-02 20:00:42 [error]: Error happened while trying to execute a function inside a smart contract
+2024-05-02 20:00:47 [info]: Issuing ticket...
+2024-05-02 20:00:47 [info]: Transaction hash: 0x901d81b72eb3f18a66d950dd715afd49ecd0617d70e2256132c892292e284a46
+2024-05-02 20:00:47 [info]: Ticket issued successfully
+2024-05-02 20:00:58 [info]: Transferring ticket...
+2024-05-02 20:00:58 [info]: Transaction hash: 0x0af9b0efe91979b439a0346446def371e76f9f2cc87371fa0effa1f407e225bb
+2024-05-02 20:00:58 [error]: ticket.populate(...).populate is not a function
+2024-05-02 20:02:26 [info]: Connected to Redis
+2024-05-02 20:02:26 [info]: Database connected successfully
+2024-05-02 20:02:26 [info]: Server running on port = 8000
+2024-05-02 20:02:29 [info]: Issuing ticket...
+2024-05-02 20:02:29 [info]: Transaction hash: 0x0bb2f6add9a47d506a26fa4810f539e3f1a1db37a55d23027e03b11b396a86a5
+2024-05-02 20:02:29 [info]: Ticket issued successfully
+2024-05-02 20:02:36 [info]: Transferring ticket...
+2024-05-02 20:02:36 [info]: Transaction hash: 0x915c04f8542c1f0a372b6e5648eb0f34feb8ac91e82d044d04bbc9e304b7ef3b
+2024-05-02 20:02:36 [error]: Assignment to constant variable.
+2024-05-02 20:03:30 [info]: Connected to Redis
+2024-05-02 20:03:30 [info]: Database connected successfully
+2024-05-02 20:03:30 [info]: Server running on port = 8000
+2024-05-02 20:03:46 [info]: Connected to Redis
+2024-05-02 20:03:46 [info]: Database connected successfully
+2024-05-02 20:03:46 [info]: Server running on port = 8000
+2024-05-02 20:03:48 [info]: Transferring ticket...
+2024-05-02 20:03:48 [error]: Error happened while trying to execute a function inside a smart contract
+2024-05-02 20:03:53 [info]: Issuing ticket...
+2024-05-02 20:03:53 [info]: Transaction hash: 0x9f8068c5086f66c961313f22820863a2edc7f53dbd3243f9b257dc1302a7de89
+2024-05-02 20:03:53 [info]: Ticket issued successfully
+2024-05-02 20:04:00 [info]: Transferring ticket...
+2024-05-02 20:04:00 [info]: Transaction hash: 0xa31d73275567e7735b4c99dcf5c009177a865316b1ecb7f36a309dd75887fb69
+2024-05-02 20:04:00 [info]: Ticket transferred successfully
+2024-05-02 20:06:05 [info]: Connected to Redis
+2024-05-02 20:06:05 [info]: Database connected successfully
+2024-05-02 20:06:05 [info]: Server running on port = 8000
+2024-05-02 20:08:28 [info]: Connected to Redis
+2024-05-02 20:08:28 [info]: Database connected successfully
+2024-05-02 20:08:28 [info]: Server running on port = 8000
+2024-05-02 20:10:35 [info]: Connected to Redis
+2024-05-02 20:10:35 [info]: Database connected successfully
+2024-05-02 20:10:35 [info]: Server running on port = 8000
+2024-05-02 20:15:33 [info]: Connected to Redis
+2024-05-02 20:15:33 [info]: Database connected successfully
+2024-05-02 20:15:33 [info]: Server running on port = 8000
+2024-05-02 20:16:20 [info]: Connected to Redis
+2024-05-02 20:16:20 [info]: Database connected successfully
+2024-05-02 20:16:20 [info]: Server running on port = 8000
+2024-05-02 20:17:28 [info]: Connected to Redis
+2024-05-02 20:17:28 [info]: Database connected successfully
+2024-05-02 20:17:28 [info]: Server running on port = 8000
+2024-05-02 20:17:40 [info]: Connected to Redis
+2024-05-02 20:17:40 [info]: Database connected successfully
+2024-05-02 20:17:40 [info]: Server running on port = 8000
+2024-05-02 20:28:40 [info]: Connected to Redis
+2024-05-02 20:28:40 [info]: Database connected successfully
+2024-05-02 20:28:40 [info]: Server running on port = 8000
+2024-05-02 20:29:29 [info]: Connected to Redis
+2024-05-02 20:29:29 [info]: Database connected successfully
+2024-05-02 20:29:29 [info]: Server running on port = 8000
+2024-05-02 20:30:16 [info]: Connected to Redis
+2024-05-02 20:30:16 [info]: Database connected successfully
+2024-05-02 20:30:16 [info]: Server running on port = 8000

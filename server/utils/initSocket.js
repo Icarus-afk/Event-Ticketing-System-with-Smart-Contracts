@@ -1,8 +1,8 @@
-// initSocket.js
 import { Server } from 'socket.io';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import logger from './consoleLogger.js'
+import cookie from 'cookie';
 
 dotenv.config();
 
@@ -12,8 +12,11 @@ const initSocket = (server) => {
     io = new Server(server);
 
     io.use((socket, next) => {
-        if (socket.handshake.query && socket.handshake.query.token){
-            jwt.verify(socket.handshake.query.token, process.env.JWT_SECRET, function(err, decoded) {
+        if (socket.request.headers && socket.request.headers.cookie){
+            const cookies = cookie.parse(socket.request.headers.cookie);
+            const token = cookies.yourCookieName;
+
+            jwt.verify(token, process.env.JWT_SECRET, function(err, decoded) {
                 if (err) return next(new Error('Authentication error'));
                 socket.decoded = decoded;
                 next();
