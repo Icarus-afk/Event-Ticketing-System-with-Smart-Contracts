@@ -15,6 +15,7 @@ import MongoStore from 'connect-mongo';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import organizationRoutes from './routes/organizations.js';
+import passport from  './utils/passportConfig.js';
 
 
 dotenv.config();
@@ -51,9 +52,14 @@ app.use(session({
   }
 }));
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(errorHandler);
 app.use(logger);
 app.use(limiter);
+
+app.use(express.static('public'));
 
 app.use('/user', userRoutes);
 app.use('/event', eventRoutes);

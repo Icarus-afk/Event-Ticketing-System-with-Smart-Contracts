@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: npm start
+    volumes:
+      - .:/server
+    ports:
+      - '8000:8000'
+  synchronizer:
+    build: 
+      context: .
+      dockerfile: Dockerfile.synchronizer
+    command: node synchronizer.js

@@ -15,7 +15,8 @@ const userSchema = mongoose.Schema({
   bio: { type: String }, 
   interests: [{ type: String }], 
   joinedAt: { type: Date, default: Date.now },
-  organizations: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Organizer' }]
+  organizations: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Organizer' }],
+  googleId: { type: String },
 });
 
 const User = mongoose.model("User", userSchema);

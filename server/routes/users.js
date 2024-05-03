@@ -1,7 +1,8 @@
 import express from 'express';
-import { signin, signup, deleteUser, updateUser,getUserDetails, refreshToken, verifyToken } from '../controllers/user.js'
+import { signin, signup, deleteUser, updateUser, getUserDetails, refreshToken, verifyToken } from '../controllers/user.js'
 import auth from '../middleware/auth.js';
 import passwordStrength from '../middleware/passwordStrength.js'
+import passport from '../utils/passportConfig.js';
 
 import path from 'path';
 import multer from 'multer';
@@ -34,5 +35,14 @@ router.post('/refresh-token', refreshToken);
 router.delete('/:id', auth, deleteUser);
 router.patch('/:id', auth, updateUser);
 router.get('/:id', auth, getUserDetails);
+
+// Google authentication routes
+router.get('/auth/google', passport.authenticate('google', {
+    scope: ['profile', 'email']
+}));
+
+router.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
+    res.redirect('/home.html');
+});
 
 export default router;
