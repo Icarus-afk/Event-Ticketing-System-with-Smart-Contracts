@@ -17,6 +17,7 @@
     "axios": "^1.6.8",
     "chakra-paginator": "^0.7.3",
     "daisyui": "^4.10.2",
+    "dotenv": "^16.4.5",
     "framer-motion": "^4.1.17",
     "google-maps-react": "^2.0.6",
     "js-cookie": "^3.0.5",

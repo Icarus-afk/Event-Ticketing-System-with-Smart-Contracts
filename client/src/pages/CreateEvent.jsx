@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack, HStack, Heading, Flex } from '@chakra-ui/react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import BASE_URL from '../config';
 
 
 const CreateEventPage = () => {
@@ -40,7 +41,7 @@ const CreateEventPage = () => {
 
         let config = {
             method: 'post',
-            url: 'http://127.0.0.1:8000/event/create',
+            url: `${BASE_URL}event/create`,
             headers: {
                 'Authorization': `Bearer ${Cookies.get('a_Token')}`
             },

@@ -1,4 +1,4 @@
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Text, Box, Image, Badge, Flex, Heading, Button, ModalFooter } from "@chakra-ui/react";
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Text, Image, Flex, Heading, Button, ModalFooter } from "@chakra-ui/react";
 import PropTypes from 'prop-types';
 
 

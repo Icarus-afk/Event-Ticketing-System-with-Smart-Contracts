@@ -4,6 +4,7 @@ import { Button, Input, Box, VStack, Heading, Text, ChakraProvider } from '@chak
 import { Link } from 'react-router-dom';
 import { useCustomToast } from '../components/useCustomToast';
 import { useNavigate, useLocation } from 'react-router-dom';
+import BASE_URL from '../config';
 
 
 const SignIn = () => {
@@ -20,7 +21,7 @@ const SignIn = () => {
 
 		const config = {
 			method: 'post',
-			url: 'http://localhost:8000/user/signin',
+			url:`${BASE_URL}user/signin`,
 			data: {
 				email: email,
 				password: password,
@@ -34,7 +35,7 @@ const SignIn = () => {
 		try {
 			const response = await axios(config);
 			console.log('Response:', response);
-
+			console.log('Response:', response);
 			if (response.data.success) {
 				showSuccessToast(response.data.message);
 				navigate(from.pathname)
@@ -48,8 +49,6 @@ const SignIn = () => {
 	};
 
 	return (
-		<ChakraProvider>
-
 			<VStack align="center" justify="center" h="100vh" bg="gray.100">
 				<Heading mb="6" size="lg" fontWeight="bold" color="purple.500">Sign In</Heading>
 				<Box as="form" onSubmit={handleSubmit} p="6" bg="white" rounded="md" shadow="md" w="md">
@@ -61,7 +60,6 @@ const SignIn = () => {
 					</Text>
 				</Box>
 			</VStack>
-		</ ChakraProvider>
 
 	);
 };

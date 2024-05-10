@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import BASE_URL from '../config';
 
 const PrivateRoute = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -13,7 +14,7 @@ const PrivateRoute = ({ children }) => {
       setIsLoading(true); // Start loading
 
       try {
-        const response = await axios.get('http://localhost:8000/user/verify-token', {
+        const response = await axios.get(`${BASE_URL}user/verify-token`, {
           withCredentials: true
         });
         if (response.status === 200) {

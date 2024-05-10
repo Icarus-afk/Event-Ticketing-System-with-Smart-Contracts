@@ -4,6 +4,7 @@ import { Button, Input, Box, VStack, Heading, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useCustomToast } from '../components/useCustomToast';
 import { useNavigate } from 'react-router-dom';
+import BASE_URL from '../config';
 
 
 const SignUp = () => {
@@ -28,7 +29,7 @@ const SignUp = () => {
         const config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'http://127.0.0.1:8000/user/signup',
+            url: `${BASE_URL}user/signup`,
             headers: {
                 'Content-Type': 'application/json'
             },

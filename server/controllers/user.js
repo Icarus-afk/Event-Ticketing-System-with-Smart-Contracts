@@ -189,6 +189,7 @@ export const getUserDetails = async (req, res) => {
   }
 };
 
+
 export const refreshToken = async (req, res) => {
   const refreshToken = req.body.token;
 

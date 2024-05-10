@@ -13,6 +13,7 @@ export const useCustomToast = () => {
   };
 
   const showErrorToast = (message) => {
+    console.log(message);
     return toast({
       title: message,
       status: "error",
@@ -21,5 +22,13 @@ export const useCustomToast = () => {
     });
   };
 
-  return { showSuccessToast, showErrorToast };
+  const showPromiseToast = (promise, successMessage, errorMessage) => {
+    return toast.promise(promise, {
+      loading: { title: 'Loading...', description: 'Please wait' },
+      success: { title: successMessage, description: 'Success!' },
+      error: { title: errorMessage, description: 'Error' },
+    });
+  };
+
+  return { showSuccessToast, showErrorToast, showPromiseToast };
 };

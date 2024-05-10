@@ -1,4 +1,4 @@
-import { Box, Flex, Input, Button, Grid, LinkOverlay, Image, Text, useDisclosure, IconButton } from '@chakra-ui/react';
+import { Box, Flex, Input, Button, Grid, Image, Text, useDisclosure, IconButton } from '@chakra-ui/react';
 import { FaRegClock, FaRegEye } from 'react-icons/fa';
 import { usePaginator, Paginator, Container, PageGroup } from 'chakra-paginator';
 import axios from 'axios';
@@ -7,7 +7,7 @@ import { useState, useEffect, useCallback } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import EventModal from '../components/EventModal'
-import { useNavigate } from 'react-router-dom'
+import BASE_URL from '../config';
 
 const HomePage = () => {
     const [events, setEvents] = useState([]);
@@ -22,7 +22,7 @@ const HomePage = () => {
 
 
     const fetchEvents = useCallback(async (search = false) => {
-        let url = `http://localhost:8000/event/get?page=${currentPage}&limit=9`;
+        let url = `${BASE_URL}event/get?page=${currentPage}&limit=9`;
         if (search) {
             if (searchQuery) url += `&name=${searchQuery}`;
             if (searchDate) url += `&date=${searchDate}`;
@@ -65,7 +65,7 @@ const HomePage = () => {
     
         event.stopPropagation();
     
-        const url = `http://localhost:8000/event/get/?eventId=${eventId}`;
+        const url = `${BASE_URL}event/get/?eventId=${eventId}`;
         console.log("url -->", url);
         const config = {
             method: 'get',
